@@ -46,37 +46,30 @@ body::before {
 /* ══════════════ NAV ══════════════ */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.1rem 3.5rem;
+  display: flex; justify-content: center; align-items: center;
+  padding: 1.2rem 3.5rem;
   background: rgba(245,240,232,0.95);
   backdrop-filter: blur(16px);
   border-bottom: 1.5px solid var(--border);
 }
+.nav-brand {
+  display: flex; flex-direction: column; align-items: center;
+}
 .nav-brand-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.05rem; font-weight: 600;
-  color: var(--mocha); letter-spacing: 0.04em;
+  font-size: 1.55rem; font-weight: 700;
+  color: var(--mocha); letter-spacing: 0.07em;
+  line-height: 1;
 }
 .nav-brand-sub {
-  font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--sand); margin-top: 2px; font-weight: 500;
+  font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--bronze); margin-top: 5px; font-weight: 700;
 }
-.nav-links { display: flex; gap: 2.2rem; align-items: center; }
-.nav-links a {
-  color: var(--taupe); text-decoration: none;
-  font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase;
-  font-weight: 600; transition: color 0.3s;
-}
-.nav-links a:hover { color: var(--bronze); }
-.nav-cta {
-  background: var(--bronze) !important;
-  color: #fff !important;
-  padding: 0.52rem 1.4rem;
-  font-size: 0.74rem !important;
-  font-weight: 600 !important;
-  transition: background 0.3s !important;
-}
-.nav-cta:hover { background: var(--mocha) !important; }
+/* Desktop nav links removed — nav is brand-only */
+.nav-links { display: none; }
+.nav-cta { display: none; }
+
+/* nav is brand-only — no hamburger needed */
 
 /* ══════════════ HERO ══════════════ */
 .hero {
@@ -135,6 +128,7 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   color: var(--sand); margin-top: 0.4rem; font-weight: 600;
 }
 
+/* Hero buttons — ONE CTA only (WhatsApp), phone removed from hero */
 .hero-btns {
   display: flex; gap: 1rem; flex-wrap: wrap;
   animation: fadeUp 0.7s 0.5s ease both;
@@ -181,14 +175,6 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   align-items: center; justify-content: center;
   overflow: hidden; position: relative;
 }
-/* ── TAHER — UPLOAD YOUR PHOTO HERE ──────────────────────────
-   1. Upload your photo file (e.g. taher-photo.jpg) to GitHub
-      in the same folder as this index.html file
-   2. Delete the <svg> and <div class="photo-label"> below
-   3. Paste this in their place:
-      <img src="taher-photo.jpg" alt="Taher Betwala"
-           style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
-   ──────────────────────────────────────────────────────────── */
 .photo-silhouette { width: 44px; height: 44px; fill: var(--border2); }
 .photo-label {
   font-size: 0.54rem; letter-spacing: 0.1em; text-transform: uppercase;
@@ -259,6 +245,8 @@ h2 em { font-style: italic; color: var(--bronze); }
   background: var(--card); border: 1.5px solid var(--border);
   padding: 2.2rem 2rem; position: relative; overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  text-decoration: none; display: block; color: inherit;
+  cursor: pointer;
 }
 .dev-card:hover {
   box-shadow: 0 14px 44px rgba(92,61,46,0.13);
@@ -278,6 +266,13 @@ h2 em { font-style: italic; color: var(--bronze); }
   font-size: 1.25rem; font-weight: 700;
   color: var(--mocha); margin-bottom: 0.3rem;
 }
+.dev-visit {
+  font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--bronze); font-weight: 700; margin-bottom: 0.35rem;
+  opacity: 0; transition: opacity 0.2s;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.dev-card:hover .dev-visit { opacity: 1; }
 .dev-type {
   font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--bronze); margin-bottom: 1rem; font-weight: 700;
@@ -348,7 +343,7 @@ tbody td {
 
 .empty-row { text-align: center !important; padding: 3rem !important; color: var(--sand) !important; font-weight: 500 !important; }
 
-/* ══════════════ CONTACT STRIP ══════════════ */
+/* ══════════════ CONTACT STRIP — single CTA block ══════════════ */
 .contact-strip {
   background: var(--mocha); padding: 5.5rem 3.5rem;
   position: relative; z-index: 1; overflow: hidden;
@@ -393,45 +388,30 @@ tbody td {
 }
 .btn-call-lg:hover { border-color: var(--bg); transform: translateY(-2px); }
 
-/* ══════════════ FOOTER ══════════════ */
+/* ══════════════ FOOTER — minimal, no repeated contact ══════════════ */
 footer {
-  background: var(--espresso); padding: 4rem 3.5rem;
+  background: var(--espresso); padding: 3rem 3.5rem;
   position: relative; z-index: 1; text-align: center;
 }
 .footer-name {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem; font-weight: 700; color: var(--bg); margin-bottom: 0.35rem;
+  font-size: 1.7rem; font-weight: 700; color: var(--bg); margin-bottom: 0.3rem;
 }
 .footer-role {
   font-size: 0.67rem; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--sand); margin-bottom: 1.8rem; font-weight: 600;
+  color: var(--sand); margin-bottom: 1.4rem; font-weight: 600;
 }
-.footer-contact-row {
-  display: flex; justify-content: center; gap: 2.8rem; flex-wrap: wrap;
-  margin-bottom: 1.6rem;
-}
-.footer-contact-item {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.86rem; color: var(--bg2); text-decoration: none;
-  font-weight: 500; transition: color 0.2s;
-}
-.footer-contact-item:hover { color: var(--bronze2); }
-
-/* Social row — hidden, ready to activate */
 .social-row {
-  display: none; /* TO ACTIVATE: change to display:flex */
-  gap: 1.2rem; justify-content: center; margin-bottom: 1.6rem;
+  display: none; /* hidden — activate when ready */
+  gap: 1.2rem; justify-content: center; margin-bottom: 1.2rem;
 }
-/* Instagram → https://www.instagram.com/habibi_chalodubai/         */
-/* Facebook  → https://www.facebook.com/profile.php?id=61580013579727 */
 .social-link {
   font-size: 0.74rem; letter-spacing: 0.13em; text-transform: uppercase;
   color: var(--sand); text-decoration: none; font-weight: 600;
   transition: color 0.2s;
 }
 .social-link:hover { color: var(--bronze2); }
-
-.footer-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 1.6rem 0; }
+.footer-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 1.2rem 0; }
 .footer-copy { font-size: 0.67rem; letter-spacing: 0.1em; color: var(--sand); font-weight: 500; }
 
 /* ══════════════ MOBILE STICKY ══════════════ */
@@ -464,16 +444,20 @@ footer {
 }
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
-  .nav-links a:not(.nav-cta) { display: none; }
+
   .hero { padding: 7.5rem 1.5rem 3rem; }
-  .hero-stats { gap: 1.5rem; }
+  .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+  .stat-val { font-size: 1.7rem; }
+
   .dev-grid { grid-template-columns: 1fr; }
   .contact-inner { flex-direction: column; text-align: center; }
   .contact-btns { justify-content: center; }
-  .footer-contact-row { flex-direction: column; gap: 1rem; align-items: center; }
+  footer { padding: 2.5rem 1.5rem; }
   .mobile-sticky { display: grid; }
   body { padding-bottom: 62px; }
   .section-inner { padding: 3.5rem 1.5rem; }
+  .contact-strip { padding: 4rem 1.5rem; }
+  table { min-width: 700px; }
 }
 </style>
 </head>
@@ -481,15 +465,9 @@ footer {
 
 <!-- ══ NAV ══ -->
 <nav>
-  <div>
+  <div class="nav-brand">
     <div class="nav-brand-name">New Heights Real Estate</div>
     <div class="nav-brand-sub">Dubai · UAE</div>
-  </div>
-  <div class="nav-links">
-    <a href="#developers">Developers</a>
-    <a href="#listings">Listings</a>
-    <a href="#contact">Contact</a>
-    <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="nav-cta">WhatsApp</a>
   </div>
 </nav>
 
@@ -501,7 +479,7 @@ footer {
       <div class="eyebrow"><span class="eyebrow-line"></span>Dubai Real Estate</div>
       <h1>Your Property<br><em>Expert</em> in<br>Dubai</h1>
       <p class="hero-desc">
-        Whether you're buying, selling, or renting — I guide you through Dubai's market with
+        Whether you're buying, selling, or renting — I will assist you through Dubai's market with
         <strong>10+ years of hands-on expertise</strong> across the city's most prestigious communities.
       </p>
       <div class="hero-stats">
@@ -518,13 +496,13 @@ footer {
           <div class="stat-lbl">All Covered</div>
         </div>
       </div>
+      <!-- Single CTA in hero — just WhatsApp -->
       <div class="hero-btns">
         <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa">💬 WhatsApp Me</a>
-        <a href="tel:+971556472153" class="btn-call">📞 +971 55647 2153</a>
       </div>
     </div>
 
-    <!-- PROFILE CARD -->
+    <!-- PROFILE CARD — contact info here but no buttons; CTA section handles action -->
     <div class="profile-card">
       <div class="photo-wrap">
         <div class="photo-circle">
@@ -595,13 +573,14 @@ footer {
   <div class="section-inner">
     <div class="sec-eyebrow">Our Network</div>
     <h2>Dubai's Top Developers —<br><em>All Under One Roof</em></h2>
-    <p class="sec-subtitle">From iconic master communities to boutique luxury residences — I work across every major developer in Dubai so you always find the right fit.</p>
+    <p class="sec-subtitle">From iconic master communities to boutique luxury residences — I work across every major developer in Dubai so you always find the right fit. Click any card to visit their official website.</p>
 
     <div class="dev-grid">
 
-      <div class="dev-card" data-num="01">
+      <a class="dev-card" data-num="01" href="https://www.emaar.com" target="_blank" rel="noopener">
         <div class="dev-icon">🏙️</div>
         <div class="dev-name">Emaar Properties</div>
+        <div class="dev-visit">↗ Visit emaar.com</div>
         <div class="dev-type">Master-Planned Communities</div>
         <div class="dev-desc">Dubai's most iconic developer — creators of Burj Khalifa, Dubai Mall, and Downtown Dubai. Trusted for world-class amenities and strong capital appreciation.</div>
         <div class="dev-areas">
@@ -610,11 +589,12 @@ footer {
           <span class="area-pill">Arabian Ranches</span>
           <span class="area-pill">Creek Harbour</span>
         </div>
-      </div>
+      </a>
 
-      <div class="dev-card" data-num="02">
+      <a class="dev-card" data-num="02" href="https://www.damacproperties.com" target="_blank" rel="noopener">
         <div class="dev-icon">💎</div>
         <div class="dev-name">DAMAC Properties</div>
+        <div class="dev-visit">↗ Visit damacproperties.com</div>
         <div class="dev-type">Luxury & Branded Residences</div>
         <div class="dev-desc">High-end developer with bold branded collaborations — Cavalli, Versace, Rotana. Popular with investors for premium finishes and strong rental returns.</div>
         <div class="dev-areas">
@@ -623,11 +603,12 @@ footer {
           <span class="area-pill">Safa Park</span>
           <span class="area-pill">Akoya</span>
         </div>
-      </div>
+      </a>
 
-      <div class="dev-card" data-num="03">
+      <a class="dev-card" data-num="03" href="https://www.nakheel.com" target="_blank" rel="noopener">
         <div class="dev-icon">🌊</div>
         <div class="dev-name">Nakheel</div>
+        <div class="dev-visit">↗ Visit nakheel.com</div>
         <div class="dev-type">Waterfront Living</div>
         <div class="dev-desc">Creator of Palm Jumeirah and The World Islands. Nakheel builds waterfront communities and family clusters — ideal for lifestyle buyers and long-term investors.</div>
         <div class="dev-areas">
@@ -636,11 +617,12 @@ footer {
           <span class="area-pill">Al Furjan</span>
           <span class="area-pill">Deira Islands</span>
         </div>
-      </div>
+      </a>
 
-      <div class="dev-card" data-num="04">
+      <a class="dev-card" data-num="04" href="https://www.sobharealty.com" target="_blank" rel="noopener">
         <div class="dev-icon">🏡</div>
         <div class="dev-name">Sobha Realty</div>
+        <div class="dev-visit">↗ Visit sobharealty.com</div>
         <div class="dev-type">Self-Built Quality</div>
         <div class="dev-desc">Renowned for in-house construction with zero outsourcing — delivering superior build quality and finish. Sobha Hartland in MBR City is their flagship green community.</div>
         <div class="dev-areas">
@@ -648,11 +630,12 @@ footer {
           <span class="area-pill">Sobha Hartland</span>
           <span class="area-pill">Hartland II</span>
         </div>
-      </div>
+      </a>
 
-      <div class="dev-card" data-num="05">
+      <a class="dev-card" data-num="05" href="https://www.meraas.com" target="_blank" rel="noopener">
         <div class="dev-icon">🎨</div>
         <div class="dev-name">Meraas</div>
+        <div class="dev-visit">↗ Visit meraas.com</div>
         <div class="dev-type">Lifestyle & Culture</div>
         <div class="dev-desc">Lifestyle-driven developer behind City Walk, Bluewaters Island, and Port De La Mer. Meraas blends culture, retail, and contemporary living in prime walkable areas.</div>
         <div class="dev-areas">
@@ -661,11 +644,12 @@ footer {
           <span class="area-pill">Port De La Mer</span>
           <span class="area-pill">La Mer</span>
         </div>
-      </div>
+      </a>
 
-      <div class="dev-card" data-num="06">
+      <a class="dev-card" data-num="06" href="https://www.dubaiproperties.ae" target="_blank" rel="noopener">
         <div class="dev-icon">🏛️</div>
         <div class="dev-name">Dubai Properties</div>
+        <div class="dev-visit">↗ Visit dubaiproperties.ae</div>
         <div class="dev-type">Government-Backed Value</div>
         <div class="dev-desc">A government-backed developer offering communities from affordable to mid-range. Trusted for consistent long-term value, solid infrastructure, and family-friendly layouts.</div>
         <div class="dev-areas">
@@ -674,11 +658,12 @@ footer {
           <span class="area-pill">Villanova</span>
           <span class="area-pill">Culture Village</span>
         </div>
-      </div>
+      </a>
 
-      <div class="dev-card" data-num="07">
+      <a class="dev-card" data-num="07" href="https://www.danubeproperties.com" target="_blank" rel="noopener">
         <div class="dev-icon">✨</div>
         <div class="dev-name">Danube Properties</div>
+        <div class="dev-visit">↗ Visit danubeproperties.com</div>
         <div class="dev-type">Affordable Luxury</div>
         <div class="dev-desc">One of Dubai's fastest-growing developers — making luxury accessible with flexible payment plans, high-quality finishes, and strong ROI. Ideal for first-time buyers and savvy investors.</div>
         <div class="dev-areas">
@@ -687,7 +672,7 @@ footer {
           <span class="area-pill">Al Furjan</span>
           <span class="area-pill">Sports City</span>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -729,12 +714,12 @@ footer {
   </div>
 </div>
 
-<!-- ══ CONTACT STRIP ══ -->
+<!-- ══ CONTACT STRIP — primary action CTA (WhatsApp + Call) ══ -->
 <div class="contact-strip" id="contact">
   <div class="contact-inner">
     <div class="contact-left">
       <h2>Let's Find Your<br><em>Perfect Property</em></h2>
-      <p>Reach out today — response within the hour.</p>
+      <p>Reach out today — response is just a click away.</p>
     </div>
     <div class="contact-btns">
       <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa-lg">💬 WhatsApp</a>
@@ -743,22 +728,14 @@ footer {
   </div>
 </div>
 
-<!-- ══ FOOTER ══ -->
+<!-- ══ FOOTER — minimal ══ -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
   <div class="footer-role">Property Consultant — Dubai · New Heights Real Estate</div>
 
-  <!-- SOCIAL ROW — HIDDEN UNTIL READY
-       To activate: find .social-row in CSS above and change display:none → display:flex -->
   <div class="social-row">
     <a href="https://www.instagram.com/habibi_chalodubai/" target="_blank" class="social-link">📸 Instagram</a>
     <a href="https://www.facebook.com/profile.php?id=61580013579727" target="_blank" class="social-link">👍 Facebook</a>
-  </div>
-
-  <div class="footer-contact-row">
-    <a href="tel:+971556472153" class="footer-contact-item">📞 +971 55647 2153</a>
-    <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="footer-contact-item">💬 WhatsApp</a>
-    <span class="footer-contact-item">📍 Dubai, UAE</span>
   </div>
 
   <div class="footer-divider"></div>
@@ -774,8 +751,6 @@ footer {
 <script>
 // ═══════════════════════════════════════════════════════════════════
 //   TAHER — ADD YOUR LISTINGS HERE
-//   Copy one block, fill in details, save & push to GitHub
-//   status: "sell" | "rent" | "offplan"
 // ═══════════════════════════════════════════════════════════════════
 const listings = [
   {
@@ -910,6 +885,7 @@ function filterListings(type, btn) {
 }
 
 renderListings(listings);
+
 </script>
 </body>
 </html>
