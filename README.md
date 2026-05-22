@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -451,13 +450,48 @@ footer {
 
   .dev-grid { grid-template-columns: 1fr; }
   .contact-inner { flex-direction: column; text-align: center; }
-  .contact-btns { justify-content: center; }
+  .hide-mobile { display: none !important; }
   footer { padding: 2.5rem 1.5rem; }
   .mobile-sticky { display: grid; }
   body { padding-bottom: 62px; }
   .section-inner { padding: 3.5rem 1.5rem; }
   .contact-strip { padding: 4rem 1.5rem; }
   table { min-width: 700px; }
+}
+
+/* ══════════════ MORE PROPERTIES BANNER ══════════════ */
+.more-properties-banner {
+  margin-top: 2.5rem;
+  background: var(--card);
+  border: 1.5px solid var(--border2);
+  border-left: 4px solid var(--bronze);
+  padding: 1.6rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+.more-prop-text { flex: 1; }
+.more-prop-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--espresso); margin-bottom: 0.3rem;
+}
+.more-prop-sub {
+  font-size: 0.82rem; color: var(--taupe); font-weight: 400; line-height: 1.6;
+}
+.more-prop-sub strong { color: var(--mocha); font-weight: 600; }
+.btn-more-props {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: #25D366; color: #fff;
+  padding: 0.85rem 1.8rem; text-decoration: none;
+  font-size: 0.78rem; letter-spacing: 0.13em; text-transform: uppercase;
+  font-weight: 700; white-space: nowrap;
+  transition: background 0.3s, transform 0.2s;
+  flex-shrink: 0;
+}
+.btn-more-props:hover { background: #1cb85a; transform: translateY(-2px); }
+@media (max-width: 600px) {
+  .more-properties-banner { flex-direction: column; }
+  .btn-more-props { width: 100%; justify-content: center; }
 }
 </style>
 </head>
@@ -495,10 +529,6 @@ footer {
           <div class="stat-val">Buy · Sell · Rent</div>
           <div class="stat-lbl">All Covered</div>
         </div>
-      </div>
-      <!-- Single CTA in hero — just WhatsApp -->
-      <div class="hero-btns">
-        <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa">💬 WhatsApp Me</a>
       </div>
     </div>
 
@@ -711,6 +741,16 @@ footer {
         <tbody id="listingsBody"></tbody>
       </table>
     </div>
+
+    <!-- More properties banner -->
+    <div class="more-properties-banner">
+      <div class="more-prop-text">
+        <div class="more-prop-title">🔍 Looking for something not listed here?</div>
+        <div class="more-prop-sub">These are just a selection — I have access to <strong>hundreds more properties</strong> across Dubai including exclusive off-market deals, new launches, and investor portfolios. Just tell me what you're looking for.</div>
+      </div>
+      <a href="https://wa.me/971556472153?text=Hi%20Taher!%20I%20checked%20your%20listings%20but%20didn't%20find%20exactly%20what%20I'm%20looking%20for.%20Can%20you%20help%20me%20find%20more%20options?%20%F0%9F%94%91" target="_blank" class="btn-more-props">💬 Ask for More Options</a>
+    </div>
+
   </div>
 </div>
 
@@ -719,9 +759,9 @@ footer {
   <div class="contact-inner">
     <div class="contact-left">
       <h2>Let's Find Your<br><em>Perfect Property</em></h2>
-      <p>Reach out today — response is just a click away.</p>
+      <p>Reach out today — response within the hour..</p>
     </div>
-    <div class="contact-btns">
+    <div class="contact-btns hide-mobile">
       <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa-lg">💬 WhatsApp</a>
       <a href="tel:+971556472153" class="btn-call-lg">📞 Call Now</a>
     </div>
@@ -753,6 +793,7 @@ footer {
 //   TAHER — ADD YOUR LISTINGS HERE
 // ═══════════════════════════════════════════════════════════════════
 const listings = [
+  // ── FOR SALE ──────────────────────────────────────────────────────
   {
     id: 1,
     name: "Harbour Gate — Tower 1",
@@ -766,17 +807,6 @@ const listings = [
   },
   {
     id: 2,
-    name: "DAMAC Volta",
-    type: "Apartment",
-    developer: "DAMAC",
-    location: "Downtown Dubai",
-    beds: "2 BR",
-    size: "1,250",
-    price: "18,000 / mo",
-    status: "rent"
-  },
-  {
-    id: 3,
     name: "Sobha Hartland — Greens",
     type: "Villa",
     developer: "Sobha",
@@ -787,29 +817,7 @@ const listings = [
     status: "sell"
   },
   {
-    id: 4,
-    name: "Palm Beach Towers",
-    type: "Apartment",
-    developer: "Nakheel",
-    location: "Palm Jumeirah",
-    beds: "3 BR",
-    size: "2,100",
-    price: "35,000 / mo",
-    status: "rent"
-  },
-  {
-    id: 5,
-    name: "Elo — Phase 2",
-    type: "Townhouse",
-    developer: "DAMAC",
-    location: "DAMAC Hills 2",
-    beds: "3 BR",
-    size: "1,900",
-    price: "1,750,000",
-    status: "offplan"
-  },
-  {
-    id: 6,
+    id: 3,
     name: "Bluewaters Residences",
     type: "Apartment",
     developer: "Meraas",
@@ -820,7 +828,141 @@ const listings = [
     status: "sell"
   },
   {
+    id: 4,
+    name: "Address Harbour Point",
+    type: "Apartment",
+    developer: "Emaar",
+    location: "Creek Harbour",
+    beds: "2 BR",
+    size: "1,180",
+    price: "2,800,000",
+    status: "sell"
+  },
+  {
+    id: 5,
+    name: "Golf Place — Phase II",
+    type: "Villa",
+    developer: "Emaar",
+    location: "Dubai Hills Estate",
+    beds: "5 BR",
+    size: "5,200",
+    price: "9,800,000",
+    status: "sell"
+  },
+  {
+    id: 6,
+    name: "Cavalli Estates",
+    type: "Villa",
+    developer: "DAMAC",
+    location: "DAMAC Hills",
+    beds: "6 BR",
+    size: "8,500",
+    price: "18,500,000",
+    status: "sell"
+  },
+  {
     id: 7,
+    name: "Jumeirah Living — Marina Gate",
+    type: "Apartment",
+    developer: "Dubai Properties",
+    location: "Dubai Marina",
+    beds: "3 BR",
+    size: "2,050",
+    price: "5,100,000",
+    status: "sell"
+  },
+  {
+    id: 8,
+    name: "Villanova — La Rosa 5",
+    type: "Townhouse",
+    developer: "Dubai Properties",
+    location: "Dubailand",
+    beds: "3 BR",
+    size: "2,220",
+    price: "2,150,000",
+    status: "sell"
+  },
+  // ── FOR RENT ──────────────────────────────────────────────────────
+  {
+    id: 9,
+    name: "DAMAC Volta",
+    type: "Apartment",
+    developer: "DAMAC",
+    location: "Downtown Dubai",
+    beds: "2 BR",
+    size: "1,250",
+    price: "18,000 / mo",
+    status: "rent"
+  },
+  {
+    id: 10,
+    name: "Palm Beach Towers",
+    type: "Apartment",
+    developer: "Nakheel",
+    location: "Palm Jumeirah",
+    beds: "3 BR",
+    size: "2,100",
+    price: "35,000 / mo",
+    status: "rent"
+  },
+  {
+    id: 11,
+    name: "Mudon Al Ranim — Townhouse",
+    type: "Townhouse",
+    developer: "Dubai Properties",
+    location: "Mudon",
+    beds: "4 BR",
+    size: "2,700",
+    price: "22,000 / mo",
+    status: "rent"
+  },
+  {
+    id: 12,
+    name: "Creek Vistas Reserve",
+    type: "Apartment",
+    developer: "Sobha",
+    location: "MBR City",
+    beds: "1 BR",
+    size: "710",
+    price: "9,500 / mo",
+    status: "rent"
+  },
+  {
+    id: 13,
+    name: "City Walk Residences",
+    type: "Apartment",
+    developer: "Meraas",
+    location: "City Walk",
+    beds: "2 BR",
+    size: "1,350",
+    price: "19,000 / mo",
+    status: "rent"
+  },
+  {
+    id: 14,
+    name: "Emaar Beachfront — Beach Vista",
+    type: "Apartment",
+    developer: "Emaar",
+    location: "Emaar Beachfront",
+    beds: "1 BR",
+    size: "820",
+    price: "13,000 / mo",
+    status: "rent"
+  },
+  // ── OFF-PLAN ──────────────────────────────────────────────────────
+  {
+    id: 15,
+    name: "Elo — Phase 2",
+    type: "Townhouse",
+    developer: "DAMAC",
+    location: "DAMAC Hills 2",
+    beds: "3 BR",
+    size: "1,900",
+    price: "1,750,000",
+    status: "offplan"
+  },
+  {
+    id: 16,
     name: "Danube Opalz",
     type: "Apartment",
     developer: "Danube",
@@ -828,6 +970,61 @@ const listings = [
     beds: "Studio",
     size: "450",
     price: "680,000",
+    status: "offplan"
+  },
+  {
+    id: 17,
+    name: "Sobha Solis",
+    type: "Apartment",
+    developer: "Sobha",
+    location: "Motor City",
+    beds: "1 BR",
+    size: "660",
+    price: "1,100,000",
+    status: "offplan"
+  },
+  {
+    id: 18,
+    name: "Creek Waters 2",
+    type: "Apartment",
+    developer: "Emaar",
+    location: "Creek Harbour",
+    beds: "2 BR",
+    size: "1,050",
+    price: "2,350,000",
+    status: "offplan"
+  },
+  {
+    id: 19,
+    name: "Danube Petalz — Phase 3",
+    type: "Apartment",
+    developer: "Danube",
+    location: "Jumeirah Village Circle",
+    beds: "1 BR",
+    size: "580",
+    price: "790,000",
+    status: "offplan"
+  },
+  {
+    id: 20,
+    name: "Safa One — De GRISOGONO",
+    type: "Apartment",
+    developer: "DAMAC",
+    location: "Safa Park",
+    beds: "2 BR",
+    size: "1,320",
+    price: "3,600,000",
+    status: "offplan"
+  },
+  {
+    id: 21,
+    name: "Nakheel Bay Residences",
+    type: "Apartment",
+    developer: "Nakheel",
+    location: "Deira Islands",
+    beds: "2 BR",
+    size: "1,100",
+    price: "1,950,000",
     status: "offplan"
   },
 ];
