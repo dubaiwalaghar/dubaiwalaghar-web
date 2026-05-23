@@ -398,7 +398,13 @@ footer {
 }
 .footer-role {
   font-size: 0.67rem; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--sand); margin-bottom: 1.4rem; font-weight: 600;
+  color: var(--sand); margin-bottom: 0.35rem; font-weight: 600;
+}
+.footer-company {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem; font-weight: 600;
+  color: var(--bronze2); letter-spacing: 0.08em;
+  margin-bottom: 1.4rem;
 }
 .social-row {
   display: none; /* hidden — activate when ready */
@@ -759,7 +765,7 @@ footer {
   <div class="contact-inner">
     <div class="contact-left">
       <h2>Let's Find Your<br><em>Perfect Property</em></h2>
-      <p>Reach out today — response within the hour..</p>
+      <p>Reach out today — response within the hour.</p>
     </div>
     <div class="contact-btns hide-mobile">
       <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa-lg">💬 WhatsApp</a>
@@ -771,7 +777,8 @@ footer {
 <!-- ══ FOOTER — minimal ══ -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
-  <div class="footer-role">Property Consultant — Dubai · New Heights Real Estate</div>
+  <div class="footer-role">Property Consultant — Dubai</div>
+  <div class="footer-company">New Heights Real Estate</div>
 
   <div class="social-row">
     <a href="https://www.instagram.com/habibi_chalodubai/" target="_blank" class="social-link">📸 Instagram</a>
