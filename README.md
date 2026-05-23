@@ -550,11 +550,7 @@ footer {
                   <img src="taher-photo.jpg" alt="Taher Betwala"
                        style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
                ──────────────────────────────────────────────────────── -->
-          <svg class="photo-silhouette" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="40" cy="28" r="16" fill="#CABFB2"/>
-            <ellipse cx="40" cy="70" rx="26" ry="18" fill="#CABFB2"/>
-          </svg>
-          <div class="photo-label">Your Photo</div>
+          <img src="TB 1.jpg" alt="Taher Betwala" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
         </div>
       </div>
 
