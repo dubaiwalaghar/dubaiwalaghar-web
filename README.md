@@ -66,7 +66,7 @@ nav {
 .hero {
   min-height: 100vh;
   display: grid; grid-template-columns: 1fr 1fr;
-  padding: 9rem 3.5rem 5rem;
+  padding: 6rem 3.5rem 5rem;
   gap: 5rem; max-width: 1280px; margin: 0 auto;
   align-items: center; position: relative; z-index: 1;
 }
@@ -323,7 +323,28 @@ tbody td {
 /* ══════════════ PRIMARY LISTINGS ══════════════ */
 .listings-section { background: var(--bg); }
 
-/* ══════════════ MORE PROPERTIES BANNER ══════════════ */
+/* ══════════════ AVAILABILITY NOTE ══════════════ */
+.availability-note {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.78rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--sand);
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+  font-style: italic;
+}
+
+/* ══════════════ PRIMARY CARD GRID (matches secondary) ══════════════ */
+.primary-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+@media (max-width: 1024px) { .primary-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px)  { .primary-grid { grid-template-columns: 1fr; } }
+
+
 .more-properties-banner {
   margin-top: 2.5rem; background: var(--card);
   border: 1.5px solid var(--border2); border-left: 4px solid var(--bronze);
@@ -619,10 +640,7 @@ footer {
           <div class="stat-lbl">All Covered</div>
         </div>
       </div>
-      <div class="hero-btns">
-        <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa">💬 WhatsApp Me</a>
-        <a href="tel:+971556472153" class="btn-call">📞 +971 55647 2153</a>
-      </div>
+
     </div>
 
     <!-- PROFILE CARD -->
@@ -773,27 +791,17 @@ footer {
 <!-- ══ PRIMARY LISTINGS ══ -->
 <div class="section-outer listings-section" id="listings">
   <div class="section-inner">
-    <div class="sec-eyebrow">Primary Market</div>
-    <h2>Current <em>Listings</em></h2>
-    <p class="sec-subtitle">Browse available primary market properties across Dubai — updated regularly. Click Enquire on any listing to connect with me directly on WhatsApp with full property details.</p>
+    <div class="sec-eyebrow" style="justify-content:center;">Primary Market</div>
+    <h2 style="text-align:center;">Current <em>Listings</em></h2>
+    <p class="sec-subtitle" style="text-align:center;max-width:100%;">Browse available primary market properties across Dubai — updated regularly. Click Enquire on any listing to connect with me directly on WhatsApp with full property details.</p>
     <div class="filters">
       <button class="filter-btn active" onclick="filterListings('all',this)">All Properties</button>
       <button class="filter-btn" onclick="filterListings('sell',this)">For Sale</button>
       <button class="filter-btn" onclick="filterListings('rent',this)">For Rent</button>
       <button class="filter-btn" onclick="filterListings('offplan',this)">Off-Plan</button>
     </div>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th><th>Property</th><th>Type</th><th>Developer</th>
-            <th>Location</th><th>Beds</th><th>Size (sqft)</th>
-            <th>Price (AED)</th><th>Status</th><th>Enquire</th>
-          </tr>
-        </thead>
-        <tbody id="listingsBody"></tbody>
-      </table>
-    </div>
+    <div class="primary-grid" id="listingsBody"></div>
+    <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Listings are updated regularly — please connect directly for current status.</p>
     <div class="more-properties-banner">
       <div class="more-prop-text">
         <div class="more-prop-title">🔍 Looking for something not listed here?</div>
@@ -809,9 +817,9 @@ footer {
 ══════════════════════════════════════════════════════ -->
 <div class="section-outer secondary-section" id="secondary">
   <div class="section-inner">
-    <div class="sec-eyebrow">Secondary Market</div>
-    <h2>Secondary Market —<br><em>Direct Listings</em></h2>
-    <p class="sec-subtitle">Exclusive secondary market properties — direct from owners and investors. Prices are negotiable. Click any property to enquire directly on WhatsApp with full details.</p>
+    <div class="sec-eyebrow" style="justify-content:center;">Secondary Market</div>
+    <h2 style="text-align:center;">Secondary Market —<br><em>Direct Listings</em></h2>
+    <p class="sec-subtitle" style="text-align:center;max-width:100%;">Exclusive secondary market properties — direct from owners and investors. Prices are negotiable. Click any property to enquire directly on WhatsApp with full details.</p>
 
     <!-- Sub-tabs -->
     <div class="sec-tabs">
@@ -823,7 +831,7 @@ footer {
 
     <!-- Cards Grid -->
     <div class="sec-grid" id="secGrid"></div>
-
+    <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Listings are updated regularly — please connect directly for current status.</p>
   </div>
 </div>
 
@@ -977,27 +985,46 @@ function buildWaLink(p) {
 }
 
 function renderListings(data) {
-  const body = document.getElementById('listingsBody');
-  body.innerHTML = '';
+  const grid = document.getElementById('listingsBody');
+  grid.innerHTML = '';
   if (!data.length) {
-    body.innerHTML = `<tr><td colspan="10" class="empty-row">No listings found for this filter.</td></tr>`;
+    grid.innerHTML = `<div class="sec-empty" style="grid-column:1/-1">No listings found for this filter.</div>`;
     return;
   }
   data.forEach(p => {
     const s = statusMap[p.status] || statusMap.sell;
-    body.innerHTML += `
-      <tr>
-        <td class="prop-num">${p.id}</td>
-        <td class="prop-name">${p.name}</td>
-        <td>${p.type}</td>
-        <td class="prop-dev">${p.developer}</td>
-        <td class="prop-loc">${p.location}</td>
-        <td>${p.beds}</td>
-        <td>${p.size}</td>
-        <td class="prop-price">${p.price}</td>
-        <td><span class="badge ${s.cls}">${s.label}</span></td>
-        <td><a href="${buildWaLink(p)}" target="_blank" class="enquire-link">💬 Enquire</a></td>
-      </tr>`;
+    grid.innerHTML += `
+      <div class="sec-card">
+        <div class="sec-card-top">
+          <div class="sec-card-name">${p.name}</div>
+          <div class="sec-card-badge"><span class="badge ${s.cls}">${s.label}</span></div>
+        </div>
+        <div class="sec-card-area">📍 ${p.location}</div>
+        <div class="sec-card-details">
+          <div class="sec-det-item">
+            <div class="sec-det-label">Type</div>
+            <div class="sec-det-val">${p.type}</div>
+          </div>
+          <div class="sec-det-item">
+            <div class="sec-det-label">Developer</div>
+            <div class="sec-det-val">${p.developer}</div>
+          </div>
+          <div class="sec-det-item">
+            <div class="sec-det-label">Beds</div>
+            <div class="sec-det-val">${p.beds}</div>
+          </div>
+          <div class="sec-det-item">
+            <div class="sec-det-label">Size</div>
+            <div class="sec-det-val">${p.size} sqft</div>
+          </div>
+        </div>
+        <div class="sec-card-divider"></div>
+        <div class="sec-card-price">AED ${p.price}</div>
+        <div class="sec-card-footer">
+          <div></div>
+          <a href="${buildWaLink(p)}" target="_blank" class="sec-enquire-btn">💬 Enquire</a>
+        </div>
+      </div>`;
   });
 }
 
