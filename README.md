@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -51,24 +52,16 @@ nav {
   backdrop-filter: blur(16px);
   border-bottom: 1.5px solid var(--border);
 }
-.nav-brand {
-  display: flex; flex-direction: column; align-items: center;
-}
+.nav-brand { display: flex; flex-direction: column; align-items: center; }
 .nav-brand-name {
   font-family: 'Playfair Display', serif;
   font-size: 1.55rem; font-weight: 700;
-  color: var(--mocha); letter-spacing: 0.07em;
-  line-height: 1;
+  color: var(--mocha); letter-spacing: 0.07em; line-height: 1;
 }
 .nav-brand-sub {
   font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
   color: var(--bronze); margin-top: 5px; font-weight: 700;
 }
-/* Desktop nav links removed — nav is brand-only */
-.nav-links { display: none; }
-.nav-cta { display: none; }
-
-/* nav is brand-only — no hamburger needed */
 
 /* ══════════════ HERO ══════════════ */
 .hero {
@@ -86,7 +79,6 @@ nav {
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   pointer-events: none;
 }
-
 .hero-left { display: flex; flex-direction: column; }
 
 .eyebrow {
@@ -127,7 +119,6 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   color: var(--sand); margin-top: 0.4rem; font-weight: 600;
 }
 
-/* Hero buttons — ONE CTA only (WhatsApp), phone removed from hero */
 .hero-btns {
   display: flex; gap: 1rem; flex-wrap: wrap;
   animation: fadeUp 0.7s 0.5s ease both;
@@ -164,22 +155,19 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   position: absolute; top: 0; left: 0; right: 0; height: 4px;
   background: linear-gradient(90deg, var(--bronze), var(--mocha));
 }
-
 .photo-wrap { display: flex; justify-content: center; margin-bottom: 1.8rem; }
 .photo-circle {
   width: 115px; height: 115px; border-radius: 50%;
-  background: var(--bg2);
-  border: 3px solid var(--border2);
+  background: var(--bg2); border: 3px solid var(--border2);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  overflow: hidden; position: relative;
+  overflow: hidden;
 }
 .photo-silhouette { width: 44px; height: 44px; fill: var(--border2); }
 .photo-label {
   font-size: 0.54rem; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--sand); margin-top: 4px; font-weight: 600;
 }
-
 .card-name {
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem; font-weight: 700;
@@ -194,7 +182,6 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   text-align: center; margin-bottom: 1.6rem;
 }
 .card-divider { height: 1.5px; background: var(--border); margin: 0 0 1.5rem; }
-
 .card-row { display: flex; align-items: flex-start; gap: 0.9rem; margin-bottom: 1rem; }
 .card-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
 .card-row-label {
@@ -202,7 +189,6 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   color: var(--sand); margin-bottom: 2px; font-weight: 600;
 }
 .card-row-val { font-size: 0.92rem; color: var(--espresso); font-weight: 500; }
-
 .spec-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
 .spec-tag {
   background: var(--bg2); border: 1.5px solid var(--border2);
@@ -237,20 +223,16 @@ h2 em { font-style: italic; color: var(--bronze); }
 
 /* ══════════════ DEVELOPERS ══════════════ */
 .dev-section { background: var(--bg2); }
-
 .dev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-
 .dev-card {
   background: var(--card); border: 1.5px solid var(--border);
   padding: 2.2rem 2rem; position: relative; overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
-  text-decoration: none; display: block; color: inherit;
-  cursor: pointer;
+  text-decoration: none; display: block; color: inherit; cursor: pointer;
 }
 .dev-card:hover {
   box-shadow: 0 14px 44px rgba(92,61,46,0.13);
-  transform: translateY(-5px);
-  border-color: var(--bronze);
+  transform: translateY(-5px); border-color: var(--bronze);
 }
 .dev-card::after {
   content: attr(data-num);
@@ -262,8 +244,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 .dev-icon { font-size: 1.7rem; margin-bottom: 1rem; }
 .dev-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.25rem; font-weight: 700;
-  color: var(--mocha); margin-bottom: 0.3rem;
+  font-size: 1.25rem; font-weight: 700; color: var(--mocha); margin-bottom: 0.3rem;
 }
 .dev-visit {
   font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
@@ -276,10 +257,7 @@ h2 em { font-style: italic; color: var(--bronze); }
   font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--bronze); margin-bottom: 1rem; font-weight: 700;
 }
-.dev-desc {
-  font-size: 0.86rem; color: var(--taupe);
-  line-height: 1.82; font-weight: 400;
-}
+.dev-desc { font-size: 0.86rem; color: var(--taupe); line-height: 1.82; font-weight: 400; }
 .dev-areas { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.3rem; }
 .area-pill {
   font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
@@ -287,9 +265,7 @@ h2 em { font-style: italic; color: var(--bronze); }
   padding: 0.24rem 0.7rem; font-weight: 600;
 }
 
-/* ══════════════ LISTINGS ══════════════ */
-.listings-section { background: var(--bg); }
-
+/* ══════════════ SHARED TABLE STYLES ══════════════ */
 .filters { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .filter-btn {
   padding: 0.58rem 1.5rem; border: 2px solid var(--border2);
@@ -316,10 +292,10 @@ tbody td {
   padding: 1.1rem 1.1rem; color: var(--taupe);
   font-size: 0.87rem; vertical-align: middle; font-weight: 400;
 }
-.prop-name { font-weight: 600; color: var(--espresso) !important; }
-.prop-num { color: var(--sand) !important; font-size: 0.8rem !important; font-weight: 600 !important; }
-.prop-dev { font-weight: 600; color: var(--mocha) !important; }
-.prop-loc { font-weight: 500; }
+.prop-name  { font-weight: 600; color: var(--espresso) !important; }
+.prop-num   { color: var(--sand) !important; font-size: 0.8rem !important; font-weight: 600 !important; }
+.prop-dev   { font-weight: 600; color: var(--mocha) !important; }
+.prop-loc   { font-weight: 500; }
 .prop-price { color: var(--mocha) !important; font-weight: 700 !important; white-space: nowrap; }
 
 .badge {
@@ -327,22 +303,164 @@ tbody td {
   font-size: 0.62rem; letter-spacing: 0.12em;
   text-transform: uppercase; font-weight: 700;
 }
-.badge-sell    { background: rgba(92,61,46,0.1);   color: var(--mocha);  }
-.badge-rent    { background: rgba(154,107,63,0.13); color: var(--bronze); }
-.badge-offplan { background: rgba(80,130,80,0.1);   color: #4a7a4a;       }
+.badge-sell      { background: rgba(92,61,46,0.1);    color: var(--mocha);  }
+.badge-rent      { background: rgba(154,107,63,0.13); color: var(--bronze); }
+.badge-offplan   { background: rgba(80,130,80,0.1);   color: #4a7a4a;       }
+.badge-vacant    { background: rgba(80,140,200,0.1);  color: #3a6a9a;       }
+.badge-rented    { background: rgba(200,140,80,0.12); color: #8a5a20;       }
+.badge-distress  { background: rgba(180,60,60,0.1);   color: #9a2a2a;       }
+.badge-negotiable{ background: rgba(100,160,100,0.1); color: #3a7a3a;       }
 
 .enquire-link {
   display: inline-flex; align-items: center; gap: 0.4rem;
   color: #25D366; text-decoration: none;
   font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
   font-weight: 700; border-bottom: 1.5px solid transparent;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s; white-space: nowrap;
 }
 .enquire-link:hover { border-color: #25D366; }
-
 .empty-row { text-align: center !important; padding: 3rem !important; color: var(--sand) !important; font-weight: 500 !important; }
 
-/* ══════════════ CONTACT STRIP — single CTA block ══════════════ */
+/* ══════════════ PRIMARY LISTINGS ══════════════ */
+.listings-section { background: var(--bg); }
+
+/* ══════════════ MORE PROPERTIES BANNER ══════════════ */
+.more-properties-banner {
+  margin-top: 2.5rem; background: var(--card);
+  border: 1.5px solid var(--border2); border-left: 4px solid var(--bronze);
+  padding: 1.6rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+.more-prop-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 700; color: var(--espresso); margin-bottom: 0.3rem;
+}
+.more-prop-sub { font-size: 0.82rem; color: var(--taupe); font-weight: 400; line-height: 1.6; }
+.more-prop-sub strong { color: var(--mocha); font-weight: 600; }
+.btn-more-props {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: #25D366; color: #fff;
+  padding: 0.85rem 1.8rem; text-decoration: none;
+  font-size: 0.78rem; letter-spacing: 0.13em; text-transform: uppercase;
+  font-weight: 700; white-space: nowrap;
+  transition: background 0.3s, transform 0.2s; flex-shrink: 0;
+}
+.btn-more-props:hover { background: #1cb85a; transform: translateY(-2px); }
+
+/* ══════════════ SECONDARY MARKET ══════════════ */
+.secondary-section { background: var(--bg2); }
+
+/* sub-tab filters */
+.sec-tabs {
+  display: flex; gap: 0; margin-bottom: 2.5rem;
+  border: 2px solid var(--border2); width: fit-content; overflow: hidden;
+}
+.sec-tab {
+  padding: 0.65rem 1.8rem; background: transparent; color: var(--taupe);
+  font-family: 'Jost', sans-serif; font-size: 0.74rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  cursor: pointer; font-weight: 600; transition: all 0.25s;
+  border: none; border-right: 1.5px solid var(--border2);
+}
+.sec-tab:last-child { border-right: none; }
+.sec-tab:hover { background: var(--bg3); color: var(--bronze); }
+.sec-tab.active { background: var(--mocha); color: #fff; }
+
+/* secondary card grid */
+.sec-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+}
+
+.sec-card {
+  background: var(--card); border: 1.5px solid var(--border);
+  padding: 1.6rem; position: relative; overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  display: flex; flex-direction: column; gap: 0;
+}
+.sec-card:hover {
+  box-shadow: 0 12px 40px rgba(92,61,46,0.12);
+  transform: translateY(-4px); border-color: var(--bronze);
+}
+
+/* hot deal ribbon */
+.sec-card.hot::before {
+  content: '🔥 Hot Deal';
+  position: absolute; top: 12px; right: -1px;
+  background: var(--bronze); color: #fff;
+  font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 700; padding: 0.22rem 0.8rem;
+}
+.sec-card.distress::before {
+  content: '⚡ Urgent';
+  position: absolute; top: 12px; right: -1px;
+  background: #9a2a2a; color: #fff;
+  font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 700; padding: 0.22rem 0.8rem;
+}
+
+.sec-card-top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 0.9rem; gap: 0.5rem;
+}
+.sec-card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 700; color: var(--espresso);
+  line-height: 1.25; flex: 1;
+}
+.sec-card-badge { flex-shrink: 0; margin-top: 2px; }
+
+.sec-card-area {
+  font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--bronze); font-weight: 700; margin-bottom: 0.9rem;
+}
+
+.sec-card-details {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem;
+  margin-bottom: 1.1rem;
+}
+.sec-det-item { }
+.sec-det-label {
+  font-size: 0.58rem; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--sand); font-weight: 700; margin-bottom: 1px;
+}
+.sec-det-val {
+  font-size: 0.84rem; color: var(--espresso); font-weight: 600;
+}
+
+.sec-card-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem; font-weight: 700; color: var(--mocha);
+  margin-bottom: 0.4rem;
+}
+.sec-card-price-note {
+  font-size: 0.72rem; color: var(--taupe); font-weight: 400; margin-bottom: 1.1rem;
+}
+
+.sec-card-divider { height: 1px; background: var(--border); margin: 0 0 1rem; }
+
+.sec-card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 0.5rem; flex-wrap: wrap; margin-top: auto;
+}
+.sec-status-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+.sec-enquire-btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: #25D366; color: #fff; padding: 0.52rem 1.1rem;
+  text-decoration: none; font-size: 0.7rem; letter-spacing: 0.1em;
+  text-transform: uppercase; font-weight: 700;
+  transition: background 0.25s, transform 0.2s; white-space: nowrap;
+}
+.sec-enquire-btn:hover { background: #1cb85a; transform: translateY(-1px); }
+
+/* no listings state */
+.sec-empty {
+  grid-column: 1/-1; text-align: center;
+  padding: 3rem; color: var(--sand); font-weight: 500; font-size: 0.9rem;
+}
+
+/* ══════════════ CONTACT STRIP ══════════════ */
 .contact-strip {
   background: var(--mocha); padding: 5.5rem 3.5rem;
   position: relative; z-index: 1; overflow: hidden;
@@ -365,9 +483,7 @@ tbody td {
   flex-wrap: wrap; gap: 2.5rem; position: relative; z-index: 2;
 }
 .contact-left h2 { color: var(--bg); margin-bottom: 0.6rem; }
-.contact-left p {
-  color: rgba(245,240,232,0.7); font-size: 0.95rem; font-weight: 400;
-}
+.contact-left p { color: rgba(245,240,232,0.7); font-size: 0.95rem; font-weight: 400; }
 .contact-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn-wa-lg {
   display: inline-flex; align-items: center; gap: 0.7rem;
@@ -387,7 +503,7 @@ tbody td {
 }
 .btn-call-lg:hover { border-color: var(--bg); transform: translateY(-2px); }
 
-/* ══════════════ FOOTER — minimal, no repeated contact ══════════════ */
+/* ══════════════ FOOTER ══════════════ */
 footer {
   background: var(--espresso); padding: 3rem 3.5rem;
   position: relative; z-index: 1; text-align: center;
@@ -403,17 +519,17 @@ footer {
 .footer-company {
   font-family: 'Playfair Display', serif;
   font-size: 0.95rem; font-weight: 600;
-  color: var(--bronze2); letter-spacing: 0.08em;
-  margin-bottom: 1.4rem;
+  color: var(--bronze2); letter-spacing: 0.08em; margin-bottom: 1.4rem;
 }
 .social-row {
-  display: none; /* hidden — activate when ready */
+  display: none; /* hidden — activate when ready: change to display:flex */
+  /* Instagram → https://www.instagram.com/habibi_chalodubai/          */
+  /* Facebook  → https://www.facebook.com/profile.php?id=61580013579727 */
   gap: 1.2rem; justify-content: center; margin-bottom: 1.2rem;
 }
 .social-link {
   font-size: 0.74rem; letter-spacing: 0.13em; text-transform: uppercase;
-  color: var(--sand); text-decoration: none; font-weight: 600;
-  transition: color 0.2s;
+  color: var(--sand); text-decoration: none; font-weight: 600; transition: color 0.2s;
 }
 .social-link:hover { color: var(--bronze2); }
 .footer-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 1.2rem 0; }
@@ -422,8 +538,7 @@ footer {
 /* ══════════════ MOBILE STICKY ══════════════ */
 .mobile-sticky {
   display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
-  grid-template-columns: 1fr 1fr;
-  border-top: 1.5px solid var(--border);
+  grid-template-columns: 1fr 1fr; border-top: 1.5px solid var(--border);
 }
 .mob-btn {
   display: flex; align-items: center; justify-content: center; gap: 0.5rem;
@@ -444,18 +559,19 @@ footer {
   .hero { grid-template-columns: 1fr; gap: 3rem; padding: 8rem 2rem 4rem; }
   .hero::after { display: none; }
   .dev-grid { grid-template-columns: 1fr 1fr; }
+  .sec-grid { grid-template-columns: 1fr 1fr; }
   .section-inner { padding: 4.5rem 2rem; }
   nav { padding: 1rem 2rem; }
 }
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
-
   .hero { padding: 7.5rem 1.5rem 3rem; }
   .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
   .stat-val { font-size: 1.7rem; }
-
   .dev-grid { grid-template-columns: 1fr; }
+  .sec-grid { grid-template-columns: 1fr; }
   .contact-inner { flex-direction: column; text-align: center; }
+  .contact-btns { justify-content: center; }
   .hide-mobile { display: none !important; }
   footer { padding: 2.5rem 1.5rem; }
   .mobile-sticky { display: grid; }
@@ -463,39 +579,8 @@ footer {
   .section-inner { padding: 3.5rem 1.5rem; }
   .contact-strip { padding: 4rem 1.5rem; }
   table { min-width: 700px; }
-}
-
-/* ══════════════ MORE PROPERTIES BANNER ══════════════ */
-.more-properties-banner {
-  margin-top: 2.5rem;
-  background: var(--card);
-  border: 1.5px solid var(--border2);
-  border-left: 4px solid var(--bronze);
-  padding: 1.6rem 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 1.5rem; flex-wrap: wrap;
-}
-.more-prop-text { flex: 1; }
-.more-prop-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem; font-weight: 700;
-  color: var(--espresso); margin-bottom: 0.3rem;
-}
-.more-prop-sub {
-  font-size: 0.82rem; color: var(--taupe); font-weight: 400; line-height: 1.6;
-}
-.more-prop-sub strong { color: var(--mocha); font-weight: 600; }
-.btn-more-props {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  background: #25D366; color: #fff;
-  padding: 0.85rem 1.8rem; text-decoration: none;
-  font-size: 0.78rem; letter-spacing: 0.13em; text-transform: uppercase;
-  font-weight: 700; white-space: nowrap;
-  transition: background 0.3s, transform 0.2s;
-  flex-shrink: 0;
-}
-.btn-more-props:hover { background: #1cb85a; transform: translateY(-2px); }
-@media (max-width: 600px) {
+  .sec-tabs { flex-wrap: wrap; width: 100%; }
+  .sec-tab { flex: 1; border-right: none; border-bottom: 1.5px solid var(--border2); }
   .more-properties-banner { flex-direction: column; }
   .btn-more-props { width: 100%; justify-content: center; }
 }
@@ -514,7 +599,6 @@ footer {
 <!-- ══ HERO ══ -->
 <section style="position:relative;z-index:1;">
   <div class="hero">
-
     <div class="hero-left">
       <div class="eyebrow"><span class="eyebrow-line"></span>Dubai Real Estate</div>
       <h1>Your Property<br><em>Expert</em> in<br>Dubai</h1>
@@ -536,29 +620,30 @@ footer {
           <div class="stat-lbl">All Covered</div>
         </div>
       </div>
+      <div class="hero-btns">
+        <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa">💬 WhatsApp Me</a>
+        <a href="tel:+971556472153" class="btn-call">📞 +971 55647 2153</a>
+      </div>
     </div>
 
-    <!-- PROFILE CARD — contact info here but no buttons; CTA section handles action -->
+    <!-- PROFILE CARD -->
     <div class="profile-card">
       <div class="photo-wrap">
         <div class="photo-circle">
           <!-- TAHER — UPLOAD YOUR PHOTO HERE ─────────────────────────
-               1. Upload your photo (e.g. taher-photo.jpg) to GitHub
-                  in the same folder as this index.html file
-               2. Delete the <svg> tag and <div class="photo-label"> below
-               3. Paste this line in their place:
+               1. Upload photo file (e.g. taher-photo.jpg) to GitHub same folder
+               2. Delete SVG + photo-label below
+               3. Replace with:
                   <img src="taher-photo.jpg" alt="Taher Betwala"
                        style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
                ──────────────────────────────────────────────────────── -->
           <img src="TB 1.jpg" alt="Taher Betwala" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
         </div>
       </div>
-
       <div class="card-name">Taher Betwala</div>
       <div class="card-title">Property Consultant — Dubai</div>
       <div class="card-company">New Heights Real Estate</div>
       <div class="card-divider"></div>
-
       <div class="card-row">
         <div class="card-icon">📱</div>
         <div>
@@ -587,7 +672,6 @@ footer {
           <div class="card-row-val">10+ Years — Dubai Market</div>
         </div>
       </div>
-
       <div class="spec-row">
         <span class="spec-tag">Buy</span>
         <span class="spec-tag">Sell</span>
@@ -596,7 +680,6 @@ footer {
         <span class="spec-tag">Investment</span>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -606,9 +689,7 @@ footer {
     <div class="sec-eyebrow">Our Network</div>
     <h2>Dubai's Top Developers —<br><em>All Under One Roof</em></h2>
     <p class="sec-subtitle">From iconic master communities to boutique luxury residences — I work across every major developer in Dubai so you always find the right fit. Click any card to visit their official website.</p>
-
     <div class="dev-grid">
-
       <a class="dev-card" data-num="01" href="https://www.emaar.com" target="_blank" rel="noopener">
         <div class="dev-icon">🏙️</div>
         <div class="dev-name">Emaar Properties</div>
@@ -616,13 +697,10 @@ footer {
         <div class="dev-type">Master-Planned Communities</div>
         <div class="dev-desc">Dubai's most iconic developer — creators of Burj Khalifa, Dubai Mall, and Downtown Dubai. Trusted for world-class amenities and strong capital appreciation.</div>
         <div class="dev-areas">
-          <span class="area-pill">Downtown Dubai</span>
-          <span class="area-pill">Dubai Marina</span>
-          <span class="area-pill">Arabian Ranches</span>
-          <span class="area-pill">Creek Harbour</span>
+          <span class="area-pill">Downtown Dubai</span><span class="area-pill">Dubai Marina</span>
+          <span class="area-pill">Arabian Ranches</span><span class="area-pill">Creek Harbour</span>
         </div>
       </a>
-
       <a class="dev-card" data-num="02" href="https://www.damacproperties.com" target="_blank" rel="noopener">
         <div class="dev-icon">💎</div>
         <div class="dev-name">DAMAC Properties</div>
@@ -630,13 +708,10 @@ footer {
         <div class="dev-type">Luxury & Branded Residences</div>
         <div class="dev-desc">High-end developer with bold branded collaborations — Cavalli, Versace, Rotana. Popular with investors for premium finishes and strong rental returns.</div>
         <div class="dev-areas">
-          <span class="area-pill">Business Bay</span>
-          <span class="area-pill">DAMAC Hills</span>
-          <span class="area-pill">Safa Park</span>
-          <span class="area-pill">Akoya</span>
+          <span class="area-pill">Business Bay</span><span class="area-pill">DAMAC Hills</span>
+          <span class="area-pill">Safa Park</span><span class="area-pill">Akoya</span>
         </div>
       </a>
-
       <a class="dev-card" data-num="03" href="https://www.nakheel.com" target="_blank" rel="noopener">
         <div class="dev-icon">🌊</div>
         <div class="dev-name">Nakheel</div>
@@ -644,13 +719,10 @@ footer {
         <div class="dev-type">Waterfront Living</div>
         <div class="dev-desc">Creator of Palm Jumeirah and The World Islands. Nakheel builds waterfront communities and family clusters — ideal for lifestyle buyers and long-term investors.</div>
         <div class="dev-areas">
-          <span class="area-pill">Palm Jumeirah</span>
-          <span class="area-pill">Jumeirah Village</span>
-          <span class="area-pill">Al Furjan</span>
-          <span class="area-pill">Deira Islands</span>
+          <span class="area-pill">Palm Jumeirah</span><span class="area-pill">Jumeirah Village</span>
+          <span class="area-pill">Al Furjan</span><span class="area-pill">Deira Islands</span>
         </div>
       </a>
-
       <a class="dev-card" data-num="04" href="https://www.sobharealty.com" target="_blank" rel="noopener">
         <div class="dev-icon">🏡</div>
         <div class="dev-name">Sobha Realty</div>
@@ -658,12 +730,10 @@ footer {
         <div class="dev-type">Self-Built Quality</div>
         <div class="dev-desc">Renowned for in-house construction with zero outsourcing — delivering superior build quality and finish. Sobha Hartland in MBR City is their flagship green community.</div>
         <div class="dev-areas">
-          <span class="area-pill">MBR City</span>
-          <span class="area-pill">Sobha Hartland</span>
+          <span class="area-pill">MBR City</span><span class="area-pill">Sobha Hartland</span>
           <span class="area-pill">Hartland II</span>
         </div>
       </a>
-
       <a class="dev-card" data-num="05" href="https://www.meraas.com" target="_blank" rel="noopener">
         <div class="dev-icon">🎨</div>
         <div class="dev-name">Meraas</div>
@@ -671,13 +741,10 @@ footer {
         <div class="dev-type">Lifestyle & Culture</div>
         <div class="dev-desc">Lifestyle-driven developer behind City Walk, Bluewaters Island, and Port De La Mer. Meraas blends culture, retail, and contemporary living in prime walkable areas.</div>
         <div class="dev-areas">
-          <span class="area-pill">City Walk</span>
-          <span class="area-pill">Bluewaters Island</span>
-          <span class="area-pill">Port De La Mer</span>
-          <span class="area-pill">La Mer</span>
+          <span class="area-pill">City Walk</span><span class="area-pill">Bluewaters Island</span>
+          <span class="area-pill">Port De La Mer</span><span class="area-pill">La Mer</span>
         </div>
       </a>
-
       <a class="dev-card" data-num="06" href="https://www.dubaiproperties.ae" target="_blank" rel="noopener">
         <div class="dev-icon">🏛️</div>
         <div class="dev-name">Dubai Properties</div>
@@ -685,13 +752,10 @@ footer {
         <div class="dev-type">Government-Backed Value</div>
         <div class="dev-desc">A government-backed developer offering communities from affordable to mid-range. Trusted for consistent long-term value, solid infrastructure, and family-friendly layouts.</div>
         <div class="dev-areas">
-          <span class="area-pill">JBR</span>
-          <span class="area-pill">Mudon</span>
-          <span class="area-pill">Villanova</span>
-          <span class="area-pill">Culture Village</span>
+          <span class="area-pill">JBR</span><span class="area-pill">Mudon</span>
+          <span class="area-pill">Villanova</span><span class="area-pill">Culture Village</span>
         </div>
       </a>
-
       <a class="dev-card" data-num="07" href="https://www.danubeproperties.com" target="_blank" rel="noopener">
         <div class="dev-icon">✨</div>
         <div class="dev-name">Danube Properties</div>
@@ -699,52 +763,38 @@ footer {
         <div class="dev-type">Affordable Luxury</div>
         <div class="dev-desc">One of Dubai's fastest-growing developers — making luxury accessible with flexible payment plans, high-quality finishes, and strong ROI. Ideal for first-time buyers and savvy investors.</div>
         <div class="dev-areas">
-          <span class="area-pill">Arjan</span>
-          <span class="area-pill">Jumeirah Village Circle</span>
-          <span class="area-pill">Al Furjan</span>
-          <span class="area-pill">Sports City</span>
+          <span class="area-pill">Arjan</span><span class="area-pill">Jumeirah Village Circle</span>
+          <span class="area-pill">Al Furjan</span><span class="area-pill">Sports City</span>
         </div>
       </a>
-
     </div>
   </div>
 </div>
 
-<!-- ══ LISTINGS ══ -->
+<!-- ══ PRIMARY LISTINGS ══ -->
 <div class="section-outer listings-section" id="listings">
   <div class="section-inner">
-    <div class="sec-eyebrow">Available Properties</div>
+    <div class="sec-eyebrow">Primary Market</div>
     <h2>Current <em>Listings</em></h2>
-    <p class="sec-subtitle">Browse available properties across Dubai — updated regularly. Click Enquire on any listing to connect with me directly on WhatsApp with full property details.</p>
-
+    <p class="sec-subtitle">Browse available primary market properties across Dubai — updated regularly. Click Enquire on any listing to connect with me directly on WhatsApp with full property details.</p>
     <div class="filters">
       <button class="filter-btn active" onclick="filterListings('all',this)">All Properties</button>
       <button class="filter-btn" onclick="filterListings('sell',this)">For Sale</button>
       <button class="filter-btn" onclick="filterListings('rent',this)">For Rent</button>
       <button class="filter-btn" onclick="filterListings('offplan',this)">Off-Plan</button>
     </div>
-
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Property</th>
-            <th>Type</th>
-            <th>Developer</th>
-            <th>Location</th>
-            <th>Beds</th>
-            <th>Size (sqft)</th>
-            <th>Price (AED)</th>
-            <th>Status</th>
-            <th>Enquire</th>
+            <th>#</th><th>Property</th><th>Type</th><th>Developer</th>
+            <th>Location</th><th>Beds</th><th>Size (sqft)</th>
+            <th>Price (AED)</th><th>Status</th><th>Enquire</th>
           </tr>
         </thead>
         <tbody id="listingsBody"></tbody>
       </table>
     </div>
-
-    <!-- More properties banner -->
     <div class="more-properties-banner">
       <div class="more-prop-text">
         <div class="more-prop-title">🔍 Looking for something not listed here?</div>
@@ -752,11 +802,33 @@ footer {
       </div>
       <a href="https://wa.me/971556472153?text=Hi%20Taher!%20I%20checked%20your%20listings%20but%20didn't%20find%20exactly%20what%20I'm%20looking%20for.%20Can%20you%20help%20me%20find%20more%20options?%20%F0%9F%94%91" target="_blank" class="btn-more-props">💬 Ask for More Options</a>
     </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     SECONDARY MARKET
+══════════════════════════════════════════════════════ -->
+<div class="section-outer secondary-section" id="secondary">
+  <div class="section-inner">
+    <div class="sec-eyebrow">Secondary Market</div>
+    <h2>Secondary Market —<br><em>Direct Listings</em></h2>
+    <p class="sec-subtitle">Exclusive secondary market properties — direct from owners and investors. Prices are negotiable. Click any property to enquire directly on WhatsApp with full details.</p>
+
+    <!-- Sub-tabs -->
+    <div class="sec-tabs">
+      <button class="sec-tab active" onclick="filterSecondary('all', this)">All Listings</button>
+      <button class="sec-tab" onclick="filterSecondary('rent', this)">For Rent</button>
+      <button class="sec-tab" onclick="filterSecondary('sell', this)">For Sale</button>
+      <button class="sec-tab" onclick="filterSecondary('offplan', this)">Off-Plan Resale</button>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="sec-grid" id="secGrid"></div>
 
   </div>
 </div>
 
-<!-- ══ CONTACT STRIP — primary action CTA (WhatsApp + Call) ══ -->
+<!-- ══ CONTACT STRIP ══ -->
 <div class="contact-strip" id="contact">
   <div class="contact-inner">
     <div class="contact-left">
@@ -770,22 +842,20 @@ footer {
   </div>
 </div>
 
-<!-- ══ FOOTER — minimal ══ -->
+<!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
   <div class="footer-role">Property Consultant — Dubai</div>
   <div class="footer-company">New Heights Real Estate</div>
-
   <div class="social-row">
     <a href="https://www.instagram.com/habibi_chalodubai/" target="_blank" class="social-link">📸 Instagram</a>
     <a href="https://www.facebook.com/profile.php?id=61580013579727" target="_blank" class="social-link">👍 Facebook</a>
   </div>
-
   <div class="footer-divider"></div>
   <div class="footer-copy">© 2025 Taher Betwala · New Heights Real Estate · All Rights Reserved</div>
 </footer>
 
-<!-- ══ MOBILE STICKY BUTTONS ══ -->
+<!-- ══ MOBILE STICKY ══ -->
 <div class="mobile-sticky">
   <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="mob-btn mob-btn-wa">💬 WhatsApp</a>
   <a href="tel:+971556472153" class="mob-btn mob-btn-call">📞 Call</a>
@@ -793,250 +863,106 @@ footer {
 
 <script>
 // ═══════════════════════════════════════════════════════════════════
-//   TAHER — ADD YOUR LISTINGS HERE
+//   TAHER — PRIMARY LISTINGS
+//   status: "sell" | "rent" | "offplan"
 // ═══════════════════════════════════════════════════════════════════
 const listings = [
-  // ── FOR SALE ──────────────────────────────────────────────────────
-  {
-    id: 1,
-    name: "Harbour Gate — Tower 1",
-    type: "Apartment",
-    developer: "Emaar",
-    location: "Creek Harbour",
-    beds: "1 BR",
-    size: "780",
-    price: "1,450,000",
-    status: "sell"
-  },
-  {
-    id: 2,
-    name: "Sobha Hartland — Greens",
-    type: "Villa",
-    developer: "Sobha",
-    location: "MBR City",
-    beds: "4 BR",
-    size: "3,800",
-    price: "6,500,000",
-    status: "sell"
-  },
-  {
-    id: 3,
-    name: "Bluewaters Residences",
-    type: "Apartment",
-    developer: "Meraas",
-    location: "Bluewaters Island",
-    beds: "2 BR",
-    size: "1,400",
-    price: "4,200,000",
-    status: "sell"
-  },
-  {
-    id: 4,
-    name: "Address Harbour Point",
-    type: "Apartment",
-    developer: "Emaar",
-    location: "Creek Harbour",
-    beds: "2 BR",
-    size: "1,180",
-    price: "2,800,000",
-    status: "sell"
-  },
-  {
-    id: 5,
-    name: "Golf Place — Phase II",
-    type: "Villa",
-    developer: "Emaar",
-    location: "Dubai Hills Estate",
-    beds: "5 BR",
-    size: "5,200",
-    price: "9,800,000",
-    status: "sell"
-  },
-  {
-    id: 6,
-    name: "Cavalli Estates",
-    type: "Villa",
-    developer: "DAMAC",
-    location: "DAMAC Hills",
-    beds: "6 BR",
-    size: "8,500",
-    price: "18,500,000",
-    status: "sell"
-  },
-  {
-    id: 7,
-    name: "Jumeirah Living — Marina Gate",
-    type: "Apartment",
-    developer: "Dubai Properties",
-    location: "Dubai Marina",
-    beds: "3 BR",
-    size: "2,050",
-    price: "5,100,000",
-    status: "sell"
-  },
-  {
-    id: 8,
-    name: "Villanova — La Rosa 5",
-    type: "Townhouse",
-    developer: "Dubai Properties",
-    location: "Dubailand",
-    beds: "3 BR",
-    size: "2,220",
-    price: "2,150,000",
-    status: "sell"
-  },
-  // ── FOR RENT ──────────────────────────────────────────────────────
-  {
-    id: 9,
-    name: "DAMAC Volta",
-    type: "Apartment",
-    developer: "DAMAC",
-    location: "Downtown Dubai",
-    beds: "2 BR",
-    size: "1,250",
-    price: "18,000 / mo",
-    status: "rent"
-  },
-  {
-    id: 10,
-    name: "Palm Beach Towers",
-    type: "Apartment",
-    developer: "Nakheel",
-    location: "Palm Jumeirah",
-    beds: "3 BR",
-    size: "2,100",
-    price: "35,000 / mo",
-    status: "rent"
-  },
-  {
-    id: 11,
-    name: "Mudon Al Ranim — Townhouse",
-    type: "Townhouse",
-    developer: "Dubai Properties",
-    location: "Mudon",
-    beds: "4 BR",
-    size: "2,700",
-    price: "22,000 / mo",
-    status: "rent"
-  },
-  {
-    id: 12,
-    name: "Creek Vistas Reserve",
-    type: "Apartment",
-    developer: "Sobha",
-    location: "MBR City",
-    beds: "1 BR",
-    size: "710",
-    price: "9,500 / mo",
-    status: "rent"
-  },
-  {
-    id: 13,
-    name: "City Walk Residences",
-    type: "Apartment",
-    developer: "Meraas",
-    location: "City Walk",
-    beds: "2 BR",
-    size: "1,350",
-    price: "19,000 / mo",
-    status: "rent"
-  },
-  {
-    id: 14,
-    name: "Emaar Beachfront — Beach Vista",
-    type: "Apartment",
-    developer: "Emaar",
-    location: "Emaar Beachfront",
-    beds: "1 BR",
-    size: "820",
-    price: "13,000 / mo",
-    status: "rent"
-  },
-  // ── OFF-PLAN ──────────────────────────────────────────────────────
-  {
-    id: 15,
-    name: "Elo — Phase 2",
-    type: "Townhouse",
-    developer: "DAMAC",
-    location: "DAMAC Hills 2",
-    beds: "3 BR",
-    size: "1,900",
-    price: "1,750,000",
-    status: "offplan"
-  },
-  {
-    id: 16,
-    name: "Danube Opalz",
-    type: "Apartment",
-    developer: "Danube",
-    location: "Arjan",
-    beds: "Studio",
-    size: "450",
-    price: "680,000",
-    status: "offplan"
-  },
-  {
-    id: 17,
-    name: "Sobha Solis",
-    type: "Apartment",
-    developer: "Sobha",
-    location: "Motor City",
-    beds: "1 BR",
-    size: "660",
-    price: "1,100,000",
-    status: "offplan"
-  },
-  {
-    id: 18,
-    name: "Creek Waters 2",
-    type: "Apartment",
-    developer: "Emaar",
-    location: "Creek Harbour",
-    beds: "2 BR",
-    size: "1,050",
-    price: "2,350,000",
-    status: "offplan"
-  },
-  {
-    id: 19,
-    name: "Danube Petalz — Phase 3",
-    type: "Apartment",
-    developer: "Danube",
-    location: "Jumeirah Village Circle",
-    beds: "1 BR",
-    size: "580",
-    price: "790,000",
-    status: "offplan"
-  },
-  {
-    id: 20,
-    name: "Safa One — De GRISOGONO",
-    type: "Apartment",
-    developer: "DAMAC",
-    location: "Safa Park",
-    beds: "2 BR",
-    size: "1,320",
-    price: "3,600,000",
-    status: "offplan"
-  },
-  {
-    id: 21,
-    name: "Nakheel Bay Residences",
-    type: "Apartment",
-    developer: "Nakheel",
-    location: "Deira Islands",
-    beds: "2 BR",
-    size: "1,100",
-    price: "1,950,000",
-    status: "offplan"
-  },
+  { id:1,  name:"Harbour Gate — Tower 1",          type:"Apartment",  developer:"Emaar",           location:"Creek Harbour",       beds:"1 BR",    size:"780",   price:"1,450,000",    status:"sell"    },
+  { id:2,  name:"Sobha Hartland — Greens",          type:"Villa",      developer:"Sobha",           location:"MBR City",            beds:"4 BR",    size:"3,800", price:"6,500,000",    status:"sell"    },
+  { id:3,  name:"Bluewaters Residences",            type:"Apartment",  developer:"Meraas",          location:"Bluewaters Island",   beds:"2 BR",    size:"1,400", price:"4,200,000",    status:"sell"    },
+  { id:4,  name:"Address Harbour Point",            type:"Apartment",  developer:"Emaar",           location:"Creek Harbour",       beds:"2 BR",    size:"1,180", price:"2,800,000",    status:"sell"    },
+  { id:5,  name:"Golf Place — Phase II",            type:"Villa",      developer:"Emaar",           location:"Dubai Hills Estate",  beds:"5 BR",    size:"5,200", price:"9,800,000",    status:"sell"    },
+  { id:6,  name:"Cavalli Estates",                  type:"Villa",      developer:"DAMAC",           location:"DAMAC Hills",         beds:"6 BR",    size:"8,500", price:"18,500,000",   status:"sell"    },
+  { id:7,  name:"Jumeirah Living — Marina Gate",    type:"Apartment",  developer:"Dubai Properties",location:"Dubai Marina",        beds:"3 BR",    size:"2,050", price:"5,100,000",    status:"sell"    },
+  { id:8,  name:"Villanova — La Rosa 5",            type:"Townhouse",  developer:"Dubai Properties",location:"Dubailand",           beds:"3 BR",    size:"2,220", price:"2,150,000",    status:"sell"    },
+  { id:9,  name:"DAMAC Volta",                      type:"Apartment",  developer:"DAMAC",           location:"Downtown Dubai",      beds:"2 BR",    size:"1,250", price:"18,000 / mo",  status:"rent"    },
+  { id:10, name:"Palm Beach Towers",                type:"Apartment",  developer:"Nakheel",         location:"Palm Jumeirah",       beds:"3 BR",    size:"2,100", price:"35,000 / mo",  status:"rent"    },
+  { id:11, name:"Mudon Al Ranim — Townhouse",       type:"Townhouse",  developer:"Dubai Properties",location:"Mudon",               beds:"4 BR",    size:"2,700", price:"22,000 / mo",  status:"rent"    },
+  { id:12, name:"Creek Vistas Reserve",             type:"Apartment",  developer:"Sobha",           location:"MBR City",            beds:"1 BR",    size:"710",   price:"9,500 / mo",   status:"rent"    },
+  { id:13, name:"City Walk Residences",             type:"Apartment",  developer:"Meraas",          location:"City Walk",           beds:"2 BR",    size:"1,350", price:"19,000 / mo",  status:"rent"    },
+  { id:14, name:"Emaar Beachfront — Beach Vista",   type:"Apartment",  developer:"Emaar",           location:"Emaar Beachfront",    beds:"1 BR",    size:"820",   price:"13,000 / mo",  status:"rent"    },
+  { id:15, name:"Elo — Phase 2",                    type:"Townhouse",  developer:"DAMAC",           location:"DAMAC Hills 2",       beds:"3 BR",    size:"1,900", price:"1,750,000",    status:"offplan" },
+  { id:16, name:"Danube Opalz",                     type:"Apartment",  developer:"Danube",          location:"Arjan",               beds:"Studio",  size:"450",   price:"680,000",      status:"offplan" },
+  { id:17, name:"Sobha Solis",                      type:"Apartment",  developer:"Sobha",           location:"Motor City",          beds:"1 BR",    size:"660",   price:"1,100,000",    status:"offplan" },
+  { id:18, name:"Creek Waters 2",                   type:"Apartment",  developer:"Emaar",           location:"Creek Harbour",       beds:"2 BR",    size:"1,050", price:"2,350,000",    status:"offplan" },
+  { id:19, name:"Danube Petalz — Phase 3",          type:"Apartment",  developer:"Danube",          location:"Jumeirah Village Circle", beds:"1 BR",size:"580",   price:"790,000",      status:"offplan" },
+  { id:20, name:"Safa One — De GRISOGONO",          type:"Apartment",  developer:"DAMAC",           location:"Safa Park",           beds:"2 BR",    size:"1,320", price:"3,600,000",    status:"offplan" },
+  { id:21, name:"Nakheel Bay Residences",           type:"Apartment",  developer:"Nakheel",         location:"Deira Islands",       beds:"2 BR",    size:"1,100", price:"1,950,000",    status:"offplan" },
+];
+
+// ═══════════════════════════════════════════════════════════════════
+//   TAHER — SECONDARY MARKET LISTINGS
+//   type: "rent" | "sell" | "offplan"
+//   tag:  "hot" | "distress" | "" (none)
+//   occupancy: "Vacant" | "Rented" | "Off-Plan" | "Near Handover"
+//   note: short extra note (negotiable, ROI info, handover date etc.)
+// ═══════════════════════════════════════════════════════════════════
+const secondaryListings = [
+
+  // ── FOR RENT ────────────────────────────────────────────────────
+  { id:"R1",  name:"Princess Tower",            area:"Dubai Marina",    type:"rent",    beds:"2 BR",   size:"1,200 sqft",  price:"AED 110,000/yr",  occupancy:"Vacant",  tag:"hot",  note:"Furnished"                          },
+  { id:"R2",  name:"Downtown Views Tower 2",    area:"Downtown Dubai",  type:"rent",    beds:"2 BR",   size:"—",           price:"AED 200,000/yr",  occupancy:"Vacant",  tag:"hot",  note:"Luxury, Furnished, Fountain View"   },
+  { id:"R3",  name:"Elegenz by Danube",         area:"JVC",             type:"rent",    beds:"1 BR + Study", size:"980 sqft", price:"AED 80,000/yr", occupancy:"Vacant", tag:"",    note:"Furnished"                          },
+  { id:"R4",  name:"Marina Wharf",              area:"Dubai Marina",    type:"rent",    beds:"3 BR",   size:"1,300 sqft",  price:"AED 165,000/yr",  occupancy:"Vacant",  tag:"hot",  note:"Marina View"                        },
+  { id:"R5",  name:"Marina Belvedere",          area:"Dubai Marina",    type:"rent",    beds:"2 BR + Maid", size:"1,500 sqft", price:"AED 110,000/yr", occupancy:"Vacant", tag:"", note:""                                   },
+  { id:"R6",  name:"Princess Tower",            area:"Dubai Marina",    type:"rent",    beds:"1 BR",   size:"—",           price:"AED 80,000/yr",   occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"R7",  name:"Marina View Tower",         area:"Dubai Marina",    type:"rent",    beds:"Studio", size:"418 sqft",    price:"AED 68,000/yr",   occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"R8",  name:"Marina View Tower",         area:"Dubai Marina",    type:"rent",    beds:"2 BR",   size:"960 sqft",    price:"AED 110,000/yr",  occupancy:"Vacant",  tag:"",     note:"Furnished"                          },
+
+  // ── FOR SALE ────────────────────────────────────────────────────
+  { id:"S1",  name:"Springs — Type 4M",         area:"The Springs",     type:"sell",    beds:"2 BR + Study", size:"1,690 sqft", price:"AED 3,350,000", occupancy:"Vacant", tag:"hot", note:"Pool & Park View. Vacant on transfer" },
+  { id:"S2",  name:"Crescent Tower",            area:"IMPZ",            type:"sell",    beds:"Studio", size:"500 sqft",    price:"AED 430,000",     occupancy:"Vacant",  tag:"",     note:"No Parking"                         },
+  { id:"S3",  name:"Crescent Tower",            area:"IMPZ",            type:"sell",    beds:"Studio", size:"500 sqft",    price:"AED 475,000",     occupancy:"Rented",  tag:"",     note:"Rented 35K · With Parking"          },
+  { id:"S4",  name:"Safeer Tower",              area:"Business Bay",    type:"sell",    beds:"Studio", size:"500 sqft",    price:"AED 720,000",     occupancy:"Vacant",  tag:"hot",  note:""                                   },
+  { id:"S5",  name:"Ontario Tower",             area:"Business Bay",    type:"sell",    beds:"1 BR",   size:"810 sqft",    price:"AED 1,000,000",   occupancy:"Rented",  tag:"",     note:"Rented 90K — Investor Deal"         },
+  { id:"S6",  name:"Paramount Tower A",         area:"Business Bay",    type:"sell",    beds:"2 BR",   size:"1,485 sqft",  price:"AED 2,250,000",   occupancy:"Vacant",  tag:"hot",  note:"Residential Tower"                  },
+  { id:"S7",  name:"Lincoln Park Westside",     area:"Arjan",           type:"sell",    beds:"Studio", size:"—",           price:"AED 530,000",     occupancy:"Rented",  tag:"",     note:"Furnished · Rented 54K"             },
+  { id:"S8",  name:"Escan Tower (x2 Units)",    area:"Dubai Marina",    type:"sell",    beds:"Studio", size:"—",           price:"AED 660,000 each", occupancy:"Vacant", tag:"hot",  note:"2 Units Available"                  },
+  { id:"S9",  name:"Escan Tower",               area:"Dubai Marina",    type:"sell",    beds:"1 BR",   size:"760 sqft",    price:"AED 1,050,000",   occupancy:"Rented",  tag:"",     note:"Mid Floor"                          },
+  { id:"S10", name:"May Residence",             area:"JVC",             type:"sell",    beds:"Studio", size:"400 sqft",    price:"AED 460,000",     occupancy:"Rented",  tag:"",     note:"Rented 40K"                         },
+  { id:"S11", name:"May Residence",             area:"JVC",             type:"sell",    beds:"1 BR",   size:"1,217 sqft",  price:"AED 835,000",     occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"S12", name:"Suburbia",                  area:"Jebel Ali",       type:"sell",    beds:"1 BR",   size:"751 sqft",    price:"AED 650,000",     occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"S13", name:"Jebel Ali Hills — Plot",    area:"Jebel Ali Hills", type:"sell",    beds:"2 Plots",size:"—",           price:"AED 375/sqft",    occupancy:"—",       tag:"hot",  note:"Adjacent plots · Contact for sizes" },
+  { id:"S14", name:"Hawthorn Cluster — Corner Villa Plot", area:"DAMAC Hills 2", type:"sell", beds:"Villa Plot", size:"2,643 sqft", price:"AED 1,390,000", occupancy:"—", tag:"",  note:""                                   },
+  { id:"S15", name:"Hawthorn Cluster — Villa Plot",        area:"DAMAC Hills 2", type:"sell", beds:"Villa Plot", size:"1,881 sqft", price:"AED 900,000",   occupancy:"—", tag:"",  note:""                                   },
+  { id:"S16", name:"Rabia Tower",               area:"Majan",           type:"sell",    beds:"2 BR",   size:"1,127 sqft",  price:"AED 1,000,000",   occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"S17", name:"Downtown Views 1",          area:"Downtown Dubai",  type:"sell",    beds:"1 BR",   size:"870 sqft",    price:"AED 2,250,000",   occupancy:"Rented",  tag:"hot",  note:"Rented 125K · Furnished · Near Dubai Mall" },
+  { id:"S18", name:"Jebel Ali Hills — Plot P8", area:"Jebel Ali Hills", type:"sell",    beds:"Plot",   size:"9,688 sqft",  price:"AED 3,250,000",   occupancy:"—",       tag:"",     note:"Park Facing"                        },
+  { id:"S19", name:"Al Furjan — 6 Bed Villa",  area:"Al Furjan",       type:"sell",    beds:"6 BR",   size:"9,400 sqft plot / 6,900 BUA", price:"AED 10,000,000", occupancy:"Vacant", tag:"hot", note:"Private Pool · Vacating Dec" },
+  { id:"S20", name:"Haven by Aldar 2 — Townhouse", area:"Haven Falls",  type:"sell",    beds:"4 BR",   size:"3,105 sqft BUA / 2,762 sqft plot", price:"AED 4,350,000", occupancy:"Off-Plan", tag:"", note:"40% Paid · OP + DLD Included" },
+  { id:"S21", name:"Marina Dec Tower",          area:"Dubai Marina",    type:"sell",    beds:"1 BR",   size:"823 sqft",    price:"AED 1,100,000",   occupancy:"Vacant",  tag:"",     note:"1st Floor"                          },
+  { id:"S22", name:"Jebel Ali Hills — Plot P14",area:"Jebel Ali Hills", type:"sell",    beds:"Corner Plot", size:"13,000 sqft", price:"AED 325/sqft", occupancy:"—",    tag:"",     note:"Corner Plot"                        },
+  { id:"S23", name:"Alvorada — Arabian Ranches 1", area:"Arabian Ranches", type:"sell", beds:"5 BR",  size:"9,300 sqft plot / 4,424 BUA", price:"AED 13,800,000", occupancy:"Vacant", tag:"hot", note:"Private Pool · Type C2"   },
+  { id:"S24", name:"Palm Jumeirah Penthouse",   area:"Palm Jumeirah",   type:"sell",    beds:"Penthouse", size:"10,000 sqft", price:"AED 29,000,000", occupancy:"Vacant", tag:"hot", note:"Fully Upgraded"                    },
+  { id:"S25", name:"Vida Downtown",             area:"Downtown Dubai",  type:"sell",    beds:"2 BR",   size:"—",           price:"AED 4,700,000",   occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"S26", name:"Camelia Prestige Townhouse",area:"DAMAC Hills 2",   type:"sell",    beds:"3 BR",   size:"1,924 sqft BUA / 1,208 plot", price:"AED 1,900,000", occupancy:"Off-Plan", tag:"", note:"Handover Jan 2026"         },
+  { id:"S27", name:"DAMAC Lagoons — Malta",     area:"DAMAC Lagoons",   type:"sell",    beds:"4 BR",   size:"—",           price:"AED 2,750,000",   occupancy:"Vacant",  tag:"hot",  note:"Lagoon Proximity · Prime Location" },
+  { id:"S28", name:"Silicon Heights 3",         area:"Dubai Silicon Oasis", type:"sell", beds:"1 BR", size:"700 sqft",    price:"AED 725,000",     occupancy:"Rented",  tag:"",     note:"Rented 52K"                         },
+  { id:"S29", name:"Suburbia",                  area:"Jebel Ali",       type:"sell",    beds:"1 BR",   size:"751 sqft",    price:"AED 630,000",     occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"S30", name:"Remraam — Studio",          area:"Dubailand",       type:"sell",    beds:"Studio", size:"387 sqft",    price:"AED 480,000",     occupancy:"Rented",  tag:"",     note:"Furnished · Rented 42K"             },
+  { id:"S31", name:"Remraam",                   area:"Dubailand",       type:"sell",    beds:"1 BR",   size:"665 sqft",    price:"AED 670,000",     occupancy:"Vacant",  tag:"",     note:""                                   },
+  { id:"S32", name:"DAMAC Lagoons — Venice",    area:"DAMAC Lagoons",   type:"sell",    beds:"6 BR Villa", size:"5,073 sqft plot / 4,572 BUA", price:"AED 6,600,000", occupancy:"Vacant", tag:"hot", note:"Walking distance lagoon" },
+  { id:"S33", name:"Emaar Oasis — Palace Ostra",area:"Emaar Oasis",     type:"sell",    beds:"5 BR",   size:"11,363 sqft plot / 8,000 BUA", price:"AED 15,800,000", occupancy:"Off-Plan", tag:"hot", note:"OP Price 14.98M · Selling 15.8M" },
+  { id:"S34", name:"Royal Residence 2",         area:"Sports City",     type:"sell",    beds:"2 BR",   size:"1,154 sqft",  price:"AED 1,050,000",   occupancy:"Rented",  tag:"",     note:"1st Floor · Upgraded"               },
+  { id:"S35", name:"Jebel Ali Hills — Plot P8 (Corner)", area:"Jebel Ali Hills", type:"sell", beds:"Corner Plot", size:"9,748 sqft", price:"AED 340/sqft", occupancy:"—", tag:"",  note:"Small corner — rare"                },
+  { id:"S36", name:"Lago Vista",                area:"IMPZ",            type:"sell",    beds:"Studio", size:"496 sqft",    price:"AED 460,000",     occupancy:"Vacant",  tag:"",     note:"With Parking · Vacating Notice Served" },
+  { id:"S37", name:"Fox Hill 6",                area:"Motor City",      type:"sell",    beds:"2 BR",   size:"2,000 sqft",  price:"AED 1,900,000",   occupancy:"Vacant",  tag:"",     note:"2.5 Bath · 2 Parking · Basement Storage · Road Facing" },
+  { id:"S38", name:"Camelia 1 — Arabian Ranches 2", area:"Arabian Ranches 2", type:"sell", beds:"4 BR", size:"4,386 sqft", price:"AED 5,200,000",  occupancy:"Vacant",  tag:"hot",  note:"Corner Unit · Private Pool · Furnished · Below Market" },
+  { id:"S39", name:"DAMAC Lagoons Morocco — Corner Villa", area:"DAMAC Lagoons", type:"sell", beds:"5 BR + Maid", size:"—", price:"AED 4,800,000", occupancy:"Off-Plan", tag:"distress", note:"Vastu Unit · Near Lagoon · Handover Q4 2026 · OP+DLD included" },
+  { id:"S40", name:"Saheel — Arabian Ranches",  area:"Arabian Ranches", type:"sell",    beds:"5 BR + Maid", size:"—",   price:"AED 14,200,000",  occupancy:"Vacant",  tag:"hot",  note:"Fully Upgraded · Corner Plot · Negotiable" },
+  { id:"S41", name:"Palace — Dubai Hills (Full Floor)", area:"Dubai Hills", type:"sell", beds:"Full Floor", size:"—",   price:"On Request",      occupancy:"Vacant",  tag:"",     note:"Can sell individually or as full floor" },
+
+  // ── OFF-PLAN RESALE ─────────────────────────────────────────────
+  { id:"O1",  name:"Azizi Venice",              area:"Dubai South",     type:"offplan", beds:"1 BR",   size:"—",           price:"Same as Capital",  occupancy:"Near Handover", tag:"hot", note:"40% Paid · 60% Remaining · No profit — same price" },
+  { id:"O2",  name:"Azizi Grand",               area:"Dubai Sports City", type:"offplan", beds:"1 BR", size:"—",          price:"AED 770,000",     occupancy:"Off-Plan",  tag:"distress", note:"Below OP (was 800K) · Handover June 2026 · Big Layout" },
 ];
 // ═══════════════════════════════════════════════════════════════════
 
+// ── PRIMARY LISTINGS RENDER ──
 const statusMap = {
-  sell:    { label: "For Sale",  cls: "badge-sell"    },
-  rent:    { label: "For Rent",  cls: "badge-rent"    },
-  offplan: { label: "Off-Plan",  cls: "badge-offplan" },
+  sell:    { label:"For Sale",  cls:"badge-sell"    },
+  rent:    { label:"For Rent",  cls:"badge-rent"    },
+  offplan: { label:"Off-Plan",  cls:"badge-offplan" },
 };
 
 function buildWaLink(p) {
@@ -1071,9 +997,7 @@ function renderListings(data) {
         <td>${p.size}</td>
         <td class="prop-price">${p.price}</td>
         <td><span class="badge ${s.cls}">${s.label}</span></td>
-        <td>
-          <a href="${buildWaLink(p)}" target="_blank" class="enquire-link">💬 Enquire</a>
-        </td>
+        <td><a href="${buildWaLink(p)}" target="_blank" class="enquire-link">💬 Enquire</a></td>
       </tr>`;
   });
 }
@@ -1086,6 +1010,89 @@ function filterListings(type, btn) {
 
 renderListings(listings);
 
+// ── SECONDARY LISTINGS RENDER ──
+const secTypeMap = {
+  rent:    { label:"For Rent",       cls:"badge-rent"    },
+  sell:    { label:"For Sale",       cls:"badge-sell"    },
+  offplan: { label:"Off-Plan Resale",cls:"badge-offplan" },
+};
+const occupancyMap = {
+  "Vacant":       "badge-vacant",
+  "Rented":       "badge-rented",
+  "Off-Plan":     "badge-offplan",
+  "Near Handover":"badge-offplan",
+  "—":            "",
+};
+
+function buildSecWaLink(p) {
+  const typeLabel = secTypeMap[p.type]?.label || p.type;
+  const msg =
+    `Hi Taher! I'm interested in the following property:%0A` +
+    `%F0%9F%8F%A0 *${p.name}*%0A` +
+    `%F0%9F%93%8D Area: ${p.area}%0A` +
+    `%F0%9F%9B%8F Beds: ${p.beds}${p.size && p.size !== '—' ? ' | Size: ' + p.size : ''}%0A` +
+    `%F0%9F%92%B0 Price: ${p.price} | ${typeLabel}%0A` +
+    (p.note ? `%F0%9F%93%8C Note: ${p.note}%0A` : '') +
+    `Can we discuss further? %F0%9F%94%91`;
+  return `https://wa.me/971556472153?text=${msg}`;
+}
+
+function renderSecondary(data) {
+  const grid = document.getElementById('secGrid');
+  grid.innerHTML = '';
+  if (!data.length) {
+    grid.innerHTML = `<div class="sec-empty">No listings found for this filter.</div>`;
+    return;
+  }
+  data.forEach(p => {
+    const t = secTypeMap[p.type] || secTypeMap.sell;
+    const occCls = occupancyMap[p.occupancy] || '';
+    grid.innerHTML += `
+      <div class="sec-card ${p.tag || ''}">
+        <div class="sec-card-top">
+          <div class="sec-card-name">${p.name}</div>
+          <div class="sec-card-badge">
+            <span class="badge ${t.cls}">${t.label}</span>
+          </div>
+        </div>
+        <div class="sec-card-area">📍 ${p.area}</div>
+        <div class="sec-card-details">
+          <div class="sec-det-item">
+            <div class="sec-det-label">Beds / Unit</div>
+            <div class="sec-det-val">${p.beds}</div>
+          </div>
+          <div class="sec-det-item">
+            <div class="sec-det-label">Size</div>
+            <div class="sec-det-val">${p.size}</div>
+          </div>
+          <div class="sec-det-item">
+            <div class="sec-det-label">Occupancy</div>
+            <div class="sec-det-val">${p.occupancy}</div>
+          </div>
+          ${p.note ? `<div class="sec-det-item" style="grid-column:1/-1">
+            <div class="sec-det-label">Notes</div>
+            <div class="sec-det-val" style="font-weight:400;font-size:0.8rem;color:var(--taupe)">${p.note}</div>
+          </div>` : ''}
+        </div>
+        <div class="sec-card-divider"></div>
+        <div class="sec-card-price">${p.price}</div>
+        <div class="sec-card-footer">
+          <div class="sec-status-row">
+            ${occCls ? `<span class="badge ${occCls}">${p.occupancy}</span>` : ''}
+          </div>
+          <a href="${buildSecWaLink(p)}" target="_blank" class="sec-enquire-btn">💬 Enquire</a>
+        </div>
+      </div>`;
+  });
+}
+
+function filterSecondary(type, btn) {
+  document.querySelectorAll('.sec-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderSecondary(type === 'all' ? secondaryListings : secondaryListings.filter(l => l.type === type));
+}
+
+renderSecondary(secondaryListings);
 </script>
 </body>
 </html>
