@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Taher Betwala | Property Consultant — Dubai</title>
+<title>Taher Betwala | Property Consultant, Dubai</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root {
@@ -722,7 +722,7 @@ footer {
       <div class="eyebrow"><span class="eyebrow-line"></span>Dubai Real Estate</div>
       <h1>Your Property<br><em>Expert</em> in<br>Dubai</h1>
       <p class="hero-desc">
-        Whether you're buying, selling, or renting — I will assist you through Dubai's market with
+        Whether you're buying, selling, or renting, I will assist you through Dubai's market with
         <strong>10+ years of hands-on expertise</strong> across the city's most prestigious communities.
       </p>
       <div class="hero-stats">
@@ -749,7 +749,7 @@ footer {
         </div>
       </div>
       <div class="card-name">Taher Betwala</div>
-      <div class="card-title">Property Consultant — Dubai</div>
+      <div class="card-title">Property Consultant, Dubai</div>
       <div class="card-company">New Heights Real Estate</div>
       <div class="card-divider"></div>
       <div class="card-row">
@@ -777,7 +777,7 @@ footer {
         <div class="card-icon">⭐</div>
         <div>
           <div class="card-row-label">Experience</div>
-          <div class="card-row-val">10+ Years — Dubai Market</div>
+          <div class="card-row-val">10+ Years, Dubai Market</div>
         </div>
       </div>
       <div class="spec-row">
@@ -799,7 +799,7 @@ footer {
       <div class="nh-strip-name">New Heights Real Estate</div>
       <div class="nh-strip-tagline">Dubai's Premier Property Advisory Firm</div>
       <p class="nh-strip-desc">
-        Backed by one of Dubai's most trusted property advisory firms, I bring you access to exclusive listings, early off-plan launches, and investment-grade secondary market deals. New Heights Real Estate has guided <strong>700+ happy clients</strong> across the emirate — from first-time buyers to seasoned investors — with a reputation built on transparency, speed, and results that speak for themselves.
+        Backed by one of Dubai's most trusted property advisory firms, I bring you access to exclusive listings, early off-plan launches, and investment-grade secondary market deals. New Heights Real Estate has guided <strong>700+ happy clients</strong> across the emirate, from first-time buyers to seasoned investors, with a reputation built on transparency, speed, and results that speak for themselves.
       </p>
       <div class="nh-strip-stats">
         <div class="nh-stat"><span class="nh-stat-val">700+</span><span class="nh-stat-lbl">Happy Clients</span></div>
@@ -824,14 +824,14 @@ footer {
 <div class="section-outer dev-section" id="developers">
   <div class="section-inner">
     <div class="sec-eyebrow" style="justify-content:center;">Our Network</div>
-    <h2 style="text-align:center;">Dubai's Top Developers —<br><em>All Under One Roof</em></h2>
-    <p class="sec-subtitle" style="text-align:center;max-width:100%;">From iconic master communities to boutique luxury residences — I work across every major developer in Dubai so you always find the right fit. Click any card to visit their official website.</p>
+    <h2 style="text-align:center;">Dubai's Top Developers  <br><em>All Under One Roof</em></h2>
+    <p class="sec-subtitle" style="text-align:center;max-width:100%;">From iconic master communities to boutique luxury residences, I work across every major developer in Dubai so you always find the right fit. Click any card to visit their official website.</p>
     <div class="dev-grid">      <a class="dev-card" data-num="01" href="https://www.emaar.com" target="_blank" rel="noopener">
         <div class="dev-icon">🏙️</div>
         <div class="dev-name">Emaar Properties</div>
         <div class="dev-visit">↗ Visit emaar.com</div>
         <div class="dev-type">Master-Planned Communities</div>
-        <div class="dev-desc">Dubai's most iconic developer — creators of Burj Khalifa, Dubai Mall, and Downtown Dubai. Trusted for world-class amenities and strong capital appreciation.</div>
+        <div class="dev-desc">Dubai's most iconic developer, creators of Burj Khalifa, Dubai Mall, and Downtown Dubai. Trusted for world-class amenities and strong capital appreciation.</div>
         <div class="dev-areas">
           <span class="area-pill">Downtown Dubai</span><span class="area-pill">Dubai Marina</span>
           <span class="area-pill">Arabian Ranches</span><span class="area-pill">Creek Harbour</span>
@@ -842,7 +842,7 @@ footer {
         <div class="dev-name">DAMAC Properties</div>
         <div class="dev-visit">↗ Visit damacproperties.com</div>
         <div class="dev-type">Luxury & Branded Residences</div>
-        <div class="dev-desc">High-end developer with bold branded collaborations — Cavalli, Versace, Rotana. Popular with investors for premium finishes and strong rental returns.</div>
+        <div class="dev-desc">High-end developer with bold branded collaborations, Cavalli, Versace, Rotana. Popular with investors for premium finishes and strong rental returns.</div>
         <div class="dev-areas">
           <span class="area-pill">Business Bay</span><span class="area-pill">DAMAC Hills</span>
           <span class="area-pill">Safa Park</span><span class="area-pill">Akoya</span>
@@ -853,7 +853,7 @@ footer {
         <div class="dev-name">Nakheel</div>
         <div class="dev-visit">↗ Visit nakheel.com</div>
         <div class="dev-type">Waterfront Living</div>
-        <div class="dev-desc">Creator of Palm Jumeirah and The World Islands. Nakheel builds waterfront communities and family clusters — ideal for lifestyle buyers and long-term investors.</div>
+        <div class="dev-desc">Creator of Palm Jumeirah and The World Islands. Nakheel builds waterfront communities and family clusters, ideal for lifestyle buyers and long-term investors.</div>
         <div class="dev-areas">
           <span class="area-pill">Palm Jumeirah</span><span class="area-pill">Jumeirah Village</span>
           <span class="area-pill">Al Furjan</span><span class="area-pill">Deira Islands</span>
@@ -864,7 +864,7 @@ footer {
         <div class="dev-name">Sobha Realty</div>
         <div class="dev-visit">↗ Visit sobharealty.com</div>
         <div class="dev-type">Self-Built Quality</div>
-        <div class="dev-desc">Renowned for in-house construction with zero outsourcing — delivering superior build quality and finish. Sobha Hartland in MBR City is their flagship green community.</div>
+        <div class="dev-desc">Renowned for in-house construction with zero outsourcing, delivering superior build quality and finish. Sobha Hartland in MBR City is their flagship green community.</div>
         <div class="dev-areas">
           <span class="area-pill">MBR City</span><span class="area-pill">Sobha Hartland</span>
           <span class="area-pill">Hartland II</span>
@@ -897,7 +897,7 @@ footer {
         <div class="dev-name">Danube Properties</div>
         <div class="dev-visit">↗ Visit danubeproperties.com</div>
         <div class="dev-type">Affordable Luxury</div>
-        <div class="dev-desc">One of Dubai's fastest-growing developers — making luxury accessible with flexible payment plans, high-quality finishes, and strong ROI. Ideal for first-time buyers and savvy investors.</div>
+        <div class="dev-desc">One of Dubai's fastest-growing developers, making luxury accessible with flexible payment plans, high-quality finishes, and strong ROI. Ideal for first-time buyers and savvy investors.</div>
         <div class="dev-areas">
           <span class="area-pill">Arjan</span><span class="area-pill">Jumeirah Village Circle</span>
           <span class="area-pill">Al Furjan</span><span class="area-pill">Sports City</span>
@@ -912,7 +912,7 @@ footer {
   <div class="section-inner">
     <div class="sec-eyebrow" style="justify-content:center;">Primary Market</div>
     <h2 style="text-align:center;">Current <em>Listings</em></h2>
-    <p class="sec-subtitle" style="text-align:center;max-width:100%;">Browse available primary market properties across Dubai — updated regularly. Click Enquire on any listing to connect with me directly on WhatsApp with full property details.</p>
+    <p class="sec-subtitle" style="text-align:center;max-width:100%;">Browse available primary market properties across Dubai, updated regularly. Click Enquire on any listing to connect with me directly on WhatsApp with full property details.</p>
     <div class="filters">
       <button class="filter-btn active" onclick="filterListings('all',this)">All Properties</button>
       <button class="filter-btn" onclick="filterListings('sell',this)">For Sale</button>
@@ -920,11 +920,11 @@ footer {
       <button class="filter-btn" onclick="filterListings('offplan',this)">Off-Plan</button>
     </div>
     <div class="primary-grid" id="listingsBody"></div>
-    <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Listings are updated regularly — please connect directly for current status.</p>
+    <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Listings are updated regularly, please connect directly for current status.</p>
     <div class="more-properties-banner">
       <div class="more-prop-text">
         <div class="more-prop-title">🔍 Looking for something not listed here?</div>
-        <div class="more-prop-sub">These are just a selection — I have access to <strong>hundreds more properties</strong> across Dubai including exclusive off-market deals, new launches, and investor portfolios. Just tell me what you're looking for.</div>
+        <div class="more-prop-sub">These are just a selection, I have access to <strong>hundreds more properties</strong> across Dubai including exclusive off-market deals, new launches, and investor portfolios. Just tell me what you're looking for.</div>
       </div>
       <a href="https://wa.me/971556472153?text=Hi%20Taher!%20I%20checked%20your%20listings%20but%20didn't%20find%20exactly%20what%20I'm%20looking%20for.%20Can%20you%20help%20me%20find%20more%20options?%20%F0%9F%94%91" target="_blank" class="btn-more-props">💬 Ask for More Options</a>
     </div>
@@ -936,7 +936,7 @@ footer {
   <div class="section-inner">
     <div class="sec-eyebrow" style="justify-content:center;">Secondary Market</div>
     <h2 style="text-align:center;">Secondary Market —<br><em>Direct Listings</em></h2>
-    <p class="sec-subtitle" style="text-align:center;max-width:100%;">Exclusive secondary market properties — direct from owners and investors. Prices are negotiable. Click any property to enquire directly on WhatsApp with full details.</p>
+    <p class="sec-subtitle" style="text-align:center;max-width:100%;">Exclusive secondary market properties, direct from owners and investors. Prices are negotiable. Click any property to enquire directly on WhatsApp with full details.</p>
     <div class="sec-tabs">
       <button class="sec-tab active" onclick="filterSecondary('all', this)">All Listings</button>
       <button class="sec-tab" onclick="filterSecondary('rent', this)">For Rent</button>
@@ -944,7 +944,7 @@ footer {
       <button class="sec-tab" onclick="filterSecondary('offplan', this)">Off-Plan Resale</button>
     </div>
     <div class="sec-grid" id="secGrid"></div>
-    <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Listings are updated regularly — please connect directly for current status.</p>
+    <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Listings are updated regularly, please connect directly for current status.</p>
   </div>
 </div>
 
@@ -953,7 +953,7 @@ footer {
   <div class="contact-inner">
     <div class="contact-left">
       <h2>Let's Find Your<br><em>Perfect Property</em></h2>
-      <p>Reach out today — response within the hour.</p>
+      <p>Reach out today - response within the hour.</p>
     </div>
     <div class="contact-btns hide-mobile">
       <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa-lg">💬 WhatsApp</a>
@@ -965,7 +965,7 @@ footer {
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
-  <div class="footer-role">Property Consultant — Dubai</div>
+  <div class="footer-role">Property Consultant, Dubai</div>
   <div class="footer-company">New Heights Real Estate</div>
   <div class="social-row">
     <a href="https://www.instagram.com/habibi_chalodubai/" target="_blank" class="social-link">📸 Instagram</a>
