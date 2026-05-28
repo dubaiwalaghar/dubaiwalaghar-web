@@ -491,7 +491,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 
 /* ══════════════ CONTACT STRIP ══════════════ */
 .contact-strip {
-  background: var(--mocha); padding: 5.5rem 3.5rem;
+  background: var(--mocha); padding: 3rem 3.5rem;
   position: relative; z-index: 1; overflow: hidden;
 }
 .contact-strip::before {
@@ -966,7 +966,7 @@ footer {
 </div>
 <!-- ══ CONTACT STRIP ══ -->
 <div class="contact-strip" id="contact">
-  <div class="contact-inner">
+  <div class="contact-inner" style="justify-content:center;text-align:center;">
     <div class="contact-left">
       <h2>Let's Find Your<br><em>Perfect Property</em></h2>
       <p>Reach out today — response within the hour.</p>
