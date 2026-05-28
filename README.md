@@ -801,11 +801,12 @@ footer {
       <p class="nh-strip-desc">
         Backed by one of Dubai's most trusted property advisory firms, I bring you access to exclusive listings, early off-plan launches, and investment-grade secondary market deals. New Heights Real Estate has guided <strong>500+ happy clients</strong> across the emirate — from first-time buyers to seasoned investors — with a reputation built on transparency, speed, and results that speak for themselves.
       </p>
-      <div class="nh-strip-stats">
-        <div class="nh-stat"><span class="nh-stat-val">500+</span><span class="nh-stat-lbl">Happy Clients</span></div>
-        <div class="nh-stat"><span class="nh-stat-val">AED 2B+</span><span class="nh-stat-lbl">Transactions Closed</span></div>
-        <div class="nh-stat"><span class="nh-stat-val">7+</span><span class="nh-stat-lbl">Developer Partners</span></div>
+        <div class="nh-strip-stats">
+        <div class="nh-stat"><span class="nh-stat-val">700+</span><span class="nh-stat-lbl">Happy Clients</span></div>
+        <div class="nh-stat"><span class="nh-stat-val">1,500+</span><span class="nh-stat-lbl">Properties Sold</span></div>
+        <div class="nh-stat"><span class="nh-stat-val">4.7 / 5</span><span class="nh-stat-lbl">Google Review Rating</span></div>
         <div class="nh-stat"><span class="nh-stat-val">10+</span><span class="nh-stat-lbl">Years of Excellence</span></div>
+      </div>
       </div>
     </div>
     <div class="nh-strip-right">
