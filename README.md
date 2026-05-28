@@ -729,12 +729,7 @@ footer {
         </div>
       </div>
       <!-- FIX: Hero CTA buttons were defined in CSS but completely missing from HTML -->
-      <div class="hero-btns">
-        <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa">💬 WhatsApp Me</a>
-        <a href="tel:+971556472153" class="btn-call">📞 Call Now</a>
-      </div>
     </div>
-
     <!-- PROFILE CARD -->
     <div class="profile-card">
       <div class="photo-wrap">
@@ -969,21 +964,6 @@ footer {
     <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Prices shown in INR / USD are approximate conversions based on live exchange rates and are for reference only — actual transaction prices are in AED. Listings are updated regularly — please connect directly for current status.</p>
   </div>
 </div>
-
-<!-- ══ CONTACT STRIP ══ -->
-<div class="contact-strip" id="contact">
-  <div class="contact-inner">
-    <div class="contact-left">
-      <h2>Let's Find Your<br><em>Perfect Property</em></h2>
-      <p>Reach out today — response within the hour.</p>
-    </div>
-    <div class="contact-btns">
-      <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa-lg">💬 WhatsApp</a>
-      <a href="tel:+971556472153" class="btn-call-lg">📞 Call Now</a>
-    </div>
-  </div>
-</div>
-
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
