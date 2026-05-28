@@ -799,14 +799,13 @@ footer {
       <div class="nh-strip-name">New Heights Real Estate</div>
       <div class="nh-strip-tagline">Dubai's Premier Property Advisory Firm</div>
       <p class="nh-strip-desc">
-        Backed by one of Dubai's most trusted property advisory firms, I bring you access to exclusive listings, early off-plan launches, and investment-grade secondary market deals. New Heights Real Estate has guided <strong>500+ happy clients</strong> across the emirate — from first-time buyers to seasoned investors — with a reputation built on transparency, speed, and results that speak for themselves.
+        Backed by one of Dubai's most trusted property advisory firms, I bring you access to exclusive listings, early off-plan launches, and investment-grade secondary market deals. New Heights Real Estate has guided <strong>700+ happy clients</strong> across the emirate — from first-time buyers to seasoned investors — with a reputation built on transparency, speed, and results that speak for themselves.
       </p>
-        <div class="nh-strip-stats">
+      <div class="nh-strip-stats">
         <div class="nh-stat"><span class="nh-stat-val">700+</span><span class="nh-stat-lbl">Happy Clients</span></div>
         <div class="nh-stat"><span class="nh-stat-val">1,500+</span><span class="nh-stat-lbl">Properties Sold</span></div>
         <div class="nh-stat"><span class="nh-stat-val">4.7 / 5</span><span class="nh-stat-lbl">Google Review Rating</span></div>
         <div class="nh-stat"><span class="nh-stat-val">10+</span><span class="nh-stat-lbl">Years of Excellence</span></div>
-      </div>
       </div>
     </div>
     <div class="nh-strip-right">
@@ -988,7 +987,7 @@ footer {
 //  The page compares this against what's stored in localStorage and
 //  shows a "New listings available — refresh" banner if they differ.
 // ═══════════════════════════════════════════════════════════════════
-const LISTINGS_VERSION = "2026-05-28-v5";
+const LISTINGS_VERSION = "2026-05-28-v6";
 
 (function checkVersion() {
   const stored = localStorage.getItem('listingsVersion');
