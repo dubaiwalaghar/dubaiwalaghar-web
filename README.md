@@ -685,8 +685,8 @@ footer {
   .nh-strip-stats { gap: 1.2rem; }
   .nh-strip-right { width: 100%; }
   .nh-strip-cta { justify-content: center; }
-  .contact-inner { flex-direction: column; text-align: center; }
-  .contact-btns { justify-content: center; }
+  .contact-inner { flex-direction: column; text-align: center; align-items: center; }
+  .contact-btns { justify-content: center; width: 100%; }
   .hide-mobile { display: none !important; }
   footer { padding: 2.5rem 1.5rem; }
   .mobile-sticky { display: grid; }
