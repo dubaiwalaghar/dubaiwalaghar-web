@@ -42,6 +42,27 @@ body::before {
   pointer-events: none;
 }
 
+/* ══════════════ REFRESH BANNER ══════════════ */
+#refresh-banner {
+  display: none;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  background: var(--bronze);
+  color: #fff;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  animation: slideDown 0.4s ease;
+  cursor: pointer;
+}
+#refresh-banner span { text-decoration: underline; margin-left: 0.5rem; cursor: pointer; font-weight: 700; }
+#refresh-countdown { font-weight: 800; margin: 0 0.3rem; }
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0); }
+}
+
 /* ══════════════ NAV ══════════════ */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
@@ -64,10 +85,10 @@ nav {
 
 /* ══════════════ HERO ══════════════ */
 .hero {
-  min-height: 100vh;
+  min-height: auto;
   display: grid; grid-template-columns: 1fr 1fr;
-  padding: 6rem 3.5rem 5rem;
-  gap: 5rem; max-width: 1280px; margin: 0 auto;
+  padding: 4.5rem 3.5rem 2rem;
+  gap: 4rem; max-width: 1280px; margin: 0 auto;
   align-items: center; position: relative; z-index: 1;
 }
 .hero::after {
@@ -83,7 +104,7 @@ nav {
 .eyebrow {
   display: flex; align-items: center; gap: 0.9rem;
   font-size: 0.7rem; letter-spacing: 0.32em; text-transform: uppercase;
-  color: var(--bronze); margin-bottom: 1.8rem; font-weight: 600;
+  color: var(--bronze); margin-bottom: 1rem; font-weight: 600;
   animation: fadeUp 0.7s 0.1s ease both;
 }
 .eyebrow-line { width: 2.5rem; height: 1.5px; background: var(--bronze); }
@@ -99,13 +120,13 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
 
 .hero-desc {
   font-size: 1rem; color: var(--taupe); font-weight: 400;
-  line-height: 1.85; max-width: 420px; margin-bottom: 2.5rem;
+  line-height: 1.85; max-width: 420px; margin-bottom: 1.5rem;
   animation: fadeUp 0.7s 0.3s ease both;
 }
 .hero-desc strong { color: var(--espresso); font-weight: 600; }
 
 .hero-stats {
-  display: flex; gap: 2.8rem; margin-bottom: 3rem;
+  display: flex; gap: 2.8rem; margin-bottom: 2rem;
   animation: fadeUp 0.7s 0.4s ease both;
 }
 .stat { border-left: 2.5px solid var(--border2); padding-left: 1.2rem; }
@@ -162,11 +183,6 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   align-items: center; justify-content: center;
   overflow: hidden;
 }
-.photo-silhouette { width: 44px; height: 44px; fill: var(--border2); }
-.photo-label {
-  font-size: 0.54rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--sand); margin-top: 4px; font-weight: 600;
-}
 .card-name {
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem; font-weight: 700;
@@ -198,7 +214,7 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
 
 /* ══════════════ SECTION SHELL ══════════════ */
 .section-outer { position: relative; z-index: 1; }
-.section-inner { max-width: 1280px; margin: 0 auto; padding: 6rem 3.5rem; }
+.section-inner { max-width: 1280px; margin: 0 auto; padding: 3.5rem 3.5rem; }
 
 .sec-eyebrow {
   display: flex; align-items: center; gap: 0.8rem;
@@ -217,12 +233,57 @@ h2 em { font-style: italic; color: var(--bronze); }
 
 .sec-subtitle {
   font-size: 0.95rem; color: var(--taupe); font-weight: 400;
-  line-height: 1.85; margin-bottom: 3.5rem; max-width: 540px;
+  line-height: 1.85; margin-bottom: 2rem; max-width: 540px;
 }
 
 /* ══════════════ DEVELOPERS ══════════════ */
 .dev-section { background: var(--bg2); }
 .dev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+/* Featured company card */
+.dev-card-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--mocha) 0%, var(--mocha2) 100%);
+  border: 1.5px solid var(--mocha);
+  padding: 2.2rem 2.5rem;
+  position: relative; overflow: hidden;
+  text-decoration: none; display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.dev-card-featured:hover {
+  box-shadow: 0 14px 44px rgba(92,61,46,0.28);
+  transform: translateY(-3px);
+}
+.dev-card-featured::before {
+  content: '';
+  position: absolute; right: -60px; top: -60px;
+  width: 220px; height: 220px; border-radius: 50%;
+  background: rgba(255,255,255,0.04); pointer-events: none;
+}
+.dev-featured-left { display: flex; align-items: center; gap: 1.5rem; }
+.dev-featured-icon { font-size: 2.2rem; }
+.dev-featured-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem; font-weight: 700; color: var(--bg);
+  margin-bottom: 0.2rem;
+}
+.dev-featured-label {
+  font-size: 0.63rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--bronze2); font-weight: 700; margin-bottom: 0.4rem;
+}
+.dev-featured-desc {
+  font-size: 0.87rem; color: rgba(245,240,232,0.75); line-height: 1.7; max-width: 520px;
+}
+.dev-featured-cta {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--bronze); color: #fff;
+  padding: 0.75rem 1.6rem; font-size: 0.74rem;
+  letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700;
+  transition: background 0.25s, transform 0.2s; white-space: nowrap; flex-shrink: 0;
+}
+.dev-featured-cta:hover { background: var(--bronze2); transform: translateY(-2px); }
+
 .dev-card {
   background: var(--card); border: 1.5px solid var(--border);
   padding: 2.2rem 2rem; position: relative; overflow: hidden;
@@ -276,27 +337,6 @@ h2 em { font-style: italic; color: var(--bronze); }
 .filter-btn:hover { border-color: var(--bronze); color: var(--bronze); }
 .filter-btn.active { background: var(--mocha); color: #fff; border-color: var(--mocha); }
 
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; }
-thead tr { border-bottom: 2.5px solid var(--mocha); }
-thead th {
-  text-align: left; padding: 0.95rem 1.1rem;
-  font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--mocha); font-weight: 700; white-space: nowrap;
-  font-family: 'Jost', sans-serif;
-}
-tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
-tbody tr:hover { background: var(--bg2); }
-tbody td {
-  padding: 1.1rem 1.1rem; color: var(--taupe);
-  font-size: 0.87rem; vertical-align: middle; font-weight: 400;
-}
-.prop-name  { font-weight: 600; color: var(--espresso) !important; }
-.prop-num   { color: var(--sand) !important; font-size: 0.8rem !important; font-weight: 600 !important; }
-.prop-dev   { font-weight: 600; color: var(--mocha) !important; }
-.prop-loc   { font-weight: 500; }
-.prop-price { color: var(--mocha) !important; font-weight: 700 !important; white-space: nowrap; }
-
 .badge {
   display: inline-block; padding: 0.25rem 0.8rem;
   font-size: 0.62rem; letter-spacing: 0.12em;
@@ -309,16 +349,6 @@ tbody td {
 .badge-rented    { background: rgba(200,140,80,0.12); color: #8a5a20;       }
 .badge-distress  { background: rgba(180,60,60,0.1);   color: #9a2a2a;       }
 .badge-negotiable{ background: rgba(100,160,100,0.1); color: #3a7a3a;       }
-
-.enquire-link {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  color: #25D366; text-decoration: none;
-  font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
-  font-weight: 700; border-bottom: 1.5px solid transparent;
-  transition: border-color 0.2s, color 0.2s; white-space: nowrap;
-}
-.enquire-link:hover { border-color: #25D366; }
-.empty-row { text-align: center !important; padding: 3rem !important; color: var(--sand) !important; font-weight: 500 !important; }
 
 /* ══════════════ PRIMARY LISTINGS ══════════════ */
 .listings-section { background: var(--bg); }
@@ -337,13 +367,12 @@ tbody td {
   font-style: italic;
 }
 
-/* ══════════════ PRIMARY CARD GRID (matches secondary) ══════════════ */
+/* ══════════════ PRIMARY CARD GRID ══════════════ */
 .primary-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
 }
 @media (max-width: 1024px) { .primary-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 768px)  { .primary-grid { grid-template-columns: 1fr; } }
-
 
 .more-properties-banner {
   margin-top: 2.5rem; background: var(--card);
@@ -371,7 +400,6 @@ tbody td {
 /* ══════════════ SECONDARY MARKET ══════════════ */
 .secondary-section { background: var(--bg2); }
 
-/* sub-tab filters */
 .sec-tabs {
   display: flex; gap: 0; margin-bottom: 2.5rem;
   border: 2px solid var(--border2); width: fit-content; overflow: hidden;
@@ -387,7 +415,6 @@ tbody td {
 .sec-tab:hover { background: var(--bg3); color: var(--bronze); }
 .sec-tab.active { background: var(--mocha); color: #fff; }
 
-/* secondary card grid */
 .sec-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
 }
@@ -403,7 +430,6 @@ tbody td {
   transform: translateY(-4px); border-color: var(--bronze);
 }
 
-/* hot deal ribbon */
 .sec-card.hot::before {
   content: '🔥 Hot Deal';
   position: absolute; top: 12px; right: -1px;
@@ -439,7 +465,6 @@ tbody td {
   display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem;
   margin-bottom: 1.1rem;
 }
-.sec-det-item { }
 .sec-det-label {
   font-size: 0.58rem; letter-spacing: 0.13em; text-transform: uppercase;
   color: var(--sand); font-weight: 700; margin-bottom: 1px;
@@ -453,10 +478,6 @@ tbody td {
   font-size: 1.25rem; font-weight: 700; color: var(--mocha);
   margin-bottom: 0.4rem;
 }
-.sec-card-price-note {
-  font-size: 0.72rem; color: var(--taupe); font-weight: 400; margin-bottom: 1.1rem;
-}
-
 .sec-card-divider { height: 1px; background: var(--border); margin: 0 0 1rem; }
 
 .sec-card-footer {
@@ -474,7 +495,6 @@ tbody td {
 }
 .sec-enquire-btn:hover { background: #1cb85a; transform: translateY(-1px); }
 
-/* no listings state */
 .sec-empty {
   grid-column: 1/-1; text-align: center;
   padding: 3rem; color: var(--sand); font-weight: 500; font-size: 0.9rem;
@@ -542,9 +562,7 @@ footer {
   color: var(--bronze2); letter-spacing: 0.08em; margin-bottom: 1.4rem;
 }
 .social-row {
-  display: none; /* hidden — activate when ready: change to display:flex */
-  /* Instagram → https://www.instagram.com/habibi_chalodubai/          */
-  /* Facebook  → https://www.facebook.com/profile.php?id=61580013579727 */
+  display: none;
   gap: 1.2rem; justify-content: center; margin-bottom: 1.2rem;
 }
 .social-link {
@@ -574,31 +592,107 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ══════════════ RESPONSIVE ══════════════ */
+/* ══════════════ NEW HEIGHTS STRIP ══════════════ */
+.nh-strip-outer {
+  background: var(--espresso);
+  position: relative; z-index: 1; overflow: hidden;
+}
+.nh-strip-outer::before {
+  content: '';
+  position: absolute; right: -80px; top: -80px;
+  width: 320px; height: 320px; border-radius: 50%;
+  background: rgba(154,107,63,0.07); pointer-events: none;
+}
+.nh-strip-inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: 3rem 3.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 3rem; flex-wrap: wrap; position: relative; z-index: 2;
+}
+.nh-strip-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--bronze2); font-weight: 700; margin-bottom: 0.5rem;
+}
+.nh-strip-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 700; color: var(--bg);
+  line-height: 1.1; margin-bottom: 0.25rem;
+}
+.nh-strip-tagline {
+  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bronze2); font-weight: 600; margin-bottom: 1rem;
+}
+.nh-strip-desc {
+  font-size: 0.9rem; color: rgba(245,240,232,0.72);
+  line-height: 1.8; max-width: 540px; margin-bottom: 1.5rem;
+}
+.nh-strip-desc strong { color: var(--bg); font-weight: 600; }
+.nh-strip-stats {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+}
+.nh-stat {
+  display: flex; flex-direction: column; gap: 0.15rem;
+  border-left: 2px solid rgba(181,130,78,0.4); padding-left: 1rem;
+}
+.nh-stat-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--bronze2); line-height: 1;
+}
+.nh-stat-lbl {
+  font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(245,240,232,0.5); font-weight: 600;
+}
+.nh-strip-right { flex-shrink: 0; }
+.nh-strip-cta {
+  display: flex; align-items: center; gap: 1rem;
+  background: rgba(154,107,63,0.15);
+  border: 1.5px solid rgba(154,107,63,0.4);
+  padding: 1.4rem 2rem; text-decoration: none;
+  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+}
+.nh-strip-cta:hover {
+  background: rgba(154,107,63,0.25);
+  border-color: var(--bronze2); transform: translateY(-2px);
+}
+.nh-cta-icon { font-size: 1.8rem; }
+.nh-cta-label {
+  font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(245,240,232,0.5); font-weight: 700; margin-bottom: 0.3rem;
+}
+.nh-cta-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 700; color: var(--bronze2);
+}
+
+
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; gap: 3rem; padding: 8rem 2rem 4rem; }
+  .hero { grid-template-columns: 1fr; gap: 2rem; padding: 5.5rem 2rem 2rem; }
   .hero::after { display: none; }
   .dev-grid { grid-template-columns: 1fr 1fr; }
   .sec-grid { grid-template-columns: 1fr 1fr; }
-  .section-inner { padding: 4.5rem 2rem; }
+  .section-inner { padding: 3rem 2rem; }
+  .nh-strip-inner { padding: 2.5rem 2rem; }
   nav { padding: 1rem 2rem; }
 }
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
-  .hero { padding: 7.5rem 1.5rem 3rem; }
+  .hero { padding: 5.5rem 1.5rem 2rem; }
   .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
   .stat-val { font-size: 1.7rem; }
   .dev-grid { grid-template-columns: 1fr; }
   .sec-grid { grid-template-columns: 1fr; }
+  .nh-strip-inner { flex-direction: column; padding: 2rem 1.5rem; }
+  .nh-strip-stats { gap: 1.2rem; }
+  .nh-strip-right { width: 100%; }
+  .nh-strip-cta { justify-content: center; }
   .contact-inner { flex-direction: column; text-align: center; }
   .contact-btns { justify-content: center; }
   .hide-mobile { display: none !important; }
   footer { padding: 2.5rem 1.5rem; }
   .mobile-sticky { display: grid; }
   body { padding-bottom: 62px; }
-  .section-inner { padding: 3.5rem 1.5rem; }
-  .contact-strip { padding: 4rem 1.5rem; }
-  table { min-width: 700px; }
+  .section-inner { padding: 2.5rem 1.5rem; }
+  .contact-strip { padding: 3rem 1.5rem; }
   .sec-tabs { flex-wrap: wrap; width: 100%; }
   .sec-tab { flex: 1; border-right: none; border-bottom: 1.5px solid var(--border2); }
   .more-properties-banner { flex-direction: column; }
@@ -607,6 +701,11 @@ footer {
 </style>
 </head>
 <body>
+
+<!-- ══ REFRESH BANNER ══ -->
+<div id="refresh-banner" onclick="window.location.reload(true)">
+  🔄 New listings have been added! Auto-refreshing in <span id="refresh-countdown">5</span>s — or <span>click here to refresh now →</span>
+</div>
 
 <!-- ══ NAV ══ -->
 <nav>
@@ -640,20 +739,12 @@ footer {
           <div class="stat-lbl">All Covered</div>
         </div>
       </div>
-
     </div>
 
     <!-- PROFILE CARD -->
     <div class="profile-card">
       <div class="photo-wrap">
         <div class="photo-circle">
-          <!-- TAHER — UPLOAD YOUR PHOTO HERE ─────────────────────────
-               1. Upload photo file (e.g. taher-photo.jpg) to GitHub same folder
-               2. Delete SVG + photo-label below
-               3. Replace with:
-                  <img src="taher-photo.jpg" alt="Taher Betwala"
-                       style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
-               ──────────────────────────────────────────────────────── -->
           <img src="TB 1.jpg" alt="Taher Betwala" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
         </div>
       </div>
@@ -700,14 +791,42 @@ footer {
   </div>
 </section>
 
+<!-- ══ NEW HEIGHTS COMPANY STRIP ══ -->
+<div class="nh-strip-outer">
+  <div class="nh-strip-inner">
+    <div class="nh-strip-left">
+      <div class="nh-strip-eyebrow">📍 Proudly Representing</div>
+      <div class="nh-strip-name">New Heights Real Estate</div>
+      <div class="nh-strip-tagline">Dubai's Premier Property Advisory Firm</div>
+      <p class="nh-strip-desc">
+        Backed by one of Dubai's most trusted property advisory firms, I bring you access to exclusive listings, early off-plan launches, and investment-grade secondary market deals. New Heights Real Estate has guided <strong>500+ happy clients</strong> across the emirate — from first-time buyers to seasoned investors — with a reputation built on transparency, speed, and results that speak for themselves.
+      </p>
+      <div class="nh-strip-stats">
+        <div class="nh-stat"><span class="nh-stat-val">500+</span><span class="nh-stat-lbl">Happy Clients</span></div>
+        <div class="nh-stat"><span class="nh-stat-val">AED 2B+</span><span class="nh-stat-lbl">Transactions Closed</span></div>
+        <div class="nh-stat"><span class="nh-stat-val">7+</span><span class="nh-stat-lbl">Developer Partners</span></div>
+        <div class="nh-stat"><span class="nh-stat-val">10+</span><span class="nh-stat-lbl">Years of Excellence</span></div>
+      </div>
+    </div>
+    <div class="nh-strip-right">
+      <a href="https://newheightsrealestate.ae/" target="_blank" rel="noopener" class="nh-strip-cta">
+        <span class="nh-cta-icon">🏢</span>
+        <div>
+          <div class="nh-cta-label">Official Website</div>
+          <div class="nh-cta-link">newheightsrealestate.ae ↗</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- ══ DEVELOPERS ══ -->
 <div class="section-outer dev-section" id="developers">
   <div class="section-inner">
-    <div class="sec-eyebrow">Our Network</div>
-    <h2>Dubai's Top Developers —<br><em>All Under One Roof</em></h2>
-    <p class="sec-subtitle">From iconic master communities to boutique luxury residences — I work across every major developer in Dubai so you always find the right fit. Click any card to visit their official website.</p>
-    <div class="dev-grid">
-      <a class="dev-card" data-num="01" href="https://www.emaar.com" target="_blank" rel="noopener">
+    <div class="sec-eyebrow" style="justify-content:center;">Our Network</div>
+    <h2 style="text-align:center;">Dubai's Top Developers —<br><em>All Under One Roof</em></h2>
+    <p class="sec-subtitle" style="text-align:center;max-width:100%;">From iconic master communities to boutique luxury residences — I work across every major developer in Dubai so you always find the right fit. Click any card to visit their official website.</p>
+    <div class="dev-grid">      <a class="dev-card" data-num="01" href="https://www.emaar.com" target="_blank" rel="noopener">
         <div class="dev-icon">🏙️</div>
         <div class="dev-name">Emaar Properties</div>
         <div class="dev-visit">↗ Visit emaar.com</div>
@@ -812,24 +931,18 @@ footer {
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     SECONDARY MARKET
-══════════════════════════════════════════════════════ -->
+<!-- ══ SECONDARY MARKET ══ -->
 <div class="section-outer secondary-section" id="secondary">
   <div class="section-inner">
     <div class="sec-eyebrow" style="justify-content:center;">Secondary Market</div>
     <h2 style="text-align:center;">Secondary Market —<br><em>Direct Listings</em></h2>
     <p class="sec-subtitle" style="text-align:center;max-width:100%;">Exclusive secondary market properties — direct from owners and investors. Prices are negotiable. Click any property to enquire directly on WhatsApp with full details.</p>
-
-    <!-- Sub-tabs -->
     <div class="sec-tabs">
       <button class="sec-tab active" onclick="filterSecondary('all', this)">All Listings</button>
       <button class="sec-tab" onclick="filterSecondary('rent', this)">For Rent</button>
       <button class="sec-tab" onclick="filterSecondary('sell', this)">For Sale</button>
       <button class="sec-tab" onclick="filterSecondary('offplan', this)">Off-Plan Resale</button>
     </div>
-
-    <!-- Cards Grid -->
     <div class="sec-grid" id="secGrid"></div>
     <p class="availability-note">⚠ All listed properties are subject to availability at the time of enquiry. Listings are updated regularly — please connect directly for current status.</p>
   </div>
@@ -870,10 +983,34 @@ footer {
 
 <script>
 // ═══════════════════════════════════════════════════════════════════
-//   TAHER — PRIMARY LISTINGS
-//   status: "sell" | "rent" | "offplan"
+//  VERSION STAMP — update this string whenever you add new listings.
+//  The page compares this against what's stored in localStorage and
+//  shows a "New listings available — refresh" banner if they differ.
+// ═══════════════════════════════════════════════════════════════════
+const LISTINGS_VERSION = "2026-05-28-v5";
+
+(function checkVersion() {
+  const stored = localStorage.getItem('listingsVersion');
+  if (stored && stored !== LISTINGS_VERSION) {
+    const banner = document.getElementById('refresh-banner');
+    const countdown = document.getElementById('refresh-countdown');
+    banner.style.display = 'block';
+    document.querySelector('nav').style.top = '44px';
+    let secs = 5;
+    const tick = setInterval(() => {
+      secs--;
+      if (countdown) countdown.textContent = secs;
+      if (secs <= 0) { clearInterval(tick); window.location.reload(true); }
+    }, 1000);
+  }
+  localStorage.setItem('listingsVersion', LISTINGS_VERSION);
+})();
+
+// ═══════════════════════════════════════════════════════════════════
+//   PRIMARY LISTINGS
 // ═══════════════════════════════════════════════════════════════════
 const listings = [
+  // ── EXISTING ─────────────────────────────────────────────────────
   { id:1,  name:"Harbour Gate — Tower 1",          type:"Apartment",  developer:"Emaar",           location:"Creek Harbour",       beds:"1 BR",    size:"780",   price:"1,450,000",    status:"sell"    },
   { id:2,  name:"Sobha Hartland — Greens",          type:"Villa",      developer:"Sobha",           location:"MBR City",            beds:"4 BR",    size:"3,800", price:"6,500,000",    status:"sell"    },
   { id:3,  name:"Bluewaters Residences",            type:"Apartment",  developer:"Meraas",          location:"Bluewaters Island",   beds:"2 BR",    size:"1,400", price:"4,200,000",    status:"sell"    },
@@ -895,14 +1032,21 @@ const listings = [
   { id:19, name:"Danube Petalz — Phase 3",          type:"Apartment",  developer:"Danube",          location:"Jumeirah Village Circle", beds:"1 BR",size:"580",   price:"790,000",      status:"offplan" },
   { id:20, name:"Safa One — De GRISOGONO",          type:"Apartment",  developer:"DAMAC",           location:"Safa Park",           beds:"2 BR",    size:"1,320", price:"3,600,000",    status:"offplan" },
   { id:21, name:"Nakheel Bay Residences",           type:"Apartment",  developer:"Nakheel",         location:"Deira Islands",       beds:"2 BR",    size:"1,100", price:"1,950,000",    status:"offplan" },
+
+  // ── NEW ADDITIONS ─────────────────────────────────────────────────
+  { id:22, name:"J One — Business Bay",             type:"Apartment",  developer:"—",               location:"Business Bay",        beds:"2 BR",    size:"1,600", price:"3,300,000",    status:"sell",   note:"Was 3.8M · Furnished · 3 Bath · Motivated Seller" },
+  { id:23, name:"Collective 2.0 Tower",             type:"Apartment",  developer:"Emaar",           location:"Dubai Hills",         beds:"1 BR",    size:"479",   price:"1,350,000",    status:"sell",   note:"Rented · Furnished · Community View · Investor Deal" },
+  { id:24, name:"Binghatti Elite — Bulk Deal 🔥",  type:"Apartment",  developer:"Binghatti",       location:"Dubai Silicon Oasis", beds:"Studio",  size:"—",     price:"580,000",      status:"offplan",note:"Market Price 800K — Save AED 220K! Bulk (17 units) 580K · Separate 585K · Handover July 30, 2026" },
+  { id:25, name:"Florine Beach Residences — Sobha Siniya Island", type:"Apartment", developer:"Sobha", location:"Siniya Island", beds:"1 BR", size:"513",  price:"1,165,000",    status:"offplan",note:"High Floor · Lagoon, Beach & Pool View · OP 1.217M · Market 1.465M · 40% Paid · Handover Sept 2028" },
+  { id:26, name:"Rukan Townhouse",                  type:"Townhouse",  developer:"—",               location:"Rukan",               beds:"1 BR",    size:"—",     price:"1,050,000",    status:"sell",   note:"Fully Furnished · Rented 75K/6 cheques · Gross ROI 7.15% · Net ROI 6.85% · Direct community garden access" },
+  { id:27, name:"AG Residence",                     type:"Apartment",  developer:"AG",              location:"Jumeirah Village Circle", beds:"2 BR", size:"1,141", price:"1,250,000",   status:"sell",   note:"Fully Furnished · Vacant on Transfer · Good Price Alert 🚨" },
+  { id:28, name:"La Fontana Di Trevi",              type:"Apartment",  developer:"—",               location:"Arjan",               beds:"1 BR",    size:"920",   price:"850,000",      status:"sell",   note:"Fully Furnished · 2 Bath · 1 Covered Parking · Partially Upgraded · Spacious Layout" },
+  { id:29, name:"Azizi Venice — Bulk Deal 🔥",     type:"Apartment",  developer:"Azizi",           location:"Dubai South",         beds:"Studio",  size:"—",     price:"450,000",      status:"offplan",note:"10 Units Bulk Purchase · 70% Paid · OP 604K · Handover Dec 2026 · Super Distressed Price ⚡" },
+  { id:30, name:"Warehouse — Nad Al Hammar",        type:"Warehouse",  developer:"—",               location:"Nad Al Hammar",       beds:"Industrial",size:"20,551",price:"26,000,000", status:"sell",   note:"Brand New · Vacant · 180 KW Power · Rare Commercial Opportunity" },
 ];
 
 // ═══════════════════════════════════════════════════════════════════
-//   TAHER — SECONDARY MARKET LISTINGS
-//   type: "rent" | "sell" | "offplan"
-//   tag:  "hot" | "distress" | "" (none)
-//   occupancy: "Vacant" | "Rented" | "Off-Plan" | "Near Handover"
-//   note: short extra note (negotiable, ROI info, handover date etc.)
+//   SECONDARY MARKET LISTINGS
 // ═══════════════════════════════════════════════════════════════════
 const secondaryListings = [
 
@@ -963,7 +1107,6 @@ const secondaryListings = [
   { id:"O1",  name:"Azizi Venice",              area:"Dubai South",     type:"offplan", beds:"1 BR",   size:"—",           price:"Same as Capital",  occupancy:"Near Handover", tag:"hot", note:"40% Paid · 60% Remaining · No profit — same price" },
   { id:"O2",  name:"Azizi Grand",               area:"Dubai Sports City", type:"offplan", beds:"1 BR", size:"—",          price:"AED 770,000",     occupancy:"Off-Plan",  tag:"distress", note:"Below OP (was 800K) · Handover June 2026 · Big Layout" },
 ];
-// ═══════════════════════════════════════════════════════════════════
 
 // ── PRIMARY LISTINGS RENDER ──
 const statusMap = {
@@ -974,13 +1117,15 @@ const statusMap = {
 
 function buildWaLink(p) {
   const statusLabel = statusMap[p.status]?.label || p.status;
+  const noteText = p.note ? `%0A%F0%9F%93%8C ${encodeURIComponent(p.note)}` : '';
   const msg =
     `Hi Taher! I'm interested in the following property:%0A` +
-    `%F0%9F%8F%A0 *${p.name}*%0A` +
-    `%F0%9F%93%8D Location: ${p.location}%0A` +
-    `%F0%9F%9B%8F Type: ${p.type} | ${p.beds} | ${p.size} sqft%0A` +
-    `%F0%9F%92%B0 Price: AED ${p.price} | ${statusLabel}%0A` +
-    `Can we discuss further? %F0%9F%94%91`;
+    `%F0%9F%8F%A0 *${encodeURIComponent(p.name)}*%0A` +
+    `%F0%9F%93%8D Location: ${encodeURIComponent(p.location)}%0A` +
+    `%F0%9F%9B%8F Type: ${p.type} | ${p.beds}${p.size && p.size !== '—' ? ' | ' + p.size + ' sqft' : ''}%0A` +
+    `%F0%9F%92%B0 Price: AED ${p.price} | ${statusLabel}` +
+    noteText +
+    `%0ACan we discuss further? %F0%9F%94%91`;
   return `https://wa.me/971556472153?text=${msg}`;
 }
 
@@ -993,8 +1138,13 @@ function renderListings(data) {
   }
   data.forEach(p => {
     const s = statusMap[p.status] || statusMap.sell;
+    const isHot = p.note && (p.note.includes('Save') || p.note.includes('Distress') || p.note.includes('Bulk') || p.note.includes('Motivated'));
+    const ribbonHTML = isHot
+      ? `<div style="position:absolute;top:12px;right:-1px;background:var(--bronze);color:#fff;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;padding:0.22rem 0.8rem;">🔥 Hot Deal</div>`
+      : '';
     grid.innerHTML += `
-      <div class="sec-card">
+      <div class="sec-card" style="position:relative;overflow:hidden;">
+        ${ribbonHTML}
         <div class="sec-card-top">
           <div class="sec-card-name">${p.name}</div>
           <div class="sec-card-badge"><span class="badge ${s.cls}">${s.label}</span></div>
@@ -1015,8 +1165,12 @@ function renderListings(data) {
           </div>
           <div class="sec-det-item">
             <div class="sec-det-label">Size</div>
-            <div class="sec-det-val">${p.size} sqft</div>
+            <div class="sec-det-val">${p.size !== '—' ? p.size + ' sqft' : '—'}</div>
           </div>
+          ${p.note ? `<div class="sec-det-item" style="grid-column:1/-1">
+            <div class="sec-det-label">Notes</div>
+            <div class="sec-det-val" style="font-weight:400;font-size:0.8rem;color:var(--taupe)">${p.note}</div>
+          </div>` : ''}
         </div>
         <div class="sec-card-divider"></div>
         <div class="sec-card-price">AED ${p.price}</div>
@@ -1054,11 +1208,11 @@ function buildSecWaLink(p) {
   const typeLabel = secTypeMap[p.type]?.label || p.type;
   const msg =
     `Hi Taher! I'm interested in the following property:%0A` +
-    `%F0%9F%8F%A0 *${p.name}*%0A` +
-    `%F0%9F%93%8D Area: ${p.area}%0A` +
+    `%F0%9F%8F%A0 *${encodeURIComponent(p.name)}*%0A` +
+    `%F0%9F%93%8D Area: ${encodeURIComponent(p.area)}%0A` +
     `%F0%9F%9B%8F Beds: ${p.beds}${p.size && p.size !== '—' ? ' | Size: ' + p.size : ''}%0A` +
     `%F0%9F%92%B0 Price: ${p.price} | ${typeLabel}%0A` +
-    (p.note ? `%F0%9F%93%8C Note: ${p.note}%0A` : '') +
+    (p.note ? `%F0%9F%93%8C Note: ${encodeURIComponent(p.note)}%0A` : '') +
     `Can we discuss further? %F0%9F%94%91`;
   return `https://wa.me/971556472153?text=${msg}`;
 }
