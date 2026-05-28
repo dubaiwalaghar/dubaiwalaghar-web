@@ -979,7 +979,15 @@ footer {
   <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="mob-btn mob-btn-wa">💬 WhatsApp</a>
   <a href="tel:+971556472153" class="mob-btn mob-btn-call">📞 Call</a>
 </div>
-
+<!-- ══ CONTACT STRIP ══ -->
+<div class="contact-strip" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <h2>Let's Find Your<br><em>Perfect Property</em></h2>
+      <p>Reach out today — response within the hour.</p>
+    </div>
+  </div>
+</div>
 <script>
 // ═══════════════════════════════════════════════════════════════════
 //  VERSION STAMP — update whenever you add new listings
