@@ -39,47 +39,6 @@ body::before {
   pointer-events: none;
 }
 
-/* ══ REFRESH BANNER ══ */
-#refresh-banner {
-  display: none;
-  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-  background: var(--bronze);
-  color: #fff;
-  text-align: center;
-  padding: 0.6rem 1rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-}
-#refresh-banner span { text-decoration: underline; margin-left: 0.4rem; font-weight: 700; }
-#refresh-countdown { font-weight: 800; margin: 0 0.25rem; }
-
-/* ══ AUTO-REFRESH TICKER ══ */
-#auto-refresh-bar {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 400;
-  background: rgba(36,24,16,0.92);
-  backdrop-filter: blur(8px);
-  color: rgba(245,240,232,0.75);
-  text-align: center;
-  padding: 0.45rem 1rem;
-  font-size: 0.67rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  display: flex; align-items: center; justify-content: center; gap: 0.8rem;
-}
-#auto-refresh-bar .ar-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: #4caf50; flex-shrink: 0;
-  animation: pulse 1.5s infinite;
-}
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
-#auto-refresh-bar .ar-refresh-now {
-  color: var(--bronze2); text-decoration: underline; cursor: pointer; font-weight: 700;
-}
-#ar-countdown { color: #fff; font-weight: 800; }
-
 /* ══ NAV ══ */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
@@ -249,6 +208,7 @@ h2 em { font-style: italic; color: var(--bronze); }
   color: var(--espresso); font-family: 'Jost', sans-serif;
   font-size: 0.82rem; padding: 0.55rem 1rem; font-weight: 500;
   outline: none; transition: border-color 0.2s;
+  width: 100%;
 }
 .search-input::placeholder { color: var(--sand); font-weight: 400; }
 .search-input:focus { border-color: var(--bronze); }
@@ -302,9 +262,9 @@ h2 em { font-style: italic; color: var(--bronze); }
 .filter-btn:hover { border-color: var(--bronze); color: var(--bronze); }
 .filter-btn.active { background: var(--mocha); color: #fff; border-color: var(--mocha); }
 
-/* Currency toggle — right-aligned in the filter row */
+/* Currency toggle */
 .currency-inline {
-  display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0;
+  display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; flex-wrap: wrap;
 }
 .currency-label {
   font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase;
@@ -395,9 +355,6 @@ h2 em { font-style: italic; color: var(--bronze); }
 .primary-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
 }
-@media (max-width: 1200px) { .primary-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 900px)  { .primary-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px)  { .primary-grid { grid-template-columns: 1fr; } }
 
 .prop-card {
   background: var(--card); border: 1.5px solid var(--border);
@@ -437,7 +394,6 @@ h2 em { font-style: italic; color: var(--bronze); }
   font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--bronze); font-weight: 700; margin-bottom: 0.55rem;
 }
-/* Compact inline details row */
 .prop-inline {
   display: flex; flex-wrap: wrap; gap: 0.3rem 0.7rem;
   margin-bottom: 0.55rem;
@@ -527,9 +483,6 @@ h2 em { font-style: italic; color: var(--bronze); }
 .sec-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
 }
-@media (max-width: 1200px) { .sec-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 900px)  { .sec-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px)  { .sec-grid { grid-template-columns: 1fr; } }
 
 /* ══ CONTACT STRIP ══ */
 .contact-strip {
@@ -681,10 +634,12 @@ footer {
 .footer-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 1rem 0; }
 .footer-copy { font-size: 0.64rem; letter-spacing: 0.08em; color: var(--sand); font-weight: 500; }
 
-/* ══ MOBILE STICKY ══ */
+/* ══ MOBILE STICKY CTA ══ */
 .mobile-sticky {
-  display: none; position: fixed; bottom: 30px; left: 0; right: 0; z-index: 300;
-  grid-template-columns: 1fr 1fr; border-top: 1.5px solid var(--border);
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1.5px solid var(--border);
 }
 .mob-btn {
   display: flex; align-items: center; justify-content: center; gap: 0.5rem;
@@ -700,43 +655,114 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ══ RESPONSIVE ══ */
+/* ══ RESPONSIVE — TABLET ══ */
+@media (max-width: 1200px) {
+  .primary-grid { grid-template-columns: repeat(3, 1fr); }
+  .sec-grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 1024px) {
   .hero { grid-template-columns: 1fr; gap: 2rem; padding: 5.5rem 2rem 2rem; }
   .dev-grid { grid-template-columns: repeat(2, 1fr); }
   .section-inner { padding: 2.5rem 2rem; }
   .nh-strip-inner { padding: 2.2rem 2rem; }
   nav { padding: 1rem 2rem; }
+  .primary-grid { grid-template-columns: repeat(2, 1fr); }
+  .sec-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ══ RESPONSIVE — MOBILE ══ */
 @media (max-width: 768px) {
-  nav { padding: 1rem 1.5rem; }
-  .hero { padding: 5rem 1.5rem 2rem; }
-  .hero-stats { gap: 1.3rem; flex-wrap: wrap; }
-  .dev-grid { grid-template-columns: 1fr 1fr; }
-  .nh-strip-inner { flex-direction: column; padding: 2rem 1.5rem; }
-  .contact-strip { padding: 2.5rem 1.5rem; }
-  .contact-details-row { gap: 1.5rem; }
-  footer { padding: 2rem 1.5rem; }
-  .mobile-sticky { display: grid; }
-  body { padding-bottom: 90px; }
-  .section-inner { padding: 2rem 1.5rem; }
+  nav { padding: 0.9rem 1.2rem; }
+  .nav-brand-name { font-size: 1.1rem; }
+  .nav-brand-sub { font-size: 0.52rem; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 4.8rem 1.2rem 1.5rem;
+    gap: 1.8rem;
+  }
+  h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 1rem; }
+  .hero-desc { font-size: 0.88rem; max-width: 100%; margin-bottom: 1rem; }
+  .hero-stats { gap: 1rem; flex-wrap: wrap; }
+  .stat-val { font-size: 1.5rem; }
+  .stat-lbl { font-size: 0.58rem; }
+  .hero-btns { gap: 0.7rem; }
+  .btn-wa, .btn-call { padding: 0.75rem 1.3rem; font-size: 0.72rem; width: 100%; justify-content: center; }
+
+  .profile-card { padding: 1.6rem 1.2rem; }
+  .card-name { font-size: 1.35rem; }
+
+  .section-inner { padding: 2rem 1.2rem; }
+  h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+  .sec-subtitle { font-size: 0.85rem; max-width: 100%; }
+
+  .dev-grid { grid-template-columns: 1fr; gap: 0.8rem; }
+  .dev-card { padding: 1.2rem 1rem; }
+
+  .search-bar-wrap {
+    flex-direction: column; align-items: stretch; padding: 0.8rem;
+  }
+  .search-input { width: 100%; flex: none; }
+  .search-select { width: 100%; flex: none; }
+  .search-clear { width: 100%; text-align: center; }
+
+  .filter-currency-row {
+    flex-direction: column; align-items: flex-start; gap: 0.8rem;
+  }
+  .filters { gap: 0.4rem; }
+  .filter-btn { padding: 0.45rem 0.9rem; font-size: 0.65rem; }
+
+  .currency-inline { gap: 0.4rem; flex-wrap: wrap; }
+  .cur-btn { padding: 0.38rem 0.7rem; font-size: 0.64rem; }
+
+  .primary-grid { grid-template-columns: 1fr; gap: 0.9rem; }
+  .sec-grid { grid-template-columns: 1fr; gap: 0.9rem; }
+
+  .prop-card { padding: 1rem; }
+  .prop-card-name { font-size: 0.85rem; }
+  .prop-price { font-size: 0.95rem; }
+  .prop-enquire { padding: 0.45rem 0.75rem; font-size: 0.62rem; }
+
   .sec-tabs { flex-wrap: wrap; width: 100%; }
-  .sec-tab { flex: 1; border-right: none; border-bottom: 1.5px solid var(--border2); }
-  .more-properties-banner { flex-direction: column; }
+  .sec-tab {
+    flex: 1 1 calc(50% - 1px);
+    border-right: none;
+    border-bottom: 1.5px solid var(--border2);
+    text-align: center;
+    padding: 0.55rem 0.5rem;
+    font-size: 0.64rem;
+  }
+  .sec-tab:nth-child(odd) { border-right: 1.5px solid var(--border2); }
+  .sec-tab:last-child { border-bottom: none; }
+
+  .more-properties-banner { flex-direction: column; padding: 1rem 1.1rem; }
   .btn-more-props { width: 100%; justify-content: center; }
-  .search-bar-wrap { flex-direction: column; }
-  .search-input, .search-select { width: 100%; }
-  .filter-currency-row { flex-direction: column; align-items: flex-start; }
-  .dev-grid { grid-template-columns: 1fr; }
+  .more-prop-title { font-size: 0.95rem; }
+  .more-prop-sub { font-size: 0.76rem; }
+
+  .nh-strip-inner { flex-direction: column; padding: 2rem 1.2rem; gap: 1.5rem; }
+  .nh-strip-name { font-size: 1.45rem; }
+  .nh-strip-stats { gap: 1rem; }
+  .nh-strip-cta { padding: 1rem 1.2rem; }
+
+  .contact-strip { padding: 2.5rem 1.2rem; }
+  .contact-btns { flex-direction: column; align-items: center; }
+  .btn-wa-lg, .btn-call-lg { width: 100%; justify-content: center; padding: 0.9rem 1.5rem; font-size: 0.78rem; }
+  .contact-details-row { gap: 1.2rem; }
+
+  footer { padding: 2rem 1.2rem; }
+
+  .mobile-sticky { display: grid; }
+  body { padding-bottom: 68px; }
+}
+
+@media (max-width: 400px) {
+  .hero-stats { flex-direction: column; gap: 0.8rem; }
+  .stat { border-left: none; border-top: 1.5px solid var(--border2); padding-left: 0; padding-top: 0.7rem; }
 }
 </style>
 </head>
 <body>
-
-<!-- ══ VERSION REFRESH BANNER ══ -->
-<div id="refresh-banner" onclick="window.location.reload(true)">
-  🔄 New listings have been added! Auto-refreshing in <span id="refresh-countdown">5</span>s — or <span>click to refresh now →</span>
-</div>
 
 <!-- ══ NAV ══ -->
 <nav>
@@ -949,7 +975,6 @@ footer {
     <h2 style="text-align:center;">Current <em>Listings</em></h2>
     <p class="sec-subtitle" style="text-align:center;max-width:100%;">Browse available primary market properties across Dubai. Click Enquire to connect directly on WhatsApp with full property details.</p>
 
-    <!-- SEARCH BAR -->
     <div class="search-bar-wrap">
       <input type="text" class="search-input" id="primarySearch" placeholder="🔍  Search by name, location, developer…" oninput="applyPrimaryFilters()"/>
       <select class="search-select" id="primaryBeds" onchange="applyPrimaryFilters()">
@@ -981,7 +1006,6 @@ footer {
       <span class="search-results-count" id="primaryCount"></span>
     </div>
 
-    <!-- FILTERS + CURRENCY -->
     <div class="filter-currency-row">
       <div class="filters">
         <button class="filter-btn active" onclick="setPrimaryType('all',this)">All</button>
@@ -1019,7 +1043,6 @@ footer {
     <h2 style="text-align:center;">Secondary Market — <em>Direct Listings</em></h2>
     <p class="sec-subtitle" style="text-align:center;max-width:100%;">Exclusive secondary market properties, direct from owners and investors. Prices are negotiable. Click Enquire on any property to connect directly on WhatsApp.</p>
 
-    <!-- SEARCH BAR -->
     <div class="search-bar-wrap">
       <input type="text" class="search-input" id="secSearch" placeholder="🔍  Search by name, area, notes…" oninput="applySecFilters()"/>
       <select class="search-select" id="secBeds" onchange="applySecFilters()">
@@ -1046,7 +1069,6 @@ footer {
       <span class="search-results-count" id="secCount"></span>
     </div>
 
-    <!-- TABS + CURRENCY -->
     <div class="filter-currency-row">
       <div class="sec-tabs">
         <button class="sec-tab active" onclick="setSecType('all', this)">All</button>
@@ -1115,44 +1137,7 @@ footer {
   <a href="tel:+971556472153" class="mob-btn mob-btn-call">📞 Call</a>
 </div>
 
-<!-- ══ AUTO-REFRESH BAR ══ -->
-<div id="auto-refresh-bar">
-  <span class="ar-dot"></span>
-  <span>Page auto-refreshes in <span id="ar-countdown">25</span>s for latest listings</span>
-  <span class="ar-refresh-now" onclick="window.location.reload(true)">Refresh now →</span>
-</div>
-
 <script>
-// ═══ VERSION CHECK ═══
-const LISTINGS_VERSION = "2026-05-29-v7";
-(function checkVersion() {
-  const stored = localStorage.getItem('listingsVersion');
-  if (stored && stored !== LISTINGS_VERSION) {
-    const banner = document.getElementById('refresh-banner');
-    const cd = document.getElementById('refresh-countdown');
-    banner.style.display = 'block';
-    document.querySelector('nav').style.top = '38px';
-    let s = 5;
-    const tick = setInterval(() => {
-      s--;
-      if (cd) cd.textContent = s;
-      if (s <= 0) { clearInterval(tick); window.location.reload(true); }
-    }, 1000);
-  }
-  localStorage.setItem('listingsVersion', LISTINGS_VERSION);
-})();
-
-// ═══ AUTO-REFRESH every 25 seconds ═══
-(function autoRefresh() {
-  const cd = document.getElementById('ar-countdown');
-  let secs = 25;
-  const tick = setInterval(() => {
-    secs--;
-    if (cd) cd.textContent = secs;
-    if (secs <= 0) { clearInterval(tick); window.location.reload(true); }
-  }, 1000);
-})();
-
 // ═══ CURRENCY ═══
 const FALLBACK_RATES = { AED: 1, INR: 22.45, USD: 0.2722 };
 let rates = { ...FALLBACK_RATES };
@@ -1314,7 +1299,6 @@ const secondaryListings = [
   { id:"O2",  name:"Azizi Grand",                 area:"Dubai Sports City", type:"offplan", beds:"1 BR",          size:"—",           price:"770,000",       occupancy:"Off-Plan", tag:"distress", note:"Below OP (was 800K) · Handover June 2026 · Big Layout" },
 ];
 
-// === STATE ===
 const statusMap = { sell:{ label:"For Sale", cls:"badge-sell" }, rent:{ label:"For Rent", cls:"badge-rent" }, offplan:{ label:"Off-Plan", cls:"badge-offplan" } };
 const secTypeMap = { rent:{ label:"For Rent", cls:"badge-rent" }, sell:{ label:"For Sale", cls:"badge-sell" }, offplan:{ label:"Off-Plan Resale", cls:"badge-offplan" } };
 const occupancyMap = { "Vacant":"badge-vacant","Rented":"badge-rented","Off-Plan":"badge-offplan","Near Handover":"badge-offplan","—":"" };
