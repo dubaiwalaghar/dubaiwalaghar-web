@@ -39,7 +39,7 @@ body::before {
   pointer-events: none;
 }
 
-/* ══ NAV ══ */
+/* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   display: flex; justify-content: center; align-items: center;
@@ -59,7 +59,7 @@ nav {
   color: var(--bronze); margin-top: 4px; font-weight: 700;
 }
 
-/* ══ HERO ══ */
+/* ── HERO ── */
 .hero {
   display: grid; grid-template-columns: 1fr 1fr;
   padding: 5rem 3.5rem 2rem;
@@ -89,7 +89,7 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
 }
 .hero-desc strong { color: var(--espresso); font-weight: 600; }
 .hero-stats {
-  display: flex; gap: 2.2rem; margin-bottom: 1.8rem;
+  display: flex; gap: 2.2rem;
   animation: fadeUp 0.7s 0.4s ease both;
 }
 .stat { border-left: 2.5px solid var(--border2); padding-left: 1.1rem; }
@@ -101,27 +101,6 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--sand); margin-top: 0.3rem; font-weight: 600;
 }
-.hero-btns {
-  display: flex; gap: 0.9rem; flex-wrap: wrap;
-  animation: fadeUp 0.7s 0.5s ease both;
-}
-.btn-wa {
-  display: inline-flex; align-items: center; gap: 0.55rem;
-  background: #25D366; color: #fff;
-  padding: 0.85rem 1.7rem; text-decoration: none;
-  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 600; transition: background 0.3s, transform 0.2s;
-}
-.btn-wa:hover { background: #1cb85a; transform: translateY(-2px); }
-.btn-call {
-  display: inline-flex; align-items: center; gap: 0.55rem;
-  background: transparent; color: var(--mocha);
-  border: 2px solid var(--mocha);
-  padding: 0.85rem 1.7rem; text-decoration: none;
-  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 600; transition: all 0.3s;
-}
-.btn-call:hover { background: var(--mocha); color: #fff; transform: translateY(-2px); }
 
 /* ── PROFILE CARD ── */
 .profile-card {
@@ -173,7 +152,7 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   text-transform: uppercase; font-weight: 600;
 }
 
-/* ══ SECTION SHELL ══ */
+/* ── SECTION SHARED ── */
 .section-outer { position: relative; z-index: 1; }
 .section-inner { max-width: 1280px; margin: 0 auto; padding: 3rem 3.5rem; }
 .sec-eyebrow {
@@ -194,104 +173,109 @@ h2 em { font-style: italic; color: var(--bronze); }
   line-height: 1.85; margin-bottom: 1.5rem; max-width: 540px;
 }
 
-/* ══ SEARCH BAR ══ */
-.search-bar-wrap {
-  background: var(--card);
-  border: 1.5px solid var(--border2);
-  padding: 0.9rem 1.2rem;
-  display: flex; gap: 0.6rem; flex-wrap: wrap;
-  align-items: center; margin-bottom: 1.2rem;
-}
-.search-input {
-  flex: 2 1 180px;
-  background: var(--bg2); border: 1.5px solid var(--border);
-  color: var(--espresso); font-family: 'Jost', sans-serif;
-  font-size: 0.82rem; padding: 0.55rem 1rem; font-weight: 500;
-  outline: none; transition: border-color 0.2s;
-  width: 100%;
-}
-.search-input::placeholder { color: var(--sand); font-weight: 400; }
-.search-input:focus { border-color: var(--bronze); }
-.search-select {
-  flex: 1 1 130px;
-  background: var(--bg2); border: 1.5px solid var(--border);
-  color: var(--espresso); font-family: 'Jost', sans-serif;
-  font-size: 0.8rem; padding: 0.55rem 0.7rem; font-weight: 500;
-  outline: none; cursor: pointer; transition: border-color 0.2s;
-  -webkit-appearance: none; appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238A7465'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 0.7rem center;
-  padding-right: 2rem;
-}
-.search-select:focus { border-color: var(--bronze); }
-.search-btn {
-  background: var(--mocha); color: #fff; border: none;
-  font-family: 'Jost', sans-serif; font-size: 0.75rem;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  font-weight: 700; padding: 0.6rem 1.4rem; cursor: pointer;
-  transition: background 0.2s, transform 0.2s; white-space: nowrap;
-  display: flex; align-items: center; gap: 0.4rem;
-}
-.search-btn:hover { background: var(--mocha2); transform: translateY(-1px); }
-.search-clear {
-  background: transparent; color: var(--sand); border: 1.5px solid var(--border2);
-  font-family: 'Jost', sans-serif; font-size: 0.72rem;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  font-weight: 600; padding: 0.55rem 0.9rem; cursor: pointer;
-  transition: all 0.2s; white-space: nowrap;
-}
-.search-clear:hover { border-color: var(--bronze); color: var(--bronze); }
-.search-results-count {
-  font-size: 0.72rem; color: var(--sand); font-weight: 600;
-  letter-spacing: 0.08em; padding: 0 0.2rem;
-}
-
-/* ══ FILTERS + CURRENCY ROW ══ */
-.filter-currency-row {
+/* ── FILTER BAR ── */
+.filter-bar {
   display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 0.7rem; margin-bottom: 1.2rem;
+  flex-wrap: nowrap; gap: 0.9rem; margin-bottom: 1.4rem;
 }
-.filters { display: flex; gap: 0.55rem; flex-wrap: wrap; }
-.filter-btn {
-  padding: 0.5rem 1.2rem; border: 1.5px solid var(--border2);
-  background: transparent; color: var(--taupe);
-  font-family: 'Jost', sans-serif; font-size: 0.7rem;
-  letter-spacing: 0.13em; text-transform: uppercase;
-  cursor: pointer; font-weight: 600; transition: all 0.22s;
-}
-.filter-btn:hover { border-color: var(--bronze); color: var(--bronze); }
-.filter-btn.active { background: var(--mocha); color: #fff; border-color: var(--mocha); }
+.filter-left { display: flex; align-items: center; gap: 0.8rem; flex-shrink: 0; }
 
-/* Currency toggle */
+/* filter dropdown */
+.filter-dropdown-wrap { position: relative; }
+.filter-main-btn {
+  display: flex; align-items: center; gap: 0.55rem;
+  background: var(--card); border: 1.5px solid var(--border2);
+  color: var(--mocha); font-family: 'Jost', sans-serif;
+  font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 700; padding: 0.58rem 1.1rem; cursor: pointer;
+  transition: border-color 0.2s; white-space: nowrap;
+}
+.filter-main-btn:hover { border-color: var(--bronze); }
+.filter-main-btn .arrow {
+  display: inline-block; width: 0; height: 0;
+  border-left: 4px solid transparent; border-right: 4px solid transparent;
+  border-top: 5px solid var(--bronze); margin-left: 0.2rem;
+  transition: transform 0.2s;
+}
+.filter-main-btn.open .arrow { transform: rotate(180deg); }
+.filter-panel {
+  display: none; position: absolute; top: calc(100% + 4px); left: 0;
+  background: var(--card); border: 1.5px solid var(--border2);
+  padding: 1rem 1.1rem; z-index: 100; min-width: 340px;
+  box-shadow: 0 8px 28px rgba(92,61,46,0.1);
+}
+.filter-panel.open { display: block; }
+.filter-group { margin-bottom: 0.9rem; }
+.filter-group:last-child { margin-bottom: 0; }
+.filter-group-label {
+  font-size: 0.59rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--sand); font-weight: 700; margin-bottom: 0.45rem; display: block;
+}
+.filter-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.chip {
+  padding: 0.38rem 0.85rem; border: 1.5px solid var(--border2);
+  background: transparent; color: var(--taupe);
+  font-family: 'Jost', sans-serif; font-size: 0.68rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  cursor: pointer; font-weight: 600; transition: all 0.18s;
+}
+.chip:hover { border-color: var(--bronze); color: var(--bronze); }
+.chip.active { background: var(--mocha); color: #fff; border-color: var(--mocha); }
+
+/* ── CURRENCY TOGGLE ── */
 .currency-inline {
-  display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; flex-wrap: wrap;
+  display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;
 }
 .currency-label {
   font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--sand); font-weight: 700;
+  color: var(--sand); font-weight: 700; white-space: nowrap;
 }
 .currency-toggle {
-  display: flex; border: 1.5px solid var(--border2); overflow: hidden;
+  display: flex; border: 1.5px solid var(--border2); overflow: hidden; flex-shrink: 0;
 }
 .cur-btn {
-  padding: 0.4rem 0.9rem; background: transparent; color: var(--taupe);
+  padding: 0.42rem 0.8rem; background: transparent; color: var(--taupe);
   font-family: 'Jost', sans-serif; font-size: 0.68rem;
-  letter-spacing: 0.12em; text-transform: uppercase;
+  letter-spacing: 0.1em; text-transform: uppercase;
   cursor: pointer; font-weight: 700; border: none;
   border-right: 1.5px solid var(--border2);
-  transition: all 0.2s;
+  transition: all 0.2s; white-space: nowrap;
 }
 .cur-btn:last-child { border-right: none; }
 .cur-btn:hover { background: var(--bg3); color: var(--bronze); }
 .cur-btn.active { background: var(--mocha); color: #fff; }
+
 .rate-note {
-  font-size: 0.63rem; color: var(--sand); font-weight: 400;
-  font-style: italic; display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.61rem; color: var(--sand); font-weight: 400;
+  font-style: italic; display: flex; align-items: center; gap: 0.28rem;
+  white-space: nowrap;
 }
 .rate-dot { width: 6px; height: 6px; border-radius: 50%; background: #4caf50; display: inline-block; flex-shrink: 0; }
 .rate-dot.stale { background: var(--bronze); }
 
-/* ══ DEVELOPERS ══ */
+/* ── SEARCH BAR ── */
+.search-bar-wrap {
+  background: var(--card);
+  border: 1.5px solid var(--border2);
+  padding: 0.7rem 1rem;
+  display: flex; gap: 0.7rem;
+  align-items: center; margin-bottom: 1rem;
+}
+.search-input {
+  flex: 1 1 0;
+  background: var(--bg2); border: 1.5px solid var(--border);
+  color: var(--espresso); font-family: 'Jost', sans-serif;
+  font-size: 0.82rem; padding: 0.55rem 1rem; font-weight: 500;
+  outline: none; transition: border-color 0.2s; min-width: 0;
+}
+.search-input::placeholder { color: var(--sand); font-weight: 400; }
+.search-input:focus { border-color: var(--bronze); }
+.search-results-count {
+  font-size: 0.72rem; color: var(--sand); font-weight: 600;
+  letter-spacing: 0.08em; white-space: nowrap; flex-shrink: 0;
+}
+
+/* ── DEVELOPERS ── */
 .dev-section { background: var(--bg2); }
 .dev-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.1rem; }
 .dev-card {
@@ -335,7 +319,7 @@ h2 em { font-style: italic; color: var(--bronze); }
   padding: 0.2rem 0.55rem; font-weight: 600;
 }
 
-/* ══ BADGES ══ */
+/* ── BADGES ── */
 .badge {
   display: inline-block; padding: 0.2rem 0.65rem;
   font-size: 0.58rem; letter-spacing: 0.1em;
@@ -347,14 +331,10 @@ h2 em { font-style: italic; color: var(--bronze); }
 .badge-vacant    { background: rgba(80,140,200,0.1);  color: #3a6a9a;       }
 .badge-rented    { background: rgba(200,140,80,0.12); color: #8a5a20;       }
 .badge-distress  { background: rgba(180,60,60,0.1);   color: #9a2a2a;       }
-.badge-negotiable{ background: rgba(100,160,100,0.1); color: #3a7a3a;       }
 
-/* ══ COMPACT PROPERTY CARDS ══ */
+/* ── LISTINGS GRID ── */
 .listings-section { background: var(--bg); }
-
-.primary-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
-}
+.primary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 
 .prop-card {
   background: var(--card); border: 1.5px solid var(--border);
@@ -408,9 +388,10 @@ h2 em { font-style: italic; color: var(--bronze); }
   margin-bottom: 0.55rem; font-style: italic;
   border-left: 2px solid var(--border2); padding-left: 0.5rem;
 }
-.prop-divider { height: 1px; background: var(--border); margin: 0.55rem 0; }
 .prop-price-row {
-  display: flex; justify-content: space-between; align-items: flex-end; gap: 0.4rem;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 0.4rem; margin-top: auto; padding-top: 0.55rem;
+  border-top: 1px solid var(--border);
 }
 .prop-price {
   font-family: 'Playfair Display', serif;
@@ -432,16 +413,14 @@ h2 em { font-style: italic; color: var(--bronze); }
   padding: 2.5rem; color: var(--sand); font-weight: 500; font-size: 0.88rem;
 }
 
-/* ══ AVAILABILITY NOTE ══ */
 .availability-note {
   margin-top: 1.5rem; text-align: center;
   font-size: 0.75rem; font-weight: 500;
   letter-spacing: 0.04em; color: var(--sand);
-  border-top: 1px solid var(--border);
   padding-top: 1rem; font-style: italic;
+  border-top: 1px solid var(--border);
 }
 
-/* ══ MORE BANNER ══ */
 .more-properties-banner {
   margin-top: 2rem; background: var(--card);
   border: 1.5px solid var(--border2); border-left: 4px solid var(--bronze);
@@ -465,26 +444,11 @@ h2 em { font-style: italic; color: var(--bronze); }
 }
 .btn-more-props:hover { background: #1cb85a; transform: translateY(-2px); }
 
-/* ══ SECONDARY ══ */
+/* ── SECONDARY ── */
 .secondary-section { background: var(--bg2); }
-.sec-tabs {
-  display: flex; border: 1.5px solid var(--border2); width: fit-content; max-width: 100%;
-}
-.sec-tab {
-  padding: 0.55rem 1.5rem; background: transparent; color: var(--taupe);
-  font-family: 'Jost', sans-serif; font-size: 0.7rem;
-  letter-spacing: 0.13em; text-transform: uppercase;
-  cursor: pointer; font-weight: 600; transition: all 0.22s;
-  border: none; border-right: 1.5px solid var(--border2);
-}
-.sec-tab:last-child { border-right: none; }
-.sec-tab:hover { background: var(--bg3); color: var(--bronze); }
-.sec-tab.active { background: var(--mocha); color: #fff; }
-.sec-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
-}
+.sec-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 
-/* ══ CONTACT STRIP ══ */
+/* ── CONTACT ── */
 .contact-strip {
   background: var(--mocha); padding: 3.5rem 3.5rem;
   position: relative; z-index: 1; overflow: hidden;
@@ -546,7 +510,7 @@ h2 em { font-style: italic; color: var(--bronze); }
   font-size: 0.92rem; color: var(--bg); font-weight: 600;
 }
 
-/* ══ COMPANY STRIP ══ */
+/* ── COMPANY STRIP ── */
 .nh-strip-outer {
   background: var(--espresso); position: relative; z-index: 1; overflow: hidden;
 }
@@ -613,7 +577,7 @@ h2 em { font-style: italic; color: var(--bronze); }
   font-size: 1rem; font-weight: 700; color: var(--bronze2);
 }
 
-/* ══ FOOTER ══ */
+/* ── FOOTER ── */
 footer {
   background: var(--espresso); padding: 2.5rem 3.5rem;
   position: relative; z-index: 1; text-align: center;
@@ -629,12 +593,11 @@ footer {
 .footer-company {
   font-family: 'Playfair Display', serif;
   font-size: 0.9rem; font-weight: 600;
-  color: var(--bronze2); letter-spacing: 0.08em; margin-bottom: 1.2rem;
+  color: var(--bronze2); letter-spacing: 0.08em; margin-bottom: 0.4rem;
 }
-.footer-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 1rem 0; }
-.footer-copy { font-size: 0.64rem; letter-spacing: 0.08em; color: var(--sand); font-weight: 500; }
+.footer-copy { font-size: 0.64rem; letter-spacing: 0.08em; color: var(--sand); font-weight: 500; margin-top: 1.2rem; }
 
-/* ══ MOBILE STICKY CTA ══ */
+/* ── MOBILE STICKY ── */
 .mobile-sticky {
   display: none;
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
@@ -649,13 +612,12 @@ footer {
 .mob-btn-wa   { background: #25D366; color: #fff; }
 .mob-btn-call { background: var(--mocha); color: #fff; }
 
-/* ══ ANIMATIONS ══ */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ══ RESPONSIVE — TABLET ══ */
+/* ── RESPONSIVE ── */
 @media (max-width: 1200px) {
   .primary-grid { grid-template-columns: repeat(3, 1fr); }
   .sec-grid { grid-template-columns: repeat(3, 1fr); }
@@ -668,26 +630,19 @@ footer {
   nav { padding: 1rem 2rem; }
   .primary-grid { grid-template-columns: repeat(2, 1fr); }
   .sec-grid { grid-template-columns: repeat(2, 1fr); }
+  .filter-panel { min-width: 300px; }
 }
 
-/* ══ RESPONSIVE — MOBILE ══ */
 @media (max-width: 768px) {
   nav { padding: 0.9rem 1.2rem; }
   .nav-brand-name { font-size: 1.1rem; }
   .nav-brand-sub { font-size: 0.52rem; }
 
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 4.8rem 1.2rem 1.5rem;
-    gap: 1.8rem;
-  }
+  .hero { grid-template-columns: 1fr; padding: 4.8rem 1.2rem 1.5rem; gap: 1.8rem; }
   h1 { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 1rem; }
   .hero-desc { font-size: 0.88rem; max-width: 100%; margin-bottom: 1rem; }
   .hero-stats { gap: 1rem; flex-wrap: wrap; }
   .stat-val { font-size: 1.5rem; }
-  .stat-lbl { font-size: 0.58rem; }
-  .hero-btns { gap: 0.7rem; }
-  .btn-wa, .btn-call { padding: 0.75rem 1.3rem; font-size: 0.72rem; width: 100%; justify-content: center; }
 
   .profile-card { padding: 1.6rem 1.2rem; }
   .card-name { font-size: 1.35rem; }
@@ -699,21 +654,50 @@ footer {
   .dev-grid { grid-template-columns: 1fr; gap: 0.8rem; }
   .dev-card { padding: 1.2rem 1rem; }
 
-  .search-bar-wrap {
-    flex-direction: column; align-items: stretch; padding: 0.8rem;
-  }
-  .search-input { width: 100%; flex: none; }
-  .search-select { width: 100%; flex: none; }
-  .search-clear { width: 100%; text-align: center; }
+  /* Search bar */
+  .search-bar-wrap { padding: 0.6rem 0.8rem; gap: 0.5rem; }
+  .search-input { font-size: 0.8rem; padding: 0.5rem 0.8rem; }
 
-  .filter-currency-row {
-    flex-direction: column; align-items: flex-start; gap: 0.8rem;
+  /* Filter bar — stack vertically */
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
   }
-  .filters { gap: 0.4rem; }
-  .filter-btn { padding: 0.45rem 0.9rem; font-size: 0.65rem; }
-
-  .currency-inline { gap: 0.4rem; flex-wrap: wrap; }
-  .cur-btn { padding: 0.38rem 0.7rem; font-size: 0.64rem; }
+  .filter-left {
+    display: flex; flex-direction: row;
+    align-items: center; gap: 0.6rem; flex-wrap: nowrap;
+  }
+  /* Currency row on mobile — full width, neat row */
+  .currency-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .currency-label {
+    flex-shrink: 0;
+    font-size: 0.62rem;
+  }
+  .currency-toggle {
+    flex: 1;
+    display: flex;
+  }
+  .cur-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.48rem 0.4rem;
+    font-size: 0.66rem;
+  }
+  .rate-note { display: none; }
+  /* filter panel full-width on mobile */
+  .filter-panel {
+    min-width: 0;
+    width: calc(100vw - 2.4rem);
+    max-width: 360px;
+    left: 0;
+  }
 
   .primary-grid { grid-template-columns: 1fr; gap: 0.9rem; }
   .sec-grid { grid-template-columns: 1fr; gap: 0.9rem; }
@@ -723,22 +707,8 @@ footer {
   .prop-price { font-size: 0.95rem; }
   .prop-enquire { padding: 0.45rem 0.75rem; font-size: 0.62rem; }
 
-  .sec-tabs { flex-wrap: wrap; width: 100%; }
-  .sec-tab {
-    flex: 1 1 calc(50% - 1px);
-    border-right: none;
-    border-bottom: 1.5px solid var(--border2);
-    text-align: center;
-    padding: 0.55rem 0.5rem;
-    font-size: 0.64rem;
-  }
-  .sec-tab:nth-child(odd) { border-right: 1.5px solid var(--border2); }
-  .sec-tab:last-child { border-bottom: none; }
-
   .more-properties-banner { flex-direction: column; padding: 1rem 1.1rem; }
   .btn-more-props { width: 100%; justify-content: center; }
-  .more-prop-title { font-size: 0.95rem; }
-  .more-prop-sub { font-size: 0.76rem; }
 
   .nh-strip-inner { flex-direction: column; padding: 2rem 1.2rem; gap: 1.5rem; }
   .nh-strip-name { font-size: 1.45rem; }
@@ -751,7 +721,6 @@ footer {
   .contact-details-row { gap: 1.2rem; }
 
   footer { padding: 2rem 1.2rem; }
-
   .mobile-sticky { display: grid; }
   body { padding-bottom: 68px; }
 }
@@ -759,12 +728,13 @@ footer {
 @media (max-width: 400px) {
   .hero-stats { flex-direction: column; gap: 0.8rem; }
   .stat { border-left: none; border-top: 1.5px solid var(--border2); padding-left: 0; padding-top: 0.7rem; }
+  .filter-left { flex-wrap: wrap; }
 }
 </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
+<!-- NAV -->
 <nav>
   <div class="nav-brand">
     <div class="nav-brand-name">New Heights Real Estate</div>
@@ -772,7 +742,7 @@ footer {
   </div>
 </nav>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section style="position:relative;z-index:1;">
   <div class="hero">
     <div class="hero-left">
@@ -796,12 +766,7 @@ footer {
           <div class="stat-lbl">All Covered</div>
         </div>
       </div>
-      <div class="hero-btns">
-        <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!%20%F0%9F%94%91" target="_blank" class="btn-wa">💬 WhatsApp</a>
-        <a href="tel:+971556472153" class="btn-call">📞 Call Now</a>
-      </div>
     </div>
-    <!-- PROFILE CARD -->
     <div class="profile-card">
       <div class="photo-wrap">
         <div class="photo-circle">
@@ -851,7 +816,7 @@ footer {
   </div>
 </section>
 
-<!-- ══ COMPANY STRIP ══ -->
+<!-- COMPANY STRIP -->
 <div class="nh-strip-outer">
   <div class="nh-strip-inner">
     <div class="nh-strip-left">
@@ -880,7 +845,7 @@ footer {
   </div>
 </div>
 
-<!-- ══ DEVELOPERS ══ -->
+<!-- DEVELOPERS -->
 <div class="section-outer dev-section" id="developers">
   <div class="section-inner">
     <div class="sec-eyebrow" style="justify-content:center;">Our Network</div>
@@ -968,51 +933,75 @@ footer {
   </div>
 </div>
 
-<!-- ══ PRIMARY LISTINGS ══ -->
+<!-- PRIMARY LISTINGS -->
 <div class="section-outer listings-section" id="listings">
   <div class="section-inner">
     <div class="sec-eyebrow" style="justify-content:center;">Primary Market</div>
     <h2 style="text-align:center;">Current <em>Listings</em></h2>
     <p class="sec-subtitle" style="text-align:center;max-width:100%;">Browse available primary market properties across Dubai. Click Enquire to connect directly on WhatsApp with full property details.</p>
 
+    <!-- Search -->
     <div class="search-bar-wrap">
       <input type="text" class="search-input" id="primarySearch" placeholder="🔍  Search by name, location, developer…" oninput="applyPrimaryFilters()"/>
-      <select class="search-select" id="primaryBeds" onchange="applyPrimaryFilters()">
-        <option value="">All Sizes / Beds</option>
-        <option value="Studio">Studio</option>
-        <option value="1 BR">1 BR</option>
-        <option value="2 BR">2 BR</option>
-        <option value="3 BR">3 BR</option>
-        <option value="4 BR">4 BR</option>
-        <option value="5 BR">5 BR</option>
-        <option value="6 BR">6+ BR</option>
-        <option value="Townhouse">Townhouse</option>
-        <option value="Villa">Villa</option>
-        <option value="Warehouse">Warehouse</option>
-      </select>
-      <select class="search-select" id="primaryDev" onchange="applyPrimaryFilters()">
-        <option value="">All Developers</option>
-        <option value="Emaar">Emaar</option>
-        <option value="DAMAC">DAMAC</option>
-        <option value="Nakheel">Nakheel</option>
-        <option value="Sobha">Sobha</option>
-        <option value="Meraas">Meraas</option>
-        <option value="Dubai Properties">Dubai Properties</option>
-        <option value="Danube">Danube</option>
-        <option value="Binghatti">Binghatti</option>
-        <option value="Azizi">Azizi</option>
-      </select>
-      <button class="search-clear" onclick="clearPrimarySearch()">✕ Clear</button>
       <span class="search-results-count" id="primaryCount"></span>
     </div>
 
-    <div class="filter-currency-row">
-      <div class="filters">
-        <button class="filter-btn active" onclick="setPrimaryType('all',this)">All</button>
-        <button class="filter-btn" onclick="setPrimaryType('sell',this)">For Sale</button>
-        <button class="filter-btn" onclick="setPrimaryType('rent',this)">For Rent</button>
-        <button class="filter-btn" onclick="setPrimaryType('offplan',this)">Off-Plan</button>
+    <!-- Filter bar: left = filter btn | right = currency -->
+    <div class="filter-bar">
+      <div class="filter-left">
+        <div class="filter-dropdown-wrap">
+          <button class="filter-main-btn" id="primaryFilterBtn" onclick="toggleFilterPanel('primaryFilterPanel','primaryFilterBtn')">
+            <span id="primaryFilterLabel">Filters</span>
+            <span class="arrow"></span>
+          </button>
+          <div class="filter-panel" id="primaryFilterPanel">
+            <!-- Listing Type -->
+            <div class="filter-group">
+              <span class="filter-group-label">Listing Type</span>
+              <div class="filter-chips" id="primaryTypeChips">
+                <button class="chip active" onclick="setPrimaryType('all',this)">All</button>
+                <button class="chip" onclick="setPrimaryType('sell',this)">For Sale</button>
+                <button class="chip" onclick="setPrimaryType('rent',this)">For Rent</button>
+                <button class="chip" onclick="setPrimaryType('offplan',this)">Off-Plan</button>
+              </div>
+            </div>
+            <!-- Bedrooms / Size — all in one group -->
+            <div class="filter-group">
+              <span class="filter-group-label">Bedrooms / Size</span>
+              <div class="filter-chips" id="primaryBedsChips">
+                <button class="chip active" onclick="setPrimaryBeds('',this)">All</button>
+                <button class="chip" onclick="setPrimaryBeds('Studio',this)">Studio</button>
+                <button class="chip" onclick="setPrimaryBeds('1 BR',this)">1 BR</button>
+                <button class="chip" onclick="setPrimaryBeds('2 BR',this)">2 BR</button>
+                <button class="chip" onclick="setPrimaryBeds('3 BR',this)">3 BR</button>
+                <button class="chip" onclick="setPrimaryBeds('4 BR',this)">4 BR</button>
+                <button class="chip" onclick="setPrimaryBeds('5 BR',this)">5 BR</button>
+                <button class="chip" onclick="setPrimaryBeds('6 BR',this)">6+ BR</button>
+                <button class="chip" onclick="setPrimaryBeds('Townhouse',this)">Townhouse</button>
+                <button class="chip" onclick="setPrimaryBeds('Villa',this)">Villa</button>
+                <button class="chip" onclick="setPrimaryBeds('Warehouse',this)">Warehouse</button>
+              </div>
+            </div>
+            <!-- Developer -->
+            <div class="filter-group">
+              <span class="filter-group-label">Developer</span>
+              <div class="filter-chips" id="primaryDevChips">
+                <button class="chip active" onclick="setPrimaryDev('',this)">All</button>
+                <button class="chip" onclick="setPrimaryDev('Emaar',this)">Emaar</button>
+                <button class="chip" onclick="setPrimaryDev('DAMAC',this)">DAMAC</button>
+                <button class="chip" onclick="setPrimaryDev('Nakheel',this)">Nakheel</button>
+                <button class="chip" onclick="setPrimaryDev('Sobha',this)">Sobha</button>
+                <button class="chip" onclick="setPrimaryDev('Meraas',this)">Meraas</button>
+                <button class="chip" onclick="setPrimaryDev('Danube',this)">Danube</button>
+                <button class="chip" onclick="setPrimaryDev('Binghatti',this)">Binghatti</button>
+                <button class="chip" onclick="setPrimaryDev('Azizi',this)">Azizi</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="filter-active-label" id="primaryActiveLabel" style="font-size:0.7rem;color:var(--taupe);font-weight:500;"></span>
       </div>
+      <!-- Currency -->
       <div class="currency-inline">
         <span class="currency-label">Price in</span>
         <div class="currency-toggle">
@@ -1025,10 +1014,10 @@ footer {
     </div>
 
     <div class="primary-grid" id="listingsBody"></div>
-    <p class="availability-note">⚠ All properties are subject to availability at the time of enquiry. INR / USD prices are approximate conversions based on live exchange rates — actual transactions are in AED. Listings updated regularly.</p>
+    <p class="availability-note">All properties are subject to availability at the time of enquiry. INR / USD prices are approximate conversions based on live exchange rates — actual transactions are in AED. Listings updated regularly.</p>
     <div class="more-properties-banner">
       <div>
-        <div class="more-prop-title">🔍 Looking for something not listed here?</div>
+        <div class="more-prop-title">Looking for something not listed here?</div>
         <div class="more-prop-sub">These are just a selection — I have access to <strong>hundreds more properties</strong> including exclusive off-market deals, new launches, and investor portfolios.</div>
       </div>
       <a href="https://wa.me/971556472153?text=Hi%20Taher!%20I%20checked%20your%20listings%20but%20didn't%20find%20what%20I'm%20looking%20for.%20Can%20you%20help%20me%20find%20more%20options?" target="_blank" class="btn-more-props">💬 Ask for More Options</a>
@@ -1036,46 +1025,71 @@ footer {
   </div>
 </div>
 
-<!-- ══ SECONDARY MARKET ══ -->
+<!-- SECONDARY LISTINGS -->
 <div class="section-outer secondary-section" id="secondary">
   <div class="section-inner">
     <div class="sec-eyebrow" style="justify-content:center;">Secondary Market</div>
     <h2 style="text-align:center;">Secondary Market — <em>Direct Listings</em></h2>
     <p class="sec-subtitle" style="text-align:center;max-width:100%;">Exclusive secondary market properties, direct from owners and investors. Prices are negotiable. Click Enquire on any property to connect directly on WhatsApp.</p>
 
+    <!-- Search -->
     <div class="search-bar-wrap">
       <input type="text" class="search-input" id="secSearch" placeholder="🔍  Search by name, area, notes…" oninput="applySecFilters()"/>
-      <select class="search-select" id="secBeds" onchange="applySecFilters()">
-        <option value="">All Sizes / Beds</option>
-        <option value="Studio">Studio</option>
-        <option value="1 BR">1 BR</option>
-        <option value="2 BR">2 BR</option>
-        <option value="3 BR">3 BR</option>
-        <option value="4 BR">4 BR</option>
-        <option value="5 BR">5 BR</option>
-        <option value="6 BR">6+ BR</option>
-        <option value="Plot">Plot</option>
-        <option value="Villa">Villa</option>
-        <option value="Penthouse">Penthouse</option>
-        <option value="Full Floor">Full Floor</option>
-      </select>
-      <select class="search-select" id="secOccupancy" onchange="applySecFilters()">
-        <option value="">Any Status</option>
-        <option value="Vacant">Vacant</option>
-        <option value="Rented">Rented</option>
-        <option value="Off-Plan">Off-Plan</option>
-      </select>
-      <button class="search-clear" onclick="clearSecSearch()">✕ Clear</button>
       <span class="search-results-count" id="secCount"></span>
     </div>
 
-    <div class="filter-currency-row">
-      <div class="sec-tabs">
-        <button class="sec-tab active" onclick="setSecType('all', this)">All</button>
-        <button class="sec-tab" onclick="setSecType('rent', this)">For Rent</button>
-        <button class="sec-tab" onclick="setSecType('sell', this)">For Sale</button>
-        <button class="sec-tab" onclick="setSecType('offplan', this)">Off-Plan Resale</button>
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <div class="filter-left">
+        <div class="filter-dropdown-wrap">
+          <button class="filter-main-btn" id="secFilterBtn" onclick="toggleFilterPanel('secFilterPanel','secFilterBtn')">
+            <span id="secFilterLabel">Filters</span>
+            <span class="arrow"></span>
+          </button>
+          <div class="filter-panel" id="secFilterPanel">
+            <!-- Listing Type -->
+            <div class="filter-group">
+              <span class="filter-group-label">Listing Type</span>
+              <div class="filter-chips" id="secTypeChips">
+                <button class="chip active" onclick="setSecType('all',this)">All</button>
+                <button class="chip" onclick="setSecType('rent',this)">For Rent</button>
+                <button class="chip" onclick="setSecType('sell',this)">For Sale</button>
+                <button class="chip" onclick="setSecType('offplan',this)">Off-Plan Resale</button>
+              </div>
+            </div>
+            <!-- Bedrooms / Size — all in one group -->
+            <div class="filter-group">
+              <span class="filter-group-label">Bedrooms / Size</span>
+              <div class="filter-chips" id="secBedsChips">
+                <button class="chip active" onclick="setSecBeds('',this)">All</button>
+                <button class="chip" onclick="setSecBeds('Studio',this)">Studio</button>
+                <button class="chip" onclick="setSecBeds('1 BR',this)">1 BR</button>
+                <button class="chip" onclick="setSecBeds('2 BR',this)">2 BR</button>
+                <button class="chip" onclick="setSecBeds('3 BR',this)">3 BR</button>
+                <button class="chip" onclick="setSecBeds('4 BR',this)">4 BR</button>
+                <button class="chip" onclick="setSecBeds('5 BR',this)">5 BR</button>
+                <button class="chip" onclick="setSecBeds('6 BR',this)">6+ BR</button>
+                <button class="chip" onclick="setSecBeds('Plot',this)">Plot</button>
+                <button class="chip" onclick="setSecBeds('Villa',this)">Villa</button>
+                <button class="chip" onclick="setSecBeds('Penthouse',this)">Penthouse</button>
+                <button class="chip" onclick="setSecBeds('Full Floor',this)">Full Floor</button>
+              </div>
+            </div>
+            <!-- Occupancy Status -->
+            <div class="filter-group">
+              <span class="filter-group-label">Occupancy Status</span>
+              <div class="filter-chips" id="secOccChips">
+                <button class="chip active" onclick="setSecOcc('',this)">Any</button>
+                <button class="chip" onclick="setSecOcc('Vacant',this)">Vacant</button>
+                <button class="chip" onclick="setSecOcc('Rented',this)">Rented</button>
+                <button class="chip" onclick="setSecOcc('Off-Plan',this)">Off-Plan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="filter-active-label" id="secActiveLabel" style="font-size:0.7rem;color:var(--taupe);font-weight:500;"></span>
       </div>
+      <!-- Currency -->
       <div class="currency-inline">
         <span class="currency-label">Price in</span>
         <div class="currency-toggle">
@@ -1088,11 +1102,11 @@ footer {
     </div>
 
     <div class="sec-grid" id="secGrid"></div>
-    <p class="availability-note">⚠ All properties are subject to availability at the time of enquiry. INR / USD prices are approximate conversions — actual transactions are in AED. Listings updated regularly.</p>
+    <p class="availability-note">All properties are subject to availability at the time of enquiry. INR / USD prices are approximate conversions — actual transactions are in AED. Listings updated regularly.</p>
   </div>
 </div>
 
-<!-- ══ CONTACT STRIP ══ -->
+<!-- CONTACT -->
 <div class="contact-strip" id="contact">
   <div class="contact-inner">
     <h2>Let's Find Your<br><em>Perfect Property</em></h2>
@@ -1122,23 +1136,22 @@ footer {
   </div>
 </div>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
   <div class="footer-role">Property Consultant, Dubai</div>
   <div class="footer-company">New Heights Real Estate</div>
-  <div class="footer-divider"></div>
   <div class="footer-copy">© 2025 Taher Betwala · New Heights Real Estate · All Rights Reserved · Dubai, UAE</div>
 </footer>
 
-<!-- ══ MOBILE STICKY ══ -->
+<!-- MOBILE STICKY BUTTONS -->
 <div class="mobile-sticky">
   <a href="https://wa.me/971556472153?text=Hey%20Taher!%20Found%20your%20profile%20%E2%80%94%20I%20think%20you're%20the%20right%20guy%20to%20find%20my%20dream%20home%20in%20Dubai!" target="_blank" class="mob-btn mob-btn-wa">💬 WhatsApp</a>
   <a href="tel:+971556472153" class="mob-btn mob-btn-call">📞 Call</a>
 </div>
 
 <script>
-// ═══ CURRENCY ═══
+/* ── RATES ── */
 const FALLBACK_RATES = { AED: 1, INR: 22.45, USD: 0.2722 };
 let rates = { ...FALLBACK_RATES };
 let activeCurrency = 'AED';
@@ -1168,46 +1181,43 @@ function updateRateNote() {
     if (!dot || !txt) return;
     if (activeCurrency === 'AED') {
       dot.className = 'rate-dot';
-      txt.textContent = 'Showing prices in AED';
+      txt.textContent = 'Prices in AED';
       return;
     }
     if (ratesLive) {
       dot.className = 'rate-dot';
       const sym = activeCurrency === 'INR' ? '₹' : '$';
       const r = activeCurrency === 'INR' ? rates.INR.toFixed(2) : rates.USD.toFixed(4);
-      txt.textContent = `Live rate: 1 AED = ${sym}${r} · Approx`;
+      txt.textContent = 'Live: 1 AED = ' + sym + r + ' · Approx';
     } else {
       dot.className = 'rate-dot stale';
-      txt.textContent = 'Approx rate (offline) · Verify before transacting';
+      txt.textContent = 'Approx (offline) · Verify before transacting';
     }
   });
 }
 
 function setCurrency(cur, btn) {
   activeCurrency = cur;
-  document.querySelectorAll('.cur-btn').forEach(b => b.classList.remove('active'));
+  // update all cur-btn toggles on the page
   document.querySelectorAll('.cur-btn').forEach(b => {
-    if (b.textContent.trim() === cur) b.classList.add('active');
+    b.classList.toggle('active', b.textContent.trim() === cur);
   });
   updateRateNote();
   applyPrimaryFilters();
   applySecFilters();
 }
 
+/* ── PRICE HELPERS ── */
 function parsePriceAED(priceStr) {
   const s = priceStr.toString().trim();
-  if (/on request/i.test(s)) return { value: null, suffix: '', isSpecial: true, label: 'On Request' };
-  if (/contact/i.test(s)) return { value: null, suffix: '', isSpecial: true, label: 'Contact for Price' };
-  if (/same as capital/i.test(s)) return { value: null, suffix: '', isSpecial: true, label: 'Same as Capital' };
-  if (/per sqft|\/sqft/i.test(s)) {
-    const num = parseFloat(s.replace(/[^0-9.]/g, ''));
-    return { value: isNaN(num) ? null : num, suffix: '/sqft', isSpecial: false };
-  }
+  if (/on request/i.test(s)) return { value: null, isSpecial: true };
+  if (/contact/i.test(s))    return { value: null, isSpecial: true };
+  if (/same as capital/i.test(s)) return { value: null, isSpecial: true };
   let suffix = '';
   if (/\/\s*mo/i.test(s)) suffix = '/mo';
   else if (/\/\s*yr/i.test(s)) suffix = '/yr';
   const cleaned = s.replace(/AED\s*/i,'').replace(/[,\s]/g,'').replace(/\/.*$/,'').trim();
-  const num = parseFloat(cleaned.replace(/each$/i,''));
+  const num = parseFloat(cleaned);
   return { value: isNaN(num) ? null : num, suffix, isSpecial: false };
 }
 
@@ -1220,223 +1230,289 @@ function formatConverted(priceStr) {
   const sym = activeCurrency === 'INR' ? '₹' : '$';
   let formatted;
   if (activeCurrency === 'INR') {
-    if (converted >= 1e7) formatted = sym + (converted / 1e7).toFixed(2) + ' Cr';
+    if (converted >= 1e7)      formatted = sym + (converted / 1e7).toFixed(2) + ' Cr';
     else if (converted >= 1e5) formatted = sym + (converted / 1e5).toFixed(2) + ' L';
-    else formatted = sym + Math.round(converted).toLocaleString('en-IN');
+    else                       formatted = sym + Math.round(converted).toLocaleString('en-IN');
   } else {
-    if (converted >= 1e6) formatted = sym + (converted / 1e6).toFixed(2) + 'M';
+    if (converted >= 1e6)      formatted = sym + (converted / 1e6).toFixed(2) + 'M';
     else if (converted >= 1e3) formatted = sym + Math.round(converted / 1000) + 'K';
-    else formatted = sym + Math.round(converted).toLocaleString();
+    else                       formatted = sym + Math.round(converted).toLocaleString();
   }
-  return `≈ ${formatted}${suffix} <span style="font-size:0.58rem;opacity:0.7">(approx)</span>`;
+  return '≈ ' + formatted + (suffix||'') + ' <span style="font-size:0.58rem;opacity:0.7">(approx)</span>';
 }
 
-// ═══ PRIMARY LISTINGS DATA ═══
+/* ── DATA ── */
 const listings = [
-  { id:1,  name:"Harbour Gate — Tower 1",   type:"Apartment",  developer:"Emaar",            location:"Creek Harbour",          beds:"1 BR",       size:"780",    price:"1,450,000",   status:"sell" },
-  { id:2,  name:"Sobha Hartland — Greens",  type:"Villa",      developer:"Sobha",            location:"MBR City",               beds:"4 BR",       size:"3,800",  price:"6,500,000",   status:"sell" },
-  { id:3,  name:"Bluewaters Residences",    type:"Apartment",  developer:"Meraas",           location:"Bluewaters Island",      beds:"2 BR",       size:"1,400",  price:"4,200,000",   status:"sell" },
-  { id:4,  name:"Address Harbour Point",    type:"Apartment",  developer:"Emaar",            location:"Creek Harbour",          beds:"2 BR",       size:"1,180",  price:"2,800,000",   status:"sell" },
-  { id:5,  name:"Golf Place — Phase II",    type:"Villa",      developer:"Emaar",            location:"Dubai Hills Estate",     beds:"5 BR",       size:"5,200",  price:"9,800,000",   status:"sell" },
-  { id:6,  name:"Cavalli Estates",          type:"Villa",      developer:"DAMAC",            location:"DAMAC Hills",            beds:"6 BR",       size:"8,500",  price:"18,500,000",  status:"sell" },
-  { id:7,  name:"Jumeirah Living — Marina", type:"Apartment",  developer:"Dubai Properties", location:"Dubai Marina",           beds:"3 BR",       size:"2,050",  price:"5,100,000",   status:"sell" },
-  { id:8,  name:"Villanova — La Rosa 5",   type:"Townhouse",  developer:"Dubai Properties", location:"Dubailand",              beds:"3 BR",       size:"2,220",  price:"2,150,000",   status:"sell" },
-  { id:9,  name:"DAMAC Volta",             type:"Apartment",  developer:"DAMAC",            location:"Downtown Dubai",         beds:"2 BR",       size:"1,250",  price:"18,000 / mo", status:"rent" },
-  { id:10, name:"Palm Beach Towers",        type:"Apartment",  developer:"Nakheel",          location:"Palm Jumeirah",          beds:"3 BR",       size:"2,100",  price:"35,000 / mo", status:"rent" },
-  { id:11, name:"Mudon Al Ranim",          type:"Townhouse",  developer:"Dubai Properties", location:"Mudon",                  beds:"4 BR",       size:"2,700",  price:"22,000 / mo", status:"rent" },
-  { id:12, name:"Creek Vistas Reserve",    type:"Apartment",  developer:"Sobha",            location:"MBR City",               beds:"1 BR",       size:"710",    price:"9,500 / mo",  status:"rent" },
-  { id:13, name:"City Walk Residences",    type:"Apartment",  developer:"Meraas",           location:"City Walk",              beds:"2 BR",       size:"1,350",  price:"19,000 / mo", status:"rent" },
-  { id:14, name:"Emaar Beachfront — Beach Vista", type:"Apartment", developer:"Emaar",     location:"Emaar Beachfront",       beds:"1 BR",       size:"820",    price:"13,000 / mo", status:"rent" },
-  { id:15, name:"Elo — Phase 2",           type:"Townhouse",  developer:"DAMAC",            location:"DAMAC Hills 2",          beds:"3 BR",       size:"1,900",  price:"1,750,000",   status:"offplan" },
-  { id:16, name:"Danube Opalz",            type:"Apartment",  developer:"Danube",           location:"Arjan",                  beds:"Studio",     size:"450",    price:"680,000",     status:"offplan" },
-  { id:17, name:"Sobha Solis",             type:"Apartment",  developer:"Sobha",            location:"Motor City",             beds:"1 BR",       size:"660",    price:"1,100,000",   status:"offplan" },
-  { id:18, name:"Creek Waters 2",          type:"Apartment",  developer:"Emaar",            location:"Creek Harbour",          beds:"2 BR",       size:"1,050",  price:"2,350,000",   status:"offplan" },
-  { id:19, name:"Danube Petalz — Phase 3", type:"Apartment",  developer:"Danube",           location:"Jumeirah Village Circle",beds:"1 BR",       size:"580",    price:"790,000",     status:"offplan" },
-  { id:20, name:"Safa One — De GRISOGONO", type:"Apartment",  developer:"DAMAC",            location:"Safa Park",              beds:"2 BR",       size:"1,320",  price:"3,600,000",   status:"offplan" },
-  { id:21, name:"Nakheel Bay Residences",  type:"Apartment",  developer:"Nakheel",          location:"Deira Islands",          beds:"2 BR",       size:"1,100",  price:"1,950,000",   status:"offplan" },
-  { id:22, name:"J One — Business Bay",    type:"Apartment",  developer:"—",                location:"Business Bay",           beds:"2 BR",       size:"1,600",  price:"3,300,000",   status:"sell",   note:"Was 3.8M · Furnished · 3 Bath · Motivated Seller" },
-  { id:23, name:"Collective 2.0 Tower",    type:"Apartment",  developer:"Emaar",            location:"Dubai Hills",            beds:"1 BR",       size:"479",    price:"1,350,000",   status:"sell",   note:"Rented · Furnished · Community View · Investor Deal" },
-  { id:24, name:"Binghatti Elite — Bulk 🔥", type:"Apartment",developer:"Binghatti",        location:"Dubai Silicon Oasis",    beds:"Studio",     size:"—",      price:"580,000",     status:"offplan",note:"Market Price 800K — Save AED 220K! Bulk (17 units) 580K · Separately 585K · Handover July 30, 2026" },
-  { id:25, name:"Florine Beach — Sobha Siniya", type:"Apartment",developer:"Sobha",         location:"Siniya Island",          beds:"1 BR",       size:"513",    price:"1,165,000",   status:"offplan",note:"High Floor · Lagoon & Beach View · OP 1.217M · Market 1.465M · 40% Paid · Handover Sept 2028" },
-  { id:26, name:"Rukan Townhouse",         type:"Townhouse",  developer:"—",                location:"Rukan",                  beds:"1 BR",       size:"—",      price:"1,050,000",   status:"sell",   note:"Fully Furnished · Rented 75K/6 cheques · ROI 7.15% · Direct garden access" },
-  { id:27, name:"AG Residence",            type:"Apartment",  developer:"AG",               location:"Jumeirah Village Circle",beds:"2 BR",       size:"1,141",  price:"1,250,000",   status:"sell",   note:"Fully Furnished · Vacant on Transfer · Good Price Alert 🚨" },
-  { id:28, name:"La Fontana Di Trevi",     type:"Apartment",  developer:"—",                location:"Arjan",                  beds:"1 BR",       size:"920",    price:"850,000",     status:"sell",   note:"Fully Furnished · 2 Bath · Covered Parking · Upgraded · Spacious Layout" },
-  { id:29, name:"Azizi Venice — Bulk 🔥",  type:"Apartment",  developer:"Azizi",            location:"Dubai South",            beds:"Studio",     size:"—",      price:"450,000",     status:"offplan",note:"10 Units Bulk · 70% Paid · OP 604K · Handover Dec 2026 · Super Distressed ⚡" },
-  { id:30, name:"Warehouse — Nad Al Hammar",type:"Warehouse", developer:"—",               location:"Nad Al Hammar",          beds:"Industrial", size:"20,551", price:"26,000,000",  status:"sell",   note:"Brand New · Vacant · 180 KW Power · Rare Commercial Opportunity" },
+  { id:1,  name:"Harbour Gate — Tower 1",          type:"Apartment",  developer:"Emaar",            location:"Creek Harbour",           beds:"1 BR",       size:"780",    price:"1,450,000",   status:"sell" },
+  { id:2,  name:"Sobha Hartland — Greens",          type:"Villa",      developer:"Sobha",            location:"MBR City",                beds:"4 BR",       size:"3,800",  price:"6,500,000",   status:"sell" },
+  { id:3,  name:"Bluewaters Residences",            type:"Apartment",  developer:"Meraas",           location:"Bluewaters Island",       beds:"2 BR",       size:"1,400",  price:"4,200,000",   status:"sell" },
+  { id:4,  name:"Address Harbour Point",            type:"Apartment",  developer:"Emaar",            location:"Creek Harbour",           beds:"2 BR",       size:"1,180",  price:"2,800,000",   status:"sell" },
+  { id:5,  name:"Golf Place — Phase II",            type:"Villa",      developer:"Emaar",            location:"Dubai Hills Estate",      beds:"5 BR",       size:"5,200",  price:"9,800,000",   status:"sell" },
+  { id:6,  name:"Cavalli Estates",                  type:"Villa",      developer:"DAMAC",            location:"DAMAC Hills",             beds:"6 BR",       size:"8,500",  price:"18,500,000",  status:"sell" },
+  { id:7,  name:"Jumeirah Living — Marina",         type:"Apartment",  developer:"Dubai Properties", location:"Dubai Marina",            beds:"3 BR",       size:"2,050",  price:"5,100,000",   status:"sell" },
+  { id:8,  name:"Villanova — La Rosa 5",            type:"Townhouse",  developer:"Dubai Properties", location:"Dubailand",               beds:"3 BR",       size:"2,220",  price:"2,150,000",   status:"sell" },
+  { id:9,  name:"DAMAC Volta",                      type:"Apartment",  developer:"DAMAC",            location:"Downtown Dubai",          beds:"2 BR",       size:"1,250",  price:"18,000 / mo", status:"rent" },
+  { id:10, name:"Palm Beach Towers",                type:"Apartment",  developer:"Nakheel",          location:"Palm Jumeirah",           beds:"3 BR",       size:"2,100",  price:"35,000 / mo", status:"rent" },
+  { id:11, name:"Mudon Al Ranim",                   type:"Townhouse",  developer:"Dubai Properties", location:"Mudon",                   beds:"4 BR",       size:"2,700",  price:"22,000 / mo", status:"rent" },
+  { id:12, name:"Creek Vistas Reserve",             type:"Apartment",  developer:"Sobha",            location:"MBR City",                beds:"1 BR",       size:"710",    price:"9,500 / mo",  status:"rent" },
+  { id:13, name:"City Walk Residences",             type:"Apartment",  developer:"Meraas",           location:"City Walk",               beds:"2 BR",       size:"1,350",  price:"19,000 / mo", status:"rent" },
+  { id:14, name:"Emaar Beachfront — Beach Vista",   type:"Apartment",  developer:"Emaar",            location:"Emaar Beachfront",        beds:"1 BR",       size:"820",    price:"13,000 / mo", status:"rent" },
+  { id:15, name:"Elo — Phase 2",                   type:"Townhouse",  developer:"DAMAC",            location:"DAMAC Hills 2",           beds:"3 BR",       size:"1,900",  price:"1,750,000",   status:"offplan" },
+  { id:16, name:"Danube Opalz",                    type:"Apartment",  developer:"Danube",           location:"Arjan",                   beds:"Studio",     size:"450",    price:"680,000",     status:"offplan" },
+  { id:17, name:"Sobha Solis",                     type:"Apartment",  developer:"Sobha",            location:"Motor City",              beds:"1 BR",       size:"660",    price:"1,100,000",   status:"offplan" },
+  { id:18, name:"Creek Waters 2",                  type:"Apartment",  developer:"Emaar",            location:"Creek Harbour",           beds:"2 BR",       size:"1,050",  price:"2,350,000",   status:"offplan" },
+  { id:19, name:"Danube Petalz — Phase 3",         type:"Apartment",  developer:"Danube",           location:"Jumeirah Village Circle", beds:"1 BR",       size:"580",    price:"790,000",     status:"offplan" },
+  { id:20, name:"Safa One — De GRISOGONO",         type:"Apartment",  developer:"DAMAC",            location:"Safa Park",               beds:"2 BR",       size:"1,320",  price:"3,600,000",   status:"offplan" },
+  { id:21, name:"Nakheel Bay Residences",          type:"Apartment",  developer:"Nakheel",          location:"Deira Islands",           beds:"2 BR",       size:"1,100",  price:"1,950,000",   status:"offplan" },
+  { id:22, name:"J One — Business Bay",            type:"Apartment",  developer:"—",                location:"Business Bay",            beds:"2 BR",       size:"1,600",  price:"3,300,000",   status:"sell",   note:"Was 3.8M · Furnished · 3 Bath · Motivated Seller" },
+  { id:23, name:"Collective 2.0 Tower",            type:"Apartment",  developer:"Emaar",            location:"Dubai Hills",             beds:"1 BR",       size:"479",    price:"1,350,000",   status:"sell",   note:"Rented · Furnished · Community View · Investor Deal" },
+  { id:24, name:"Binghatti Elite — Bulk 🔥",       type:"Apartment",  developer:"Binghatti",        location:"Dubai Silicon Oasis",     beds:"Studio",     size:"—",      price:"580,000",     status:"offplan",note:"Market Price 800K — Save AED 220K! Bulk (17 units) 580K · Separately 585K · Handover July 30, 2026" },
+  { id:25, name:"Florine Beach — Sobha Siniya",    type:"Apartment",  developer:"Sobha",            location:"Siniya Island",           beds:"1 BR",       size:"513",    price:"1,165,000",   status:"offplan",note:"High Floor · Lagoon & Beach View · OP 1.217M · Market 1.465M · 40% Paid · Handover Sept 2028" },
+  { id:26, name:"Rukan Townhouse",                 type:"Townhouse",  developer:"—",                location:"Rukan",                   beds:"1 BR",       size:"—",      price:"1,050,000",   status:"sell",   note:"Fully Furnished · Rented 75K/6 cheques · ROI 7.15% · Direct garden access" },
+  { id:27, name:"AG Residence",                    type:"Apartment",  developer:"AG",               location:"Jumeirah Village Circle", beds:"2 BR",       size:"1,141",  price:"1,250,000",   status:"sell",   note:"Fully Furnished · Vacant on Transfer · Good Price Alert 🚨" },
+  { id:28, name:"La Fontana Di Trevi",             type:"Apartment",  developer:"—",                location:"Arjan",                   beds:"1 BR",       size:"920",    price:"850,000",     status:"sell",   note:"Fully Furnished · 2 Bath · Covered Parking · Upgraded · Spacious Layout" },
+  { id:29, name:"Azizi Venice — Bulk 🔥",          type:"Apartment",  developer:"Azizi",            location:"Dubai South",             beds:"Studio",     size:"—",      price:"450,000",     status:"offplan",note:"10 Units Bulk · 70% Paid · OP 604K · Handover Dec 2026 · Super Distressed ⚡" },
+  { id:30, name:"Warehouse — Nad Al Hammar",       type:"Warehouse",  developer:"—",                location:"Nad Al Hammar",           beds:"Industrial", size:"20,551", price:"26,000,000",  status:"sell",   note:"Brand New · Vacant · 180 KW Power · Rare Commercial Opportunity" },
 ];
 
-// ═══ SECONDARY DATA ═══
 const secondaryListings = [
-  { id:"S14", name:"Hawthorn Cluster — Corner",   area:"DAMAC Hills 2",     type:"sell",    beds:"Villa Plot",    size:"2,643 sqft",  price:"1,390,000",     occupancy:"—",        tag:"",         note:"Corner Plot" },
-  { id:"S15", name:"Hawthorn Cluster — Plot",     area:"DAMAC Hills 2",     type:"sell",    beds:"Villa Plot",    size:"1,881 sqft",  price:"900,000",       occupancy:"—",        tag:"",         note:"" },
-  { id:"S16", name:"Rabia Tower",                 area:"Majan",             type:"sell",    beds:"2 BR",          size:"1,127 sqft",  price:"1,000,000",     occupancy:"Vacant",   tag:"",         note:"" },
-  { id:"S17", name:"Downtown Views 1",            area:"Downtown Dubai",    type:"sell",    beds:"1 BR",          size:"870 sqft",    price:"2,250,000",     occupancy:"Rented",   tag:"hot",      note:"Rented 125K · Furnished · Near Dubai Mall" },
-  { id:"S18", name:"Jebel Ali Hills — Plot P8",   area:"Jebel Ali Hills",   type:"sell",    beds:"Plot",          size:"9,688 sqft",  price:"3,250,000",     occupancy:"—",        tag:"",         note:"Park Facing" },
-  { id:"S19", name:"Al Furjan — 6 Bed Villa",     area:"Al Furjan",         type:"sell",    beds:"6 BR",          size:"9,400 sqft",  price:"10,000,000",    occupancy:"Vacant",   tag:"hot",      note:"Private Pool · Vacating Dec" },
-  { id:"S20", name:"Haven by Aldar 2 — TH",       area:"Haven Falls",       type:"sell",    beds:"4 BR",          size:"3,105 sqft",  price:"4,350,000",     occupancy:"Off-Plan", tag:"",         note:"40% Paid · OP + DLD Included" },
-  { id:"S21", name:"Marina Dec Tower",            area:"Dubai Marina",      type:"sell",    beds:"1 BR",          size:"823 sqft",    price:"1,100,000",     occupancy:"Vacant",   tag:"",         note:"1st Floor" },
-  { id:"S22", name:"Jebel Ali Hills — Plot P14",  area:"Jebel Ali Hills",   type:"sell",    beds:"Corner Plot",   size:"13,000 sqft", price:"325 / sqft",    occupancy:"—",        tag:"",         note:"Corner Plot" },
-  { id:"S23", name:"Alvorada — Arabian Ranches",  area:"Arabian Ranches",   type:"sell",    beds:"5 BR",          size:"9,300 sqft",  price:"13,800,000",    occupancy:"Vacant",   tag:"hot",      note:"Private Pool · Type C2" },
-  { id:"S24", name:"Palm Jumeirah Penthouse",     area:"Palm Jumeirah",     type:"sell",    beds:"Penthouse",     size:"10,000 sqft", price:"29,000,000",    occupancy:"Vacant",   tag:"hot",      note:"Fully Upgraded" },
-  { id:"S25", name:"Vida Downtown",               area:"Downtown Dubai",    type:"sell",    beds:"2 BR",          size:"—",           price:"4,700,000",     occupancy:"Vacant",   tag:"",         note:"" },
-  { id:"S26", name:"Camelia Prestige TH",         area:"DAMAC Hills 2",     type:"sell",    beds:"3 BR",          size:"1,924 sqft",  price:"1,900,000",     occupancy:"Off-Plan", tag:"",         note:"Handover Jan 2026" },
-  { id:"S27", name:"DAMAC Lagoons — Malta",       area:"DAMAC Lagoons",     type:"sell",    beds:"4 BR",          size:"—",           price:"2,750,000",     occupancy:"Vacant",   tag:"hot",      note:"Lagoon Proximity" },
-  { id:"S28", name:"Silicon Heights 3",           area:"Dubai Silicon Oasis",type:"sell",   beds:"1 BR",          size:"700 sqft",    price:"725,000",       occupancy:"Rented",   tag:"",         note:"Rented 52K" },
-  { id:"S29", name:"Suburbia",                    area:"Jebel Ali",         type:"sell",    beds:"1 BR",          size:"751 sqft",    price:"630,000",       occupancy:"Vacant",   tag:"",         note:"" },
-  { id:"S30", name:"Remraam — Studio",            area:"Dubailand",         type:"sell",    beds:"Studio",        size:"387 sqft",    price:"480,000",       occupancy:"Rented",   tag:"",         note:"Furnished · Rented 42K" },
-  { id:"S31", name:"Remraam",                     area:"Dubailand",         type:"sell",    beds:"1 BR",          size:"665 sqft",    price:"670,000",       occupancy:"Vacant",   tag:"",         note:"" },
-  { id:"S32", name:"DAMAC Lagoons — Venice Villa",area:"DAMAC Lagoons",     type:"sell",    beds:"6 BR Villa",    size:"5,073 sqft",  price:"6,600,000",     occupancy:"Vacant",   tag:"hot",      note:"Walking distance to lagoon" },
-  { id:"S33", name:"Emaar Oasis — Palace Ostra",  area:"Emaar Oasis",       type:"sell",    beds:"5 BR",          size:"11,363 sqft", price:"15,800,000",    occupancy:"Off-Plan", tag:"hot",      note:"OP Price 14.98M · Selling 15.8M" },
-  { id:"S34", name:"Royal Residence 2",           area:"Sports City",       type:"sell",    beds:"2 BR",          size:"1,154 sqft",  price:"1,050,000",     occupancy:"Rented",   tag:"",         note:"1st Floor · Upgraded" },
-  { id:"S35", name:"Jebel Ali Hills — P8 Corner", area:"Jebel Ali Hills",   type:"sell",    beds:"Corner Plot",   size:"9,748 sqft",  price:"340 / sqft",    occupancy:"—",        tag:"",         note:"Small corner — rare" },
-  { id:"S36", name:"Lago Vista",                  area:"IMPZ",              type:"sell",    beds:"Studio",        size:"496 sqft",    price:"460,000",       occupancy:"Vacant",   tag:"",         note:"With Parking" },
-  { id:"S37", name:"Fox Hill 6",                  area:"Motor City",        type:"sell",    beds:"2 BR",          size:"2,000 sqft",  price:"1,900,000",     occupancy:"Vacant",   tag:"",         note:"2.5 Bath · 2 Parking · Storage" },
-  { id:"S38", name:"Camelia 1 — Arabian Ranches 2",area:"Arabian Ranches 2",type:"sell",    beds:"4 BR",          size:"4,386 sqft",  price:"5,200,000",     occupancy:"Vacant",   tag:"hot",      note:"Corner · Private Pool · Furnished · Below Market" },
-  { id:"S39", name:"DAMAC Lagoons Morocco — Corner",area:"DAMAC Lagoons",   type:"sell",    beds:"5 BR + Maid",   size:"—",           price:"4,800,000",     occupancy:"Off-Plan", tag:"distress", note:"Vastu Unit · Near Lagoon · Handover Q4 2026 · OP + DLD Included" },
-  { id:"S40", name:"Saheel — Arabian Ranches",    area:"Arabian Ranches",   type:"sell",    beds:"5 BR + Maid",   size:"—",           price:"14,200,000",    occupancy:"Vacant",   tag:"hot",      note:"Fully Upgraded · Corner Plot · Negotiable" },
-  { id:"S41", name:"Palace — Dubai Hills",        area:"Dubai Hills",       type:"sell",    beds:"Full Floor",    size:"—",           price:"On Request",    occupancy:"Vacant",   tag:"",         note:"Can sell individually or as full floor" },
-  { id:"O1",  name:"Azizi Venice",                area:"Dubai South",       type:"offplan", beds:"1 BR",          size:"—",           price:"Same as Capital",occupancy:"Near Handover",tag:"hot", note:"40% Paid · 60% Remaining · Same price as original" },
-  { id:"O2",  name:"Azizi Grand",                 area:"Dubai Sports City", type:"offplan", beds:"1 BR",          size:"—",           price:"770,000",       occupancy:"Off-Plan", tag:"distress", note:"Below OP (was 800K) · Handover June 2026 · Big Layout" },
+  { id:"S14", name:"Hawthorn Cluster — Corner",    area:"DAMAC Hills 2",      type:"sell",    beds:"Villa Plot",    size:"2,643 sqft",  price:"1,390,000",      occupancy:"—",            tag:"",         note:"Corner Plot" },
+  { id:"S15", name:"Hawthorn Cluster — Plot",      area:"DAMAC Hills 2",      type:"sell",    beds:"Villa Plot",    size:"1,881 sqft",  price:"900,000",        occupancy:"—",            tag:"",         note:"" },
+  { id:"S16", name:"Rabia Tower",                  area:"Majan",              type:"sell",    beds:"2 BR",          size:"1,127 sqft",  price:"1,000,000",      occupancy:"Vacant",       tag:"",         note:"" },
+  { id:"S17", name:"Downtown Views 1",             area:"Downtown Dubai",     type:"sell",    beds:"1 BR",          size:"870 sqft",    price:"2,250,000",      occupancy:"Rented",       tag:"hot",      note:"Rented 125K · Furnished · Near Dubai Mall" },
+  { id:"S18", name:"Jebel Ali Hills — Plot P8",    area:"Jebel Ali Hills",    type:"sell",    beds:"Plot",          size:"9,688 sqft",  price:"3,250,000",      occupancy:"—",            tag:"",         note:"Park Facing" },
+  { id:"S19", name:"Al Furjan — 6 Bed Villa",      area:"Al Furjan",          type:"sell",    beds:"6 BR",          size:"9,400 sqft",  price:"10,000,000",     occupancy:"Vacant",       tag:"hot",      note:"Private Pool · Vacating Dec" },
+  { id:"S20", name:"Haven by Aldar 2 — TH",        area:"Haven Falls",        type:"sell",    beds:"4 BR",          size:"3,105 sqft",  price:"4,350,000",      occupancy:"Off-Plan",     tag:"",         note:"40% Paid · OP + DLD Included" },
+  { id:"S21", name:"Marina Dec Tower",             area:"Dubai Marina",       type:"sell",    beds:"1 BR",          size:"823 sqft",    price:"1,100,000",      occupancy:"Vacant",       tag:"",         note:"1st Floor" },
+  { id:"S22", name:"Jebel Ali Hills — Plot P14",   area:"Jebel Ali Hills",    type:"sell",    beds:"Corner Plot",   size:"13,000 sqft", price:"325 / sqft",     occupancy:"—",            tag:"",         note:"Corner Plot" },
+  { id:"S23", name:"Alvorada — Arabian Ranches",   area:"Arabian Ranches",    type:"sell",    beds:"5 BR",          size:"9,300 sqft",  price:"13,800,000",     occupancy:"Vacant",       tag:"hot",      note:"Private Pool · Type C2" },
+  { id:"S24", name:"Palm Jumeirah Penthouse",      area:"Palm Jumeirah",      type:"sell",    beds:"Penthouse",     size:"10,000 sqft", price:"29,000,000",     occupancy:"Vacant",       tag:"hot",      note:"Fully Upgraded" },
+  { id:"S25", name:"Vida Downtown",                area:"Downtown Dubai",     type:"sell",    beds:"2 BR",          size:"—",           price:"4,700,000",      occupancy:"Vacant",       tag:"",         note:"" },
+  { id:"S26", name:"Camelia Prestige TH",          area:"DAMAC Hills 2",      type:"sell",    beds:"3 BR",          size:"1,924 sqft",  price:"1,900,000",      occupancy:"Off-Plan",     tag:"",         note:"Handover Jan 2026" },
+  { id:"S27", name:"DAMAC Lagoons — Malta",        area:"DAMAC Lagoons",      type:"sell",    beds:"4 BR",          size:"—",           price:"2,750,000",      occupancy:"Vacant",       tag:"hot",      note:"Lagoon Proximity" },
+  { id:"S28", name:"Silicon Heights 3",            area:"Dubai Silicon Oasis",type:"sell",    beds:"1 BR",          size:"700 sqft",    price:"725,000",        occupancy:"Rented",       tag:"",         note:"Rented 52K" },
+  { id:"S29", name:"Suburbia",                     area:"Jebel Ali",          type:"sell",    beds:"1 BR",          size:"751 sqft",    price:"630,000",        occupancy:"Vacant",       tag:"",         note:"" },
+  { id:"S30", name:"Remraam — Studio",             area:"Dubailand",          type:"sell",    beds:"Studio",        size:"387 sqft",    price:"480,000",        occupancy:"Rented",       tag:"",         note:"Furnished · Rented 42K" },
+  { id:"S31", name:"Remraam",                      area:"Dubailand",          type:"sell",    beds:"1 BR",          size:"665 sqft",    price:"670,000",        occupancy:"Vacant",       tag:"",         note:"" },
+  { id:"S32", name:"DAMAC Lagoons — Venice Villa", area:"DAMAC Lagoons",      type:"sell",    beds:"6 BR Villa",    size:"5,073 sqft",  price:"6,600,000",      occupancy:"Vacant",       tag:"hot",      note:"Walking distance to lagoon" },
+  { id:"S33", name:"Emaar Oasis — Palace Ostra",   area:"Emaar Oasis",        type:"sell",    beds:"5 BR",          size:"11,363 sqft", price:"15,800,000",     occupancy:"Off-Plan",     tag:"hot",      note:"OP Price 14.98M · Selling 15.8M" },
+  { id:"S34", name:"Royal Residence 2",            area:"Sports City",        type:"sell",    beds:"2 BR",          size:"1,154 sqft",  price:"1,050,000",      occupancy:"Rented",       tag:"",         note:"1st Floor · Upgraded" },
+  { id:"S35", name:"Jebel Ali Hills — P8 Corner",  area:"Jebel Ali Hills",    type:"sell",    beds:"Corner Plot",   size:"9,748 sqft",  price:"340 / sqft",     occupancy:"—",            tag:"",         note:"Small corner — rare" },
+  { id:"S36", name:"Lago Vista",                   area:"IMPZ",               type:"sell",    beds:"Studio",        size:"496 sqft",    price:"460,000",        occupancy:"Vacant",       tag:"",         note:"With Parking" },
+  { id:"S37", name:"Fox Hill 6",                   area:"Motor City",         type:"sell",    beds:"2 BR",          size:"2,000 sqft",  price:"1,900,000",      occupancy:"Vacant",       tag:"",         note:"2.5 Bath · 2 Parking · Storage" },
+  { id:"S38", name:"Camelia 1 — Arabian Ranches 2",area:"Arabian Ranches 2",  type:"sell",    beds:"4 BR",          size:"4,386 sqft",  price:"5,200,000",      occupancy:"Vacant",       tag:"hot",      note:"Corner · Private Pool · Furnished · Below Market" },
+  { id:"S39", name:"DAMAC Lagoons Morocco — Corner",area:"DAMAC Lagoons",     type:"sell",    beds:"5 BR + Maid",   size:"—",           price:"4,800,000",      occupancy:"Off-Plan",     tag:"distress", note:"Vastu Unit · Near Lagoon · Handover Q4 2026 · OP + DLD Included" },
+  { id:"S40", name:"Saheel — Arabian Ranches",     area:"Arabian Ranches",    type:"sell",    beds:"5 BR + Maid",   size:"—",           price:"14,200,000",     occupancy:"Vacant",       tag:"hot",      note:"Fully Upgraded · Corner Plot · Negotiable" },
+  { id:"S41", name:"Palace — Dubai Hills",         area:"Dubai Hills",        type:"sell",    beds:"Full Floor",    size:"—",           price:"On Request",     occupancy:"Vacant",       tag:"",         note:"Can sell individually or as full floor" },
+  { id:"O1",  name:"Azizi Venice",                 area:"Dubai South",        type:"offplan", beds:"1 BR",          size:"—",           price:"Same as Capital",occupancy:"Near Handover",tag:"hot",      note:"40% Paid · 60% Remaining · Same price as original" },
+  { id:"O2",  name:"Azizi Grand",                  area:"Dubai Sports City",  type:"offplan", beds:"1 BR",          size:"—",           price:"770,000",        occupancy:"Off-Plan",     tag:"distress", note:"Below OP (was 800K) · Handover June 2026 · Big Layout" },
 ];
 
-const statusMap = { sell:{ label:"For Sale", cls:"badge-sell" }, rent:{ label:"For Rent", cls:"badge-rent" }, offplan:{ label:"Off-Plan", cls:"badge-offplan" } };
-const secTypeMap = { rent:{ label:"For Rent", cls:"badge-rent" }, sell:{ label:"For Sale", cls:"badge-sell" }, offplan:{ label:"Off-Plan Resale", cls:"badge-offplan" } };
-const occupancyMap = { "Vacant":"badge-vacant","Rented":"badge-rented","Off-Plan":"badge-offplan","Near Handover":"badge-offplan","—":"" };
+/* ── FILTER STATE ── */
 let primaryTypeFilter = 'all';
+let primaryBedsFilter = '';
+let primaryDevFilter  = '';
 let secTypeFilter = 'all';
+let secBedsFilter = '';
+let secOccFilter  = '';
 
+/* ── DROPDOWN ── */
+function toggleFilterPanel(panelId, btnId) {
+  const panel = document.getElementById(panelId);
+  const btn   = document.getElementById(btnId);
+  const isOpen = panel.classList.contains('open');
+  document.querySelectorAll('.filter-panel').forEach(p => p.classList.remove('open'));
+  document.querySelectorAll('.filter-main-btn').forEach(b => b.classList.remove('open'));
+  if (!isOpen) { panel.classList.add('open'); btn.classList.add('open'); }
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.filter-dropdown-wrap')) {
+    document.querySelectorAll('.filter-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.filter-main-btn').forEach(b => b.classList.remove('open'));
+  }
+});
+
+/* ── ACTIVE LABEL ── */
+function updatePrimaryActiveLabel() {
+  const parts = [];
+  if (primaryTypeFilter !== 'all') parts.push(primaryTypeFilter === 'sell' ? 'For Sale' : primaryTypeFilter === 'rent' ? 'For Rent' : 'Off-Plan');
+  if (primaryBedsFilter) parts.push(primaryBedsFilter);
+  if (primaryDevFilter)  parts.push(primaryDevFilter);
+  const lbl    = document.getElementById('primaryActiveLabel');
+  const btnLbl = document.getElementById('primaryFilterLabel');
+  if (parts.length) {
+    lbl.innerHTML = '<strong>' + parts.join(' · ') + '</strong>';
+    btnLbl.textContent = 'Filters (' + parts.length + ')';
+  } else {
+    lbl.innerHTML = '';
+    btnLbl.textContent = 'Filters';
+  }
+}
+function updateSecActiveLabel() {
+  const parts = [];
+  if (secTypeFilter !== 'all') parts.push(secTypeFilter === 'sell' ? 'For Sale' : secTypeFilter === 'rent' ? 'For Rent' : 'Off-Plan Resale');
+  if (secBedsFilter) parts.push(secBedsFilter);
+  if (secOccFilter)  parts.push(secOccFilter);
+  const lbl    = document.getElementById('secActiveLabel');
+  const btnLbl = document.getElementById('secFilterLabel');
+  if (parts.length) {
+    lbl.innerHTML = '<strong>' + parts.join(' · ') + '</strong>';
+    btnLbl.textContent = 'Filters (' + parts.length + ')';
+  } else {
+    lbl.innerHTML = '';
+    btnLbl.textContent = 'Filters';
+  }
+}
+
+/* ── WA LINKS ── */
 function buildWaLink(p) {
-  const sl = statusMap[p.status]?.label || p.status;
-  const n = p.note ? '%0A%F0%9F%93%8C ' + encodeURIComponent(p.note) : '';
+  const sl = { sell:'For Sale', rent:'For Rent', offplan:'Off-Plan' }[p.status] || p.status;
+  const n  = p.note ? '%0A%F0%9F%93%8C ' + encodeURIComponent(p.note) : '';
   return 'https://wa.me/971556472153?text=Hi%20Taher!%20I%27m%20interested%20in:%0A%F0%9F%8F%A0%20*'+encodeURIComponent(p.name)+'*%0A%F0%9F%93%8D%20'+encodeURIComponent(p.location)+'%0A%F0%9F%9B%8F%20'+p.type+'%20|%20'+p.beds+(p.size&&p.size!=='—'?'%20|%20'+p.size+' sqft':'')+'%0A%F0%9F%92%B0%20AED%20'+p.price+'%20|%20'+sl+n+'%0ACan%20we%20discuss?%20%F0%9F%94%91';
 }
+function buildSecWaLink(p) {
+  const tl = { sell:'For Sale', rent:'For Rent', offplan:'Off-Plan Resale' }[p.type] || p.type;
+  return 'https://wa.me/971556472153?text=Hi%20Taher!%20I%27m%20interested%20in:%0A%F0%9F%8F%A0%20*'+encodeURIComponent(p.name)+'*%0A%F0%9F%93%8D%20'+encodeURIComponent(p.area)+'%0A%F0%9F%9B%8F%20'+p.beds+(p.size&&p.size!=='—'?'%20|%20'+p.size:'')+'%0A%F0%9F%92%B0%20AED%20'+p.price+'%20|%20'+tl+'%0A'+(p.note?'%F0%9F%93%8C%20'+encodeURIComponent(p.note)+'%0A':'')+'Can%20we%20discuss?%20%F0%9F%94%91';
+}
 
+/* ── RENDER PRIMARY ── */
+const statusMap = { sell:{ label:"For Sale", cls:"badge-sell" }, rent:{ label:"For Rent", cls:"badge-rent" }, offplan:{ label:"Off-Plan", cls:"badge-offplan" } };
 function renderListings(data) {
   const grid = document.getElementById('listingsBody');
   grid.innerHTML = '';
-  if (!data.length) { grid.innerHTML = '<div class="sec-empty">No properties match your search. Try different filters or <a href="https://wa.me/971556472153" target="_blank" style="color:var(--bronze);font-weight:700;">ask Taher directly →</a></div>'; return; }
+  if (!data.length) {
+    grid.innerHTML = '<div class="sec-empty">No properties match your search. Try different filters or <a href="https://wa.me/971556472153" target="_blank" style="color:var(--bronze);font-weight:700;">ask Taher directly →</a></div>';
+    document.getElementById('primaryCount').textContent = '0 found';
+    return;
+  }
   document.getElementById('primaryCount').textContent = data.length + ' found';
   data.forEach(p => {
     const s = statusMap[p.status] || statusMap.sell;
-    const isHot = p.note && (p.note.includes('Save') || p.note.includes('Bulk') || p.note.includes('Motivated') || p.note.includes('\uD83D\uDD25'));
-    const isUrgent = p.note && (p.note.includes('Distress') || p.note.includes('\u26A1'));
-    const ribbonCls = isUrgent ? 'urgent' : isHot ? 'hot' : '';
+    const isHot    = p.note && (p.note.includes('Save') || p.note.includes('Bulk') || p.note.includes('Motivated') || p.note.includes('🔥'));
+    const isUrgent = p.note && (p.note.includes('Distress') || p.note.includes('⚡'));
     const conv = activeCurrency !== 'AED' ? formatConverted(p.price) : '';
-    grid.innerHTML += '<div class="prop-card '+ribbonCls+'">'
+    grid.innerHTML += '<div class="prop-card '+(isUrgent?'urgent':isHot?'hot':'')+'">'
       +'<div class="prop-card-head"><div class="prop-card-name">'+p.name+'</div><span class="badge '+s.cls+'">'+s.label+'</span></div>'
-      +'<div class="prop-card-area">\uD83D\uDCCD '+p.location+'</div>'
+      +'<div class="prop-card-area">📍 '+p.location+'</div>'
       +'<div class="prop-inline">'
-        +'<div class="prop-inline-item">\uD83C\uDFE0 <span>'+p.type+'</span></div>'
-        +'<div class="prop-inline-item">\uD83D\uDECF <span>'+p.beds+'</span></div>'
-        +(p.size&&p.size!=='—'?'<div class="prop-inline-item">\uD83D\uDCCF <span>'+p.size+' sqft</span></div>':'')
-        +'<div class="prop-inline-item">\uD83C\uDFD7 <span>'+p.developer+'</span></div>'
+        +'<div class="prop-inline-item">🏠 <span>'+p.type+'</span></div>'
+        +'<div class="prop-inline-item">🛏 <span>'+p.beds+'</span></div>'
+        +(p.size&&p.size!=='—'?'<div class="prop-inline-item">📐 <span>'+p.size+' sqft</span></div>':'')
+        +'<div class="prop-inline-item">🏗 <span>'+p.developer+'</span></div>'
       +'</div>'
       +(p.note?'<div class="prop-note">'+p.note+'</div>':'')
-      +'<div class="prop-divider"></div>'
       +'<div class="prop-price-row"><div><div class="prop-price">AED '+p.price+'</div>'+(conv?'<div class="prop-price-conv">'+conv+'</div>':'')+'</div>'
-      +'<a href="'+buildWaLink(p)+'" target="_blank" class="prop-enquire">\uD83D\uDCAC Enquire</a></div></div>';
+      +'<a href="'+buildWaLink(p)+'" target="_blank" class="prop-enquire">💬 Enquire</a></div></div>';
   });
 }
 
 function applyPrimaryFilters() {
   const q = (document.getElementById('primarySearch')?.value || '').toLowerCase();
-  const beds = document.getElementById('primaryBeds')?.value || '';
-  const dev = document.getElementById('primaryDev')?.value || '';
   let data = listings;
   if (primaryTypeFilter !== 'all') data = data.filter(p => p.status === primaryTypeFilter);
-  if (q) data = data.filter(p => (p.name+p.location+p.developer+p.type+(p.note||'')).toLowerCase().includes(q));
-  if (beds) {
-    if (beds === '6 BR') data = data.filter(p => /6 BR|7 BR|8 BR/.test(p.beds));
-    else if (beds === 'Townhouse') data = data.filter(p => p.type === 'Townhouse');
-    else if (beds === 'Villa') data = data.filter(p => p.type === 'Villa');
-    else if (beds === 'Warehouse') data = data.filter(p => p.type === 'Warehouse');
-    else data = data.filter(p => p.beds.includes(beds));
+  if (primaryBedsFilter) {
+    if (primaryBedsFilter === '6 BR')      data = data.filter(p => /6 BR|7 BR|8 BR/.test(p.beds));
+    else if (primaryBedsFilter === 'Townhouse') data = data.filter(p => p.type === 'Townhouse');
+    else if (primaryBedsFilter === 'Villa')     data = data.filter(p => p.type === 'Villa');
+    else if (primaryBedsFilter === 'Warehouse') data = data.filter(p => p.type === 'Warehouse');
+    else data = data.filter(p => p.beds.includes(primaryBedsFilter));
   }
-  if (dev) data = data.filter(p => p.developer === dev);
+  if (primaryDevFilter) data = data.filter(p => p.developer === primaryDevFilter);
+  if (q) data = data.filter(p => (p.name+p.location+p.developer+p.type+(p.note||'')).toLowerCase().includes(q));
   renderListings(data);
+  updatePrimaryActiveLabel();
 }
 
 function setPrimaryType(type, btn) {
   primaryTypeFilter = type;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.closest('.filter-chips').querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyPrimaryFilters();
+}
+function setPrimaryBeds(beds, btn) {
+  primaryBedsFilter = beds;
+  btn.closest('.filter-chips').querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyPrimaryFilters();
+}
+function setPrimaryDev(dev, btn) {
+  primaryDevFilter = dev;
+  btn.closest('.filter-chips').querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   applyPrimaryFilters();
 }
 
-function clearPrimarySearch() {
-  document.getElementById('primarySearch').value = '';
-  document.getElementById('primaryBeds').value = '';
-  document.getElementById('primaryDev').value = '';
-  applyPrimaryFilters();
-}
-
-function buildSecWaLink(p) {
-  const tl = secTypeMap[p.type]?.label || p.type;
-  return 'https://wa.me/971556472153?text=Hi%20Taher!%20I%27m%20interested%20in:%0A%F0%9F%8F%A0%20*'+encodeURIComponent(p.name)+'*%0A%F0%9F%93%8D%20'+encodeURIComponent(p.area)+'%0A%F0%9F%9B%8F%20'+p.beds+(p.size&&p.size!=='—'?'%20|%20'+p.size:'')+'%0A%F0%9F%92%B0%20AED%20'+p.price+'%20|%20'+tl+'%0A'+(p.note?'%F0%9F%93%8C%20'+encodeURIComponent(p.note)+'%0A':'')+'Can%20we%20discuss?%20%F0%9F%94%91';
-}
+/* ── RENDER SECONDARY ── */
+const secTypeMap = { sell:{ label:"For Sale", cls:"badge-sell" }, rent:{ label:"For Rent", cls:"badge-rent" }, offplan:{ label:"Off-Plan Resale", cls:"badge-offplan" } };
+const occupancyMap = { "Vacant":"badge-vacant","Rented":"badge-rented","Off-Plan":"badge-offplan","Near Handover":"badge-offplan","—":"" };
 
 function renderSecondary(data) {
   const grid = document.getElementById('secGrid');
   grid.innerHTML = '';
-  if (!data.length) { grid.innerHTML = '<div class="sec-empty">No properties match your search. <a href="https://wa.me/971556472153" target="_blank" style="color:var(--bronze);font-weight:700;">Ask Taher directly \u2192</a></div>'; return; }
+  if (!data.length) {
+    grid.innerHTML = '<div class="sec-empty">No properties match your search. <a href="https://wa.me/971556472153" target="_blank" style="color:var(--bronze);font-weight:700;">Ask Taher directly →</a></div>';
+    document.getElementById('secCount').textContent = '0 found';
+    return;
+  }
   document.getElementById('secCount').textContent = data.length + ' found';
   data.forEach(p => {
     const t = secTypeMap[p.type] || secTypeMap.sell;
     const occCls = occupancyMap[p.occupancy] || '';
-    const isHot = p.tag === 'hot';
-    const isDistress = p.tag === 'distress';
     const conv = activeCurrency !== 'AED' ? formatConverted(p.price) : '';
-    grid.innerHTML += '<div class="prop-card '+(isDistress?'urgent':isHot?'hot':'')+'">'
+    grid.innerHTML += '<div class="prop-card '+(p.tag==='distress'?'urgent':p.tag==='hot'?'hot':'')+'">'
       +'<div class="prop-card-head"><div class="prop-card-name">'+p.name+'</div><span class="badge '+t.cls+'">'+t.label+'</span></div>'
-      +'<div class="prop-card-area">\uD83D\uDCCD '+p.area+'</div>'
+      +'<div class="prop-card-area">📍 '+p.area+'</div>'
       +'<div class="prop-inline">'
-        +'<div class="prop-inline-item">\uD83D\uDECF <span>'+p.beds+'</span></div>'
-        +(p.size&&p.size!=='—'?'<div class="prop-inline-item">\uD83D\uDCCF <span>'+p.size+'</span></div>':'')
-        +'<div class="prop-inline-item">\uD83D\uDD11 <span>'+p.occupancy+'</span></div>'
+        +'<div class="prop-inline-item">🛏 <span>'+p.beds+'</span></div>'
+        +(p.size&&p.size!=='—'?'<div class="prop-inline-item">📐 <span>'+p.size+'</span></div>':'')
+        +'<div class="prop-inline-item">🔑 <span>'+p.occupancy+'</span></div>'
       +'</div>'
       +(p.note?'<div class="prop-note">'+p.note+'</div>':'')
-      +'<div class="prop-divider"></div>'
       +'<div class="prop-price-row"><div><div class="prop-price">AED '+p.price+'</div>'
       +(conv?'<div class="prop-price-conv">'+conv+'</div>':'')
       +(occCls?'<span class="badge '+occCls+'" style="margin-top:3px;display:inline-block;">'+p.occupancy+'</span>':'')
-      +'</div><a href="'+buildSecWaLink(p)+'" target="_blank" class="prop-enquire">\uD83D\uDCAC Enquire</a></div></div>';
+      +'</div><a href="'+buildSecWaLink(p)+'" target="_blank" class="prop-enquire">💬 Enquire</a></div></div>';
   });
 }
 
 function applySecFilters() {
   const q = (document.getElementById('secSearch')?.value || '').toLowerCase();
-  const beds = document.getElementById('secBeds')?.value || '';
-  const occ = document.getElementById('secOccupancy')?.value || '';
   let data = secondaryListings;
   if (secTypeFilter !== 'all') data = data.filter(p => p.type === secTypeFilter);
-  if (q) data = data.filter(p => (p.name+p.area+(p.note||'')+p.beds+p.occupancy).toLowerCase().includes(q));
-  if (beds) {
-    if (beds === '6 BR') data = data.filter(p => /6 BR|7 BR|8 BR|6 Bed/.test(p.beds));
-    else if (beds === 'Villa') data = data.filter(p => /Villa/.test(p.beds));
-    else if (beds === 'Plot') data = data.filter(p => /Plot/.test(p.beds));
-    else if (beds === 'Penthouse') data = data.filter(p => /Penthouse/.test(p.beds));
-    else if (beds === 'Full Floor') data = data.filter(p => /Full Floor/.test(p.beds));
-    else data = data.filter(p => p.beds.includes(beds));
+  if (secBedsFilter) {
+    if (secBedsFilter === '6 BR')       data = data.filter(p => /6 BR|7 BR|8 BR|6 Bed/.test(p.beds));
+    else if (secBedsFilter === 'Villa') data = data.filter(p => /Villa/.test(p.beds));
+    else if (secBedsFilter === 'Plot')  data = data.filter(p => /Plot/.test(p.beds));
+    else if (secBedsFilter === 'Penthouse')  data = data.filter(p => /Penthouse/.test(p.beds));
+    else if (secBedsFilter === 'Full Floor') data = data.filter(p => /Full Floor/.test(p.beds));
+    else data = data.filter(p => p.beds.includes(secBedsFilter));
   }
-  if (occ) data = data.filter(p => p.occupancy === occ);
+  if (secOccFilter) data = data.filter(p => p.occupancy === secOccFilter);
+  if (q) data = data.filter(p => (p.name+p.area+(p.note||'')+p.beds+p.occupancy).toLowerCase().includes(q));
   renderSecondary(data);
+  updateSecActiveLabel();
 }
 
 function setSecType(type, btn) {
   secTypeFilter = type;
-  document.querySelectorAll('.sec-tab').forEach(b => b.classList.remove('active'));
+  btn.closest('.filter-chips').querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applySecFilters();
+}
+function setSecBeds(beds, btn) {
+  secBedsFilter = beds;
+  btn.closest('.filter-chips').querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applySecFilters();
+}
+function setSecOcc(occ, btn) {
+  secOccFilter = occ;
+  btn.closest('.filter-chips').querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   applySecFilters();
 }
 
-function clearSecSearch() {
-  document.getElementById('secSearch').value = '';
-  document.getElementById('secBeds').value = '';
-  document.getElementById('secOccupancy').value = '';
-  applySecFilters();
-}
-
-// INIT
+/* ── INIT ── */
 applyPrimaryFilters();
 applySecFilters();
 fetchRates();
