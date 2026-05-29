@@ -1111,28 +1111,7 @@ footer {
   <div class="contact-inner">
     <h2>Let's Find Your<br><em>Perfect Property</em></h2>
     <p>Reach out today — response within the hour. Whether you're buying, selling, renting or investing, I'm here to guide you every step of the way.</p>
-    <div class="contact-details-row">
-      <div class="contact-detail-item">
-        <div class="contact-detail-label">Phone / WhatsApp</div>
-        <div class="contact-detail-val">+971 55647 2153</div>
-      </div>
-      <div class="contact-detail-item">
-        <div class="contact-detail-label">Company</div>
-        <div class="contact-detail-val">New Heights Real Estate</div>
-      </div>
-      <div class="contact-detail-item">
-        <div class="contact-detail-label">Location</div>
-        <div class="contact-detail-val">Dubai, UAE</div>
-      </div>
-      <div class="contact-detail-item">
-        <div class="contact-detail-label">Services</div>
-        <div class="contact-detail-val">Buy · Sell · Rent · Off-Plan</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
+ <!-- FOOTER -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
   <div class="footer-role">Property Consultant, Dubai</div>
