@@ -1111,10 +1111,6 @@ footer {
   <div class="contact-inner">
     <h2>Let's Find Your<br><em>Perfect Property</em></h2>
     <p>Reach out today — response within the hour. Whether you're buying, selling, renting or investing, I'm here to guide you every step of the way.</p>
-    <div class="contact-btns">
-      <a href="https://wa.me/971556472153?text=Hi%20Taher!%20I'd%20like%20to%20discuss%20a%20property%20in%20Dubai.%20Can%20we%20talk?" target="_blank" class="btn-wa-lg">💬 Message on WhatsApp</a>
-      <a href="tel:+971556472153" class="btn-call-lg">📞 +971 55647 2153</a>
-    </div>
     <div class="contact-details-row">
       <div class="contact-detail-item">
         <div class="contact-detail-label">Phone / WhatsApp</div>
