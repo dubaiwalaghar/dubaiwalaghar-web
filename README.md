@@ -654,11 +654,9 @@ footer {
   .dev-grid { grid-template-columns: 1fr; gap: 0.8rem; }
   .dev-card { padding: 1.2rem 1rem; }
 
-  /* Search bar */
   .search-bar-wrap { padding: 0.6rem 0.8rem; gap: 0.5rem; }
   .search-input { font-size: 0.8rem; padding: 0.5rem 0.8rem; }
 
-  /* Filter bar — stack vertically */
   .filter-bar {
     flex-direction: column;
     align-items: stretch;
@@ -668,7 +666,6 @@ footer {
     display: flex; flex-direction: row;
     align-items: center; gap: 0.6rem; flex-wrap: nowrap;
   }
-  /* Currency row on mobile — full width, neat row */
   .currency-inline {
     display: flex;
     flex-direction: row;
@@ -691,7 +688,6 @@ footer {
     font-size: 0.66rem;
   }
   .rate-note { display: none; }
-  /* filter panel full-width on mobile */
   .filter-panel {
     min-width: 0;
     width: calc(100vw - 2.4rem);
@@ -940,13 +936,11 @@ footer {
     <h2 style="text-align:center;">Current <em>Listings</em></h2>
     <p class="sec-subtitle" style="text-align:center;max-width:100%;">Browse available primary market properties across Dubai. Click Enquire to connect directly on WhatsApp with full property details.</p>
 
-    <!-- Search -->
     <div class="search-bar-wrap">
       <input type="text" class="search-input" id="primarySearch" placeholder="🔍  Search by name, location, developer…" oninput="applyPrimaryFilters()"/>
       <span class="search-results-count" id="primaryCount"></span>
     </div>
 
-    <!-- Filter bar: left = filter btn | right = currency -->
     <div class="filter-bar">
       <div class="filter-left">
         <div class="filter-dropdown-wrap">
@@ -955,7 +949,6 @@ footer {
             <span class="arrow"></span>
           </button>
           <div class="filter-panel" id="primaryFilterPanel">
-            <!-- Listing Type -->
             <div class="filter-group">
               <span class="filter-group-label">Listing Type</span>
               <div class="filter-chips" id="primaryTypeChips">
@@ -965,7 +958,6 @@ footer {
                 <button class="chip" onclick="setPrimaryType('offplan',this)">Off-Plan</button>
               </div>
             </div>
-            <!-- Bedrooms / Size — all in one group -->
             <div class="filter-group">
               <span class="filter-group-label">Bedrooms / Size</span>
               <div class="filter-chips" id="primaryBedsChips">
@@ -982,7 +974,6 @@ footer {
                 <button class="chip" onclick="setPrimaryBeds('Warehouse',this)">Warehouse</button>
               </div>
             </div>
-            <!-- Developer -->
             <div class="filter-group">
               <span class="filter-group-label">Developer</span>
               <div class="filter-chips" id="primaryDevChips">
@@ -1001,7 +992,6 @@ footer {
         </div>
         <span class="filter-active-label" id="primaryActiveLabel" style="font-size:0.7rem;color:var(--taupe);font-weight:500;"></span>
       </div>
-      <!-- Currency -->
       <div class="currency-inline">
         <span class="currency-label">Price in</span>
         <div class="currency-toggle">
@@ -1032,13 +1022,11 @@ footer {
     <h2 style="text-align:center;">Secondary Market — <em>Direct Listings</em></h2>
     <p class="sec-subtitle" style="text-align:center;max-width:100%;">Exclusive secondary market properties, direct from owners and investors. Prices are negotiable. Click Enquire on any property to connect directly on WhatsApp.</p>
 
-    <!-- Search -->
     <div class="search-bar-wrap">
       <input type="text" class="search-input" id="secSearch" placeholder="🔍  Search by name, area, notes…" oninput="applySecFilters()"/>
       <span class="search-results-count" id="secCount"></span>
     </div>
 
-    <!-- Filter bar -->
     <div class="filter-bar">
       <div class="filter-left">
         <div class="filter-dropdown-wrap">
@@ -1047,7 +1035,6 @@ footer {
             <span class="arrow"></span>
           </button>
           <div class="filter-panel" id="secFilterPanel">
-            <!-- Listing Type -->
             <div class="filter-group">
               <span class="filter-group-label">Listing Type</span>
               <div class="filter-chips" id="secTypeChips">
@@ -1057,7 +1044,6 @@ footer {
                 <button class="chip" onclick="setSecType('offplan',this)">Off-Plan Resale</button>
               </div>
             </div>
-            <!-- Bedrooms / Size — all in one group -->
             <div class="filter-group">
               <span class="filter-group-label">Bedrooms / Size</span>
               <div class="filter-chips" id="secBedsChips">
@@ -1075,7 +1061,6 @@ footer {
                 <button class="chip" onclick="setSecBeds('Full Floor',this)">Full Floor</button>
               </div>
             </div>
-            <!-- Occupancy Status -->
             <div class="filter-group">
               <span class="filter-group-label">Occupancy Status</span>
               <div class="filter-chips" id="secOccChips">
@@ -1089,7 +1074,6 @@ footer {
         </div>
         <span class="filter-active-label" id="secActiveLabel" style="font-size:0.7rem;color:var(--taupe);font-weight:500;"></span>
       </div>
-      <!-- Currency -->
       <div class="currency-inline">
         <span class="currency-label">Price in</span>
         <div class="currency-toggle">
@@ -1102,7 +1086,7 @@ footer {
     </div>
 
     <div class="sec-grid" id="secGrid"></div>
-    <p class="availability-note">All properties are subject to availability at the time of enquiry. INR / USD prices are approximate conversions — actual transactions are in AED. Listings updated regularly.</p>
+    <p class="availability-note">All properties are subject to availability at the time of enquiry. INR / USD prices are approximate conversions based on live exchange rates — actual transactions are in AED. Listings updated regularly.</p>
   </div>
 </div>
 
@@ -1111,7 +1095,10 @@ footer {
   <div class="contact-inner">
     <h2>Let's Find Your<br><em>Perfect Property</em></h2>
     <p>Reach out today — response within the hour. Whether you're buying, selling, renting or investing, I'm here to guide you every step of the way.</p>
- <!-- FOOTER -->
+  </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-name">Taher Betwala</div>
   <div class="footer-role">Property Consultant, Dubai</div>
@@ -1173,7 +1160,6 @@ function updateRateNote() {
 
 function setCurrency(cur, btn) {
   activeCurrency = cur;
-  // update all cur-btn toggles on the page
   document.querySelectorAll('.cur-btn').forEach(b => {
     b.classList.toggle('active', b.textContent.trim() === cur);
   });
@@ -1269,7 +1255,7 @@ const secondaryListings = [
   { id:"S29", name:"Suburbia",                     area:"Jebel Ali",          type:"sell",    beds:"1 BR",          size:"751 sqft",    price:"630,000",        occupancy:"Vacant",       tag:"",         note:"" },
   { id:"S30", name:"Remraam — Studio",             area:"Dubailand",          type:"sell",    beds:"Studio",        size:"387 sqft",    price:"480,000",        occupancy:"Rented",       tag:"",         note:"Furnished · Rented 42K" },
   { id:"S31", name:"Remraam",                      area:"Dubailand",          type:"sell",    beds:"1 BR",          size:"665 sqft",    price:"670,000",        occupancy:"Vacant",       tag:"",         note:"" },
-  { id:"S32", name:"DAMAC Lagoons — Venice Villa", area:"DAMAC Lagoons",      type:"sell",    beds:"6 BR Villa",    size:"5,073 sqft",  price:"6,600,000",      occupancy:"Vacant",       tag:"hot",      note:"Walking distance to lagoon" },
+  { id:"S32", name:"DAMAC Lagoons Venice Villa",   area:"DAMAC Lagoons",      type:"sell",    beds:"6 BR Villa",    size:"5,073 sqft",  price:"6,600,000",      occupancy:"Vacant",       tag:"hot",      note:"Walking distance to lagoon" },
   { id:"S33", name:"Emaar Oasis — Palace Ostra",   area:"Emaar Oasis",        type:"sell",    beds:"5 BR",          size:"11,363 sqft", price:"15,800,000",     occupancy:"Off-Plan",     tag:"hot",      note:"OP Price 14.98M · Selling 15.8M" },
   { id:"S34", name:"Royal Residence 2",            area:"Sports City",        type:"sell",    beds:"2 BR",          size:"1,154 sqft",  price:"1,050,000",      occupancy:"Rented",       tag:"",         note:"1st Floor · Upgraded" },
   { id:"S35", name:"Jebel Ali Hills — P8 Corner",  area:"Jebel Ali Hills",    type:"sell",    beds:"Corner Plot",   size:"9,748 sqft",  price:"340 / sqft",     occupancy:"—",            tag:"",         note:"Small corner — rare" },
