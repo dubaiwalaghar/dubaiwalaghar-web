@@ -3,31 +3,33 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Taher Betwala | Property Consultant, Dubai</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,450;0,9..144,550;0,9..144,650;0,9..144,700;1,9..144,500;1,9..144,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --bg:       #F5F0E8;
-  --bg2:      #EDE8DE;
-  --bg3:      #E4DDD2;
-  --card:     #FDFAF5;
-  --mocha:    #5C3D2E;
-  --mocha2:   #4A3025;
-  --bronze:   #9A6B3F;
-  --bronze2:  #B5824E;
-  --taupe:    #6B5B4E;
-  --espresso: #241810;
-  --sand:     #8A7465;
-  --border:   #CABFB2;
-  --border2:  #B8AA9A;
-  --text:     #241810;
-  --muted:    #6B5B4E;
+  --bg:       #F4F2ED;
+  --bg2:      #ECE8DF;
+  --bg3:      #E2DCD0;
+  --card:     #FDFCF9;
+  --mocha:    #5B6E5D;
+  --mocha2:   #49594B;
+  --bronze:   #B9835A;
+  --bronze2:  #CC9B72;
+  --taupe:    #71685C;
+  --espresso: #2B2924;
+  --sand:     #97897A;
+  --border:   #DAD3C4;
+  --border2:  #C9C0AE;
+  --text:     #2B2924;
+  --muted:    #71685C;
+  --ready:    #5B6E5D;
+  --offplan:  #B9835A;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Jost', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   line-height: 1.6;
@@ -35,7 +37,7 @@ body {
 body::before {
   content: '';
   position: fixed; inset: 0; z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
   pointer-events: none;
 }
 
@@ -44,15 +46,15 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   display: flex; justify-content: center; align-items: center;
   padding: 1.1rem 3.5rem;
-  background: rgba(245,240,232,0.96);
+  background: rgba(244,242,237,0.96);
   backdrop-filter: blur(16px);
   border-bottom: 1.5px solid var(--border);
 }
 .nav-brand { display: flex; flex-direction: column; align-items: center; }
 .nav-brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.45rem; font-weight: 700;
-  color: var(--mocha); letter-spacing: 0.07em; line-height: 1;
+  font-family: 'Fraunces', serif;
+  font-size: 1.45rem; font-weight: 650;
+  color: var(--mocha); letter-spacing: 0.05em; line-height: 1;
 }
 .nav-brand-sub {
   font-size: 0.58rem; letter-spacing: 0.28em; text-transform: uppercase;
@@ -75,13 +77,13 @@ nav {
 }
 .eyebrow-line { width: 2.2rem; height: 1.5px; background: var(--bronze); }
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-size: clamp(2.5rem, 4.5vw, 4.2rem);
-  font-weight: 700; line-height: 1.08; color: var(--espresso);
+  font-weight: 600; line-height: 1.08; color: var(--espresso);
   margin-bottom: 1.2rem;
   animation: fadeUp 0.7s 0.2s ease both;
 }
-h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
+h1 em { font-style: italic; color: var(--bronze); font-weight: 550; }
 .hero-desc {
   font-size: 0.95rem; color: var(--taupe); font-weight: 400;
   line-height: 1.85; max-width: 400px; margin-bottom: 1.3rem;
@@ -94,8 +96,8 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
 }
 .stat { border-left: 2.5px solid var(--border2); padding-left: 1.1rem; }
 .stat-val {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.9rem; color: var(--mocha); font-weight: 700; line-height: 1;
+  font-family: 'Fraunces', serif;
+  font-size: 1.9rem; color: var(--mocha); font-weight: 650; line-height: 1;
 }
 .stat-lbl {
   font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase;
@@ -107,7 +109,7 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
   background: var(--card);
   border: 1.5px solid var(--border);
   padding: 2.4rem;
-  box-shadow: 0 10px 56px rgba(92,61,46,0.11), 0 2px 14px rgba(92,61,46,0.06);
+  box-shadow: 0 10px 56px rgba(91,110,93,0.11), 0 2px 14px rgba(91,110,93,0.06);
   position: relative;
   animation: fadeUp 0.9s 0.35s ease both;
 }
@@ -124,8 +126,8 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
 }
 .photo-circle img { width: 100%; height: 100%; object-fit: cover; }
 .card-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem; font-weight: 700;
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem; font-weight: 650;
   text-align: center; color: var(--espresso); margin-bottom: 0.25rem;
 }
 .card-title {
@@ -162,9 +164,9 @@ h1 em { font-style: italic; color: var(--bronze); font-weight: 600; }
 }
 .sec-eyebrow::before { content: ''; width: 1.8rem; height: 1.5px; background: var(--bronze); }
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 700; color: var(--espresso);
+  font-weight: 650; color: var(--espresso);
   line-height: 1.18; margin-bottom: 0.7rem;
 }
 h2 em { font-style: italic; color: var(--bronze); }
@@ -185,7 +187,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 .filter-main-btn {
   display: flex; align-items: center; gap: 0.55rem;
   background: var(--card); border: 1.5px solid var(--border2);
-  color: var(--mocha); font-family: 'Jost', sans-serif;
+  color: var(--mocha); font-family: 'Outfit', sans-serif;
   font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
   font-weight: 700; padding: 0.58rem 1.1rem; cursor: pointer;
   transition: border-color 0.2s; white-space: nowrap;
@@ -202,7 +204,7 @@ h2 em { font-style: italic; color: var(--bronze); }
   display: none; position: absolute; top: calc(100% + 4px); left: 0;
   background: var(--card); border: 1.5px solid var(--border2);
   padding: 1rem 1.1rem; z-index: 100; min-width: 340px;
-  box-shadow: 0 8px 28px rgba(92,61,46,0.1);
+  box-shadow: 0 8px 28px rgba(91,110,93,0.1);
 }
 .filter-panel.open { display: block; }
 .filter-group { margin-bottom: 0.9rem; }
@@ -215,7 +217,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 .chip {
   padding: 0.38rem 0.85rem; border: 1.5px solid var(--border2);
   background: transparent; color: var(--taupe);
-  font-family: 'Jost', sans-serif; font-size: 0.68rem;
+  font-family: 'Outfit', sans-serif; font-size: 0.68rem;
   letter-spacing: 0.1em; text-transform: uppercase;
   cursor: pointer; font-weight: 600; transition: all 0.18s;
 }
@@ -235,7 +237,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 }
 .cur-btn {
   padding: 0.42rem 0.8rem; background: transparent; color: var(--taupe);
-  font-family: 'Jost', sans-serif; font-size: 0.68rem;
+  font-family: 'Outfit', sans-serif; font-size: 0.68rem;
   letter-spacing: 0.1em; text-transform: uppercase;
   cursor: pointer; font-weight: 700; border: none;
   border-right: 1.5px solid var(--border2);
@@ -264,7 +266,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 .search-input {
   flex: 1 1 0;
   background: var(--bg2); border: 1.5px solid var(--border);
-  color: var(--espresso); font-family: 'Jost', sans-serif;
+  color: var(--espresso); font-family: 'Outfit', sans-serif;
   font-size: 0.82rem; padding: 0.55rem 1rem; font-weight: 500;
   outline: none; transition: border-color 0.2s; min-width: 0;
 }
@@ -282,23 +284,23 @@ h2 em { font-style: italic; color: var(--bronze); }
   background: var(--card); border: 1.5px solid var(--border);
   padding: 1.6rem 1.4rem; position: relative; overflow: hidden;
   transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
-  text-decoration: none; display: block; color: inherit; cursor: pointer;
+  text-decoration: none; display: flex; flex-direction: column; color: inherit; cursor: pointer;
 }
 .dev-card:hover {
-  box-shadow: 0 12px 36px rgba(92,61,46,0.13);
+  box-shadow: 0 12px 36px rgba(91,110,93,0.13);
   transform: translateY(-4px); border-color: var(--bronze);
 }
 .dev-card::after {
   content: attr(data-num);
   position: absolute; bottom: -0.5rem; right: 0.8rem;
-  font-family: 'Playfair Display', serif;
-  font-size: 4.5rem; color: rgba(154,107,63,0.07);
-  line-height: 1; pointer-events: none; user-select: none; font-weight: 700;
+  font-family: 'Fraunces', serif;
+  font-size: 4.5rem; color: rgba(185,131,90,0.07);
+  line-height: 1; pointer-events: none; user-select: none; font-weight: 650;
 }
 .dev-icon { font-size: 1.4rem; margin-bottom: 0.7rem; }
 .dev-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem; font-weight: 700; color: var(--mocha); margin-bottom: 0.2rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 650; color: var(--mocha); margin-bottom: 0.2rem;
 }
 .dev-visit {
   font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
@@ -318,6 +320,16 @@ h2 em { font-style: italic; color: var(--bronze); }
   color: var(--taupe); background: var(--bg2); border: 1px solid var(--border2);
   padding: 0.2rem 0.55rem; font-weight: 600;
 }
+.dev-newproj {
+  margin-top: auto; padding-top: 0.85rem; margin-top: 0.9rem;
+  border-top: 1.5px dashed var(--border2);
+}
+.dev-newproj-label {
+  font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mocha); font-weight: 700; margin-bottom: 0.3rem;
+  display: flex; align-items: center; gap: 0.3rem;
+}
+.dev-newproj-list { font-size: 0.73rem; color: var(--taupe); line-height: 1.55; font-weight: 500; }
 
 /* ── BADGES ── */
 .badge {
@@ -325,12 +337,13 @@ h2 em { font-style: italic; color: var(--bronze); }
   font-size: 0.58rem; letter-spacing: 0.1em;
   text-transform: uppercase; font-weight: 700;
 }
-.badge-sell      { background: rgba(92,61,46,0.1);    color: var(--mocha);  }
-.badge-rent      { background: rgba(154,107,63,0.13); color: var(--bronze); }
-.badge-offplan   { background: rgba(80,130,80,0.1);   color: #4a7a4a;       }
+.badge-sell      { background: rgba(91,110,93,0.1);   color: var(--mocha);  }
+.badge-rent      { background: rgba(185,131,90,0.13);  color: var(--bronze); }
+.badge-offplan   { background: rgba(185,131,90,0.15);  color: #9a6a3f;       }
 .badge-vacant    { background: rgba(80,140,200,0.1);  color: #3a6a9a;       }
 .badge-rented    { background: rgba(200,140,80,0.12); color: #8a5a20;       }
 .badge-distress  { background: rgba(180,60,60,0.1);   color: #9a2a2a;       }
+.badge-ready     { background: rgba(91,110,93,0.13);  color: var(--mocha);  }
 
 /* ── LISTINGS GRID ── */
 .listings-section { background: var(--bg); }
@@ -338,15 +351,25 @@ h2 em { font-style: italic; color: var(--bronze); }
 
 .prop-card {
   background: var(--card); border: 1.5px solid var(--border);
+  border-left: 4px solid var(--border2);
   padding: 1.1rem 1.1rem 0.9rem;
   position: relative; overflow: hidden;
   transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
   display: flex; flex-direction: column;
 }
 .prop-card:hover {
-  box-shadow: 0 8px 28px rgba(92,61,46,0.12);
+  box-shadow: 0 8px 28px rgba(91,110,93,0.12);
   transform: translateY(-3px); border-color: var(--bronze);
 }
+.prop-card.status-ready { border-left-color: var(--ready); }
+.prop-card.status-offplan { border-left-color: var(--offplan); border-left-style: dashed; }
+.prop-status-tag {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 0.4rem;
+}
+.prop-status-tag.ready { color: var(--ready); }
+.prop-status-tag.offplan { color: var(--offplan); }
 .prop-card.hot::after {
   content: '🔥 Hot';
   position: absolute; top: 8px; right: 0;
@@ -366,8 +389,8 @@ h2 em { font-style: italic; color: var(--bronze); }
   gap: 0.4rem; margin-bottom: 0.5rem;
 }
 .prop-card-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.88rem; font-weight: 700; color: var(--espresso);
+  font-family: 'Fraunces', serif;
+  font-size: 0.88rem; font-weight: 650; color: var(--espresso);
   line-height: 1.25; flex: 1; padding-right: 0.3rem;
 }
 .prop-card-area {
@@ -394,8 +417,8 @@ h2 em { font-style: italic; color: var(--bronze); }
   border-top: 1px solid var(--border);
 }
 .prop-price {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem; font-weight: 700; color: var(--mocha); line-height: 1.2;
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 650; color: var(--mocha); line-height: 1.2;
 }
 .prop-price-conv {
   font-size: 0.65rem; color: var(--sand); font-weight: 500; margin-top: 1px;
@@ -429,8 +452,8 @@ h2 em { font-style: italic; color: var(--bronze); }
   gap: 1.2rem; flex-wrap: wrap;
 }
 .more-prop-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem; font-weight: 700; color: var(--espresso); margin-bottom: 0.25rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 650; color: var(--espresso); margin-bottom: 0.25rem;
 }
 .more-prop-sub { font-size: 0.8rem; color: var(--taupe); font-weight: 400; line-height: 1.55; }
 .more-prop-sub strong { color: var(--mocha); font-weight: 600; }
@@ -473,7 +496,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 }
 .contact-inner h2 em { color: var(--bronze2); font-style: italic; }
 .contact-inner p {
-  color: rgba(245,240,232,0.72); font-size: 1rem;
+  color: rgba(244,242,237,0.72); font-size: 1rem;
   font-weight: 400; margin-bottom: 2rem; line-height: 1.7;
 }
 .contact-btns {
@@ -490,7 +513,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 .btn-call-lg {
   display: inline-flex; align-items: center; gap: 0.65rem;
   background: transparent; color: var(--bg);
-  border: 2px solid rgba(245,240,232,0.45);
+  border: 2px solid rgba(244,242,237,0.45);
   padding: 1rem 2.2rem; text-decoration: none;
   font-size: 0.84rem; letter-spacing: 0.14em; text-transform: uppercase;
   font-weight: 600; transition: all 0.3s;
@@ -499,12 +522,12 @@ h2 em { font-style: italic; color: var(--bronze); }
 .contact-details-row {
   display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
   margin-top: 2rem; padding-top: 2rem;
-  border-top: 1px solid rgba(245,240,232,0.15);
+  border-top: 1px solid rgba(244,242,237,0.15);
 }
 .contact-detail-item { text-align: center; }
 .contact-detail-label {
   font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(245,240,232,0.45); font-weight: 700; margin-bottom: 0.3rem;
+  color: rgba(244,242,237,0.45); font-weight: 700; margin-bottom: 0.3rem;
 }
 .contact-detail-val {
   font-size: 0.92rem; color: var(--bg); font-weight: 600;
@@ -517,7 +540,7 @@ h2 em { font-style: italic; color: var(--bronze); }
 .nh-strip-outer::before {
   content: ''; position: absolute; right: -80px; top: -80px;
   width: 320px; height: 320px; border-radius: 50%;
-  background: rgba(154,107,63,0.07); pointer-events: none;
+  background: rgba(185,131,90,0.07); pointer-events: none;
 }
 .nh-strip-inner {
   max-width: 1280px; margin: 0 auto;
@@ -530,8 +553,8 @@ h2 em { font-style: italic; color: var(--bronze); }
   color: var(--bronze2); font-weight: 700; margin-bottom: 0.45rem;
 }
 .nh-strip-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem; font-weight: 700; color: var(--bg);
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem; font-weight: 650; color: var(--bg);
   line-height: 1.1; margin-bottom: 0.22rem;
 }
 .nh-strip-tagline {
@@ -539,42 +562,42 @@ h2 em { font-style: italic; color: var(--bronze); }
   color: var(--bronze2); font-weight: 600; margin-bottom: 0.9rem;
 }
 .nh-strip-desc {
-  font-size: 0.87rem; color: rgba(245,240,232,0.72);
+  font-size: 0.87rem; color: rgba(244,242,237,0.72);
   line-height: 1.8; max-width: 520px; margin-bottom: 1.3rem;
 }
 .nh-strip-desc strong { color: var(--bg); font-weight: 600; }
 .nh-strip-stats { display: flex; gap: 1.8rem; flex-wrap: wrap; }
 .nh-stat {
   display: flex; flex-direction: column; gap: 0.12rem;
-  border-left: 2px solid rgba(181,130,78,0.4); padding-left: 0.9rem;
+  border-left: 2px solid rgba(204,155,114,0.4); padding-left: 0.9rem;
 }
 .nh-stat-val {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem; font-weight: 700; color: var(--bronze2); line-height: 1;
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem; font-weight: 650; color: var(--bronze2); line-height: 1;
 }
 .nh-stat-lbl {
   font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(245,240,232,0.5); font-weight: 600;
+  color: rgba(244,242,237,0.5); font-weight: 600;
 }
 .nh-strip-cta {
   display: flex; align-items: center; gap: 1rem;
-  background: rgba(154,107,63,0.15);
-  border: 1.5px solid rgba(154,107,63,0.4);
+  background: rgba(185,131,90,0.15);
+  border: 1.5px solid rgba(185,131,90,0.4);
   padding: 1.3rem 1.8rem; text-decoration: none;
   transition: background 0.3s, border-color 0.3s, transform 0.2s;
 }
 .nh-strip-cta:hover {
-  background: rgba(154,107,63,0.25);
+  background: rgba(185,131,90,0.25);
   border-color: var(--bronze2); transform: translateY(-2px);
 }
 .nh-cta-icon { font-size: 1.7rem; }
 .nh-cta-label {
   font-size: 0.58rem; letter-spacing: 0.16em; text-transform: uppercase;
-  color: rgba(245,240,232,0.5); font-weight: 700; margin-bottom: 0.25rem;
+  color: rgba(244,242,237,0.5); font-weight: 700; margin-bottom: 0.25rem;
 }
 .nh-cta-link {
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem; font-weight: 700; color: var(--bronze2);
+  font-family: 'Fraunces', serif;
+  font-size: 1rem; font-weight: 650; color: var(--bronze2);
 }
 
 /* ── FOOTER ── */
@@ -583,15 +606,15 @@ footer {
   position: relative; z-index: 1; text-align: center;
 }
 .footer-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 700; color: var(--bg); margin-bottom: 0.25rem;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem; font-weight: 650; color: var(--bg); margin-bottom: 0.25rem;
 }
 .footer-role {
   font-size: 0.64rem; letter-spacing: 0.24em; text-transform: uppercase;
   color: var(--sand); margin-bottom: 0.3rem; font-weight: 600;
 }
 .footer-company {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fraunces', serif;
   font-size: 0.9rem; font-weight: 600;
   color: var(--bronze2); letter-spacing: 0.08em; margin-bottom: 0.4rem;
 }
@@ -754,7 +777,7 @@ footer {
           <div class="stat-lbl">Years in Dubai</div>
         </div>
         <div class="stat">
-          <div class="stat-val">7+</div>
+          <div class="stat-val">9+</div>
           <div class="stat-lbl">Top Developers</div>
         </div>
         <div class="stat">
@@ -858,6 +881,10 @@ footer {
           <span class="area-pill">Downtown Dubai</span><span class="area-pill">Dubai Marina</span>
           <span class="area-pill">Arabian Ranches</span><span class="area-pill">Creek Harbour</span>
         </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">Terra Heights · The Valley — NARA · Creek Beach · Golf Place at Dubai Hills · South Bay</div>
+        </div>
       </a>
       <a class="dev-card" data-num="02" href="https://www.damacproperties.com" target="_blank" rel="noopener">
         <div class="dev-icon">💎</div>
@@ -868,6 +895,10 @@ footer {
         <div class="dev-areas">
           <span class="area-pill">Business Bay</span><span class="area-pill">DAMAC Hills</span>
           <span class="area-pill">Safa Park</span><span class="area-pill">Akoya</span>
+        </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">DAMAC Lagoons · DAMAC Hills 2 · Safa One · DAMAC Bay 2 by Cavalli · DAMAC Riverside</div>
         </div>
       </a>
       <a class="dev-card" data-num="03" href="https://www.nakheel.com" target="_blank" rel="noopener">
@@ -880,6 +911,10 @@ footer {
           <span class="area-pill">Palm Jumeirah</span><span class="area-pill">Jumeirah Village</span>
           <span class="area-pill">Al Furjan</span><span class="area-pill">Deira Islands</span>
         </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">Palm Jebel Ali · Nakheel Bay Residences · Palm Beach Residences · Nad Al Sheba Gardens · Palma Beach Residences, Deira Islands</div>
+        </div>
       </a>
       <a class="dev-card" data-num="04" href="https://www.sobharealty.com" target="_blank" rel="noopener">
         <div class="dev-icon">🏡</div>
@@ -890,6 +925,10 @@ footer {
         <div class="dev-areas">
           <span class="area-pill">MBR City</span><span class="area-pill">Sobha Hartland</span>
           <span class="area-pill">Hartland II</span>
+        </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">Sobha Orbis · Sobha Solis · Sobha Siniya Island · Sobha Hartland II · Sobha One</div>
         </div>
       </a>
       <a class="dev-card" data-num="05" href="https://www.meraas.com" target="_blank" rel="noopener">
@@ -902,6 +941,10 @@ footer {
           <span class="area-pill">City Walk</span><span class="area-pill">Bluewaters Island</span>
           <span class="area-pill">Port De La Mer</span><span class="area-pill">La Mer</span>
         </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">City Walk Northline · Port De La Mer II · Bluewaters Bay · Central Park at City Walk · La Mer South</div>
+        </div>
       </a>
       <a class="dev-card" data-num="06" href="https://www.dubaiproperties.ae" target="_blank" rel="noopener">
         <div class="dev-icon">🏛️</div>
@@ -913,6 +956,10 @@ footer {
           <span class="area-pill">JBR</span><span class="area-pill">Mudon</span>
           <span class="area-pill">Villanova</span><span class="area-pill">Culture Village</span>
         </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">Mudon Al Ranim · Villanova — Aquilegia · Amaranta · Rukan · Serena</div>
+        </div>
       </a>
       <a class="dev-card" data-num="07" href="https://www.danubeproperties.com" target="_blank" rel="noopener">
         <div class="dev-icon">✨</div>
@@ -923,6 +970,40 @@ footer {
         <div class="dev-areas">
           <span class="area-pill">Arjan</span><span class="area-pill">Jumeirah Village Circle</span>
           <span class="area-pill">Al Furjan</span><span class="area-pill">Sports City</span>
+        </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">Danube Aspirz · Danube Opalz · Danube Petalz · Danube Skyz · Danube Oceanz</div>
+        </div>
+      </a>
+      <a class="dev-card" data-num="08" href="https://www.imtiazdevelopments.com" target="_blank" rel="noopener">
+        <div class="dev-icon">🕌</div>
+        <div class="dev-name">Imtiaz Developments</div>
+        <div class="dev-visit">↗ Visit imtiazdevelopments.com</div>
+        <div class="dev-type">Boutique Urban Living</div>
+        <div class="dev-desc">A fast-rising boutique developer known for smart, well-connected buildings near metro stations with flexible payment plans for first-time investors.</div>
+        <div class="dev-areas">
+          <span class="area-pill">Al Jaddaf</span><span class="area-pill">Sheikh Zayed Road</span>
+          <span class="area-pill">Al Furjan</span>
+        </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">Raw District · Cotier House 2 · Beach Walk Grand · Wynwood by Imtiaz · Luxor by Imtiaz</div>
+        </div>
+      </a>
+      <a class="dev-card" data-num="09" href="https://www.samana.ae" target="_blank" rel="noopener">
+        <div class="dev-icon">🏊</div>
+        <div class="dev-name">Samana Developers</div>
+        <div class="dev-visit">↗ Visit samana.ae</div>
+        <div class="dev-type">Resort-Style Investment</div>
+        <div class="dev-desc">Best known for private pools in every unit and investor-friendly post-handover payment plans — a favourite for high-yield rental portfolios.</div>
+        <div class="dev-areas">
+          <span class="area-pill">Dubailand</span><span class="area-pill">DLRC</span>
+          <span class="area-pill">Arjan</span>
+        </div>
+        <div class="dev-newproj">
+          <div class="dev-newproj-label">🆕 Selling New Projects</div>
+          <div class="dev-newproj-list">Samana Ivy Gardens · Rome by Samana · Samana Manhattan 2 · Samana Waves 2 · Samana South Haven</div>
         </div>
       </a>
     </div>
@@ -986,6 +1067,8 @@ footer {
                 <button class="chip" onclick="setPrimaryDev('Danube',this)">Danube</button>
                 <button class="chip" onclick="setPrimaryDev('Binghatti',this)">Binghatti</button>
                 <button class="chip" onclick="setPrimaryDev('Azizi',this)">Azizi</button>
+                <button class="chip" onclick="setPrimaryDev('Imtiaz',this)">Imtiaz</button>
+                <button class="chip" onclick="setPrimaryDev('Samana',this)">Samana</button>
               </div>
             </div>
           </div>
@@ -1174,6 +1257,7 @@ function parsePriceAED(priceStr) {
   if (/on request/i.test(s)) return { value: null, isSpecial: true };
   if (/contact/i.test(s))    return { value: null, isSpecial: true };
   if (/same as capital/i.test(s)) return { value: null, isSpecial: true };
+  if (/\/\s*sqft/i.test(s))  return { value: null, isSpecial: true };
   let suffix = '';
   if (/\/\s*mo/i.test(s)) suffix = '/mo';
   else if (/\/\s*yr/i.test(s)) suffix = '/yr';
@@ -1234,6 +1318,19 @@ const listings = [
   { id:28, name:"La Fontana Di Trevi",             type:"Apartment",  developer:"—",                location:"Arjan",                   beds:"1 BR",       size:"920",    price:"850,000",     status:"sell",   note:"Fully Furnished · 2 Bath · Covered Parking · Upgraded · Spacious Layout" },
   { id:29, name:"Azizi Venice — Bulk 🔥",          type:"Apartment",  developer:"Azizi",            location:"Dubai South",             beds:"Studio",     size:"—",      price:"450,000",     status:"offplan",note:"10 Units Bulk · 70% Paid · OP 604K · Handover Dec 2026 · Super Distressed ⚡" },
   { id:30, name:"Warehouse — Nad Al Hammar",       type:"Warehouse",  developer:"—",                location:"Nad Al Hammar",           beds:"Industrial", size:"20,551", price:"26,000,000",  status:"sell",   note:"Brand New · Vacant · 180 KW Power · Rare Commercial Opportunity" },
+  { id:31, name:"Sobha Orbis — 1.5 BR Type B",     type:"Apartment",  developer:"Sobha",            location:"Motor City",              beds:"1 BR",       size:"667",    price:"1,450,000",   status:"offplan",note:"1.5 BR with Study + Balcony · 42nd Floor high-floor open views · Handover 2027 · Resort amenities" },
+  { id:32, name:"Cedar Building 2 — Creek Beach",  type:"Apartment",  developer:"Emaar",            location:"Creek Beach",             beds:"1 BR",       size:"670",    price:"1,680,000",   status:"sell",   note:"Freehold · Beach access · Ready & vacant · Fully furnished · Final cash price 1.68M" },
+  { id:33, name:"The Valley — NARA Townhouse",     type:"Townhouse",  developer:"Emaar",            location:"The Valley",              beds:"4 BR",       size:"2,141",  price:"3,550,000",   status:"sell",   note:"Corner villa, single row · Vacant, ready to move · Furnished · Cash price 3.55M" },
+  { id:34, name:"Raw District — Tower C",          type:"Apartment",  developer:"Imtiaz",           location:"Sheikh Zayed Road",       beds:"Studio",     size:"389",    price:"720,000",     status:"offplan",note:"Next to Metro · SZR view · 50/50 payment plan · Handover June 2029" },
+  { id:35, name:"Samana Resorts — 1 Bed + Pool",   type:"Apartment",  developer:"Samana",           location:"Dubailand",               beds:"1 BR",       size:"805",    price:"1,200,000",   status:"offplan",note:"Private pool · 43% payment done" },
+  { id:36, name:"DAMAC Lagoons — Lagoon Views 7",  type:"Apartment",  developer:"DAMAC",            location:"DAMAC Lagoons",           beds:"2 BR",       size:"1,125",  price:"1,850,000",   status:"offplan",note:"Corner unit, full lagoon view, L-shape balcony · 50% paid · Handover Jan 2027" },
+  { id:37, name:"DWTN Residences",                 type:"Apartment",  developer:"Deyaar",           location:"Business Bay",            beds:"1 BR",       size:"765",    price:"2,200,000",   status:"offplan",note:"445m high-rise, 110 floors · Burj Khalifa & SZR view · 50/50 plan, 25% paid · Handover Q4 2029" },
+  { id:38, name:"Terra Heights — Bldg 3",          type:"Apartment",  developer:"Emaar",            location:"MBR City",                beds:"1 BR",       size:"733",    price:"1,800,000",   status:"offplan",note:"80/20 payment plan · 36.5% paid + 3.5% due · Handover Q1 2029 · Negotiable" },
+  { id:39, name:"Samana Ivy Gardens — DLRC",       type:"Apartment",  developer:"Samana",           location:"Dubai Land Residence Complex", beds:"2 BR",  size:"1,000",  price:"1,300,000",   status:"offplan",note:"Private swimming pool · 100% paid · Handover Jan 2027 · Negotiable" },
+  { id:40, name:"Azizi Neila",                     type:"Apartment",  developer:"Azizi",            location:"Al Furjan",               beds:"1 BR",       size:"683",    price:"1,100,000",   status:"offplan",note:"Near Metro · 8th floor · 40/60 plan, 40% paid · Handover Q4 2026 · Negotiable" },
+  { id:41, name:"City Walk Northline 1",           type:"Apartment",  developer:"Meraas",           location:"City Walk",               beds:"1 BR",       size:"881",    price:"3,300,000",   status:"offplan",note:"6th floor, Burj Khalifa view · 75/25 plan, 65% paid · Handover 15 July 2027 · Negotiable" },
+  { id:42, name:"DAMAC Hills 2 — PG3 Villa",       type:"Villa",      developer:"DAMAC",            location:"DAMAC Hills 2",           beds:"5 BR",       size:"3,542",  price:"3,300,000",   status:"offplan",note:"5BR + Maid · 54% paid, 70/30 plan · Handover Q1 2027 · Negotiable" },
+  { id:43, name:"JVC — G+2+R Townhouses",          type:"Townhouse",  developer:"—",                location:"Jumeirah Village Circle", beds:"4 BR",       size:"4,048",  price:"3,500,000",   status:"offplan",note:"4BHK + Maid · Ground & rooftop terrace · Fully upgraded · Starting price" },
 ];
 
 const secondaryListings = [
@@ -1267,6 +1364,22 @@ const secondaryListings = [
   { id:"S41", name:"Palace — Dubai Hills",         area:"Dubai Hills",        type:"sell",    beds:"Full Floor",    size:"—",           price:"On Request",     occupancy:"Vacant",       tag:"",         note:"Can sell individually or as full floor" },
   { id:"O1",  name:"Azizi Venice",                 area:"Dubai South",        type:"offplan", beds:"1 BR",          size:"—",           price:"Same as Capital",occupancy:"Near Handover",tag:"hot",      note:"40% Paid · 60% Remaining · Same price as original" },
   { id:"O2",  name:"Azizi Grand",                  area:"Dubai Sports City",  type:"offplan", beds:"1 BR",          size:"—",           price:"770,000",        occupancy:"Off-Plan",     tag:"distress", note:"Below OP (was 800K) · Handover June 2026 · Big Layout" },
+  { id:"S42", name:"Studio — Near Circle Mall",    area:"Arjan",              type:"sell",    beds:"Studio",        size:"336.70 sqft", price:"700,000",        occupancy:"Rented",       tag:"",         note:"Ready to move · Vacant next month · Currently rented at 55,000/yr" },
+  { id:"S43", name:"2 Bedroom — Near Al Maktoum Intl Airport", area:"Dubai South", type:"sell", beds:"2 BR",        size:"1,120 sqft",  price:"1,350,000",      occupancy:"Vacant",       tag:"",         note:"Ready to move in · Fully furnished · Excellent connectivity" },
+  { id:"S44", name:"Furnished Studio with Balcony",area:"Jumeirah Village Circle", type:"sell",beds:"Studio",        size:"474.37 sqft", price:"650,000",        occupancy:"Vacant",       tag:"",         note:"Fully furnished · Private balcony · Gross ROI 7.03%" },
+  { id:"S45", name:"Downtown Views II — 3BR+Maid",area:"Downtown Dubai",      type:"sell",    beds:"3 BR + Maid",   size:"1,625 sqft",  price:"5,250,000",      occupancy:"Vacant",       tag:"hot",      note:"Fully furnished · High floor · Burj Khalifa view · Below market" },
+  { id:"S46", name:"Binghatti Apartments — DSO",   area:"Dubai Silicon Oasis",type:"sell",    beds:"1 BR",          size:"742 sqft",    price:"720,000",        occupancy:"Vacant",       tag:"",         note:"Fully furnished, premium finishing · 2 balconies · Villas & Downtown/Burj view" },
+  { id:"S47", name:"Townhouse — Unit R2MB",        area:"DAMAC Hills 2",      type:"sell",    beds:"3 BR",          size:"2,401 sqft",  price:"1,980,000",      occupancy:"Vacant",       tag:"",         note:"Plot 1,950 sqft · Back to back" },
+  { id:"S48", name:"Villa — Yasmeen Area",         area:"Ajman",              type:"sell",    beds:"5 BR Villa",    size:"3,664 sqft",  price:"On Request",     occupancy:"Vacant",       tag:"",         note:"Plot 3,014 sqft · G+2 · Maid room · Central AC, all connections included" },
+  { id:"S49", name:"Apartment — Garden City",      area:"Ajman",              type:"sell",    beds:"2 BR",          size:"—",           price:"600,000",        occupancy:"Vacant",       tag:"",         note:"Private parking · Newly renovated · Top floor, amazing views" },
+  { id:"S50", name:"1 BHK — Arabian Gate",         area:"International City", type:"sell",    beds:"1 BR",          size:"999 sqft",    price:"1,100,000",      occupancy:"Vacant",       tag:"",         note:"Ready to move in · Fully furnished" },
+  { id:"S51", name:"Aquilegia — 3BR Rooftop",      area:"Villanova",          type:"sell",    beds:"3 BR",          size:"2,143 sqft",  price:"1,900,000",      occupancy:"Vacant",       tag:"hot",      note:"Corner unit with backyard · Plot 1,832 sqft" },
+  { id:"S52", name:"Saadiyat Beach Residences — 1BR", area:"Saadiyat Island, Abu Dhabi", type:"sell", beds:"1 BR", size:"737 sqft",   price:"1,700,000",      occupancy:"Vacant",       tag:"",         note:"Type A · Private deck/balcony · 1 covered parking" },
+  { id:"S53", name:"Murooj Villa — Type A Large",  area:"Al Furjan",          type:"sell",    beds:"4 BR + Maid",   size:"4,042 sqft",  price:"8,250,000",      occupancy:"Vacant",       tag:"hot",      note:"Plot 5,618 sqft · Driver room · Private garden · Unfurnished" },
+  { id:"S54", name:"Milano Giovanni Boutique Suites",area:"Jumeirah Village Circle", type:"sell", beds:"2 BR",     size:"1,152 sqft",  price:"1,350,000",      occupancy:"Rented",       tag:"hot",      note:"High floor, close to Circle Mall · Original price 1.6M" },
+  { id:"S55", name:"Luxury Custom Villa — Frond B",area:"Palm Jumeirah",      type:"sell",    beds:"6 BR Villa",    size:"6,000 sqft",  price:"45,000,000",     occupancy:"Vacant",       tag:"hot",      note:"Atrium Entry 11 · Fully furnished, move-in ready · Custom built" },
+  { id:"S56", name:"Ultra-Luxury Mansion",         area:"Pearl Jumeirah",     type:"sell",    beds:"7 BR Villa",    size:"15,450 sqft", price:"50,000,000",     occupancy:"Vacant",       tag:"hot",      note:"Market price 70M · Basement+G+1+Roof · 2 staff accommodations" },
+  { id:"S57", name:"District One Villas — Phase 3B",area:"MBR City",         type:"sell",    beds:"6 BR Villa",    size:"6,833 sqft",  price:"23,600,000",     occupancy:"Vacant",       tag:"hot",      note:"Brand new · Private elevator · Side Burj Khalifa view · Furniture included" },
 ];
 
 /* ── FILTER STATE ── */
@@ -1352,9 +1465,14 @@ function renderListings(data) {
     const isHot    = p.note && (p.note.includes('Save') || p.note.includes('Bulk') || p.note.includes('Motivated') || p.note.includes('🔥'));
     const isUrgent = p.note && (p.note.includes('Distress') || p.note.includes('⚡'));
     const conv = activeCurrency !== 'AED' ? formatConverted(p.price) : '';
-    grid.innerHTML += '<div class="prop-card '+(isUrgent?'urgent':isHot?'hot':'')+'">'
+    const statusCls = p.status === 'offplan' ? 'status-offplan' : 'status-ready';
+    const statusTag = p.status === 'offplan'
+      ? '<div class="prop-status-tag offplan">🏗 Off-Plan Progress</div>'
+      : '<div class="prop-status-tag ready">🔑 Ready to Move</div>';
+    grid.innerHTML += '<div class="prop-card '+statusCls+' '+(isUrgent?'urgent':isHot?'hot':'')+'">'
       +'<div class="prop-card-head"><div class="prop-card-name">'+p.name+'</div><span class="badge '+s.cls+'">'+s.label+'</span></div>'
       +'<div class="prop-card-area">📍 '+p.location+'</div>'
+      +statusTag
       +'<div class="prop-inline">'
         +'<div class="prop-inline-item">🏠 <span>'+p.type+'</span></div>'
         +'<div class="prop-inline-item">🛏 <span>'+p.beds+'</span></div>'
@@ -1420,9 +1538,15 @@ function renderSecondary(data) {
     const t = secTypeMap[p.type] || secTypeMap.sell;
     const occCls = occupancyMap[p.occupancy] || '';
     const conv = activeCurrency !== 'AED' ? formatConverted(p.price) : '';
-    grid.innerHTML += '<div class="prop-card '+(p.tag==='distress'?'urgent':p.tag==='hot'?'hot':'')+'">'
+    const isOffplanStatus = p.type === 'offplan' || p.occupancy === 'Off-Plan' || p.occupancy === 'Near Handover';
+    const statusCls = isOffplanStatus ? 'status-offplan' : 'status-ready';
+    const statusTag = isOffplanStatus
+      ? '<div class="prop-status-tag offplan">🏗 Off-Plan Progress</div>'
+      : (p.occupancy === 'Vacant' ? '<div class="prop-status-tag ready">🔑 Ready · Vacant</div>' : '<div class="prop-status-tag ready">🔑 Ready to Move</div>');
+    grid.innerHTML += '<div class="prop-card '+statusCls+' '+(p.tag==='distress'?'urgent':p.tag==='hot'?'hot':'')+'">'
       +'<div class="prop-card-head"><div class="prop-card-name">'+p.name+'</div><span class="badge '+t.cls+'">'+t.label+'</span></div>'
       +'<div class="prop-card-area">📍 '+p.area+'</div>'
+      +statusTag
       +'<div class="prop-inline">'
         +'<div class="prop-inline-item">🛏 <span>'+p.beds+'</span></div>'
         +(p.size&&p.size!=='—'?'<div class="prop-inline-item">📐 <span>'+p.size+'</span></div>':'')
